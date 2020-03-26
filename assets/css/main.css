@@ -2259,6 +2259,7 @@ input, select, textarea {
 			font-family: 'Font Awesome 5 Brands';
 		}
 
+
 		.icon.major {
 			border: solid 1px;
 			display: inline-block;
@@ -2278,6 +2279,7 @@ input, select, textarea {
 				border: solid 1px;
 				text-align: center;
 			}
+			
 
 		.icon.alt {
 			display: inline-block;
@@ -2311,8 +2313,21 @@ input, select, textarea {
 		}
 
 		.icon.style5 {
-			color: #8cc9f0;
+			color: #03a819;
 		}
+		
+		.icon.style6 {
+			color: #02647c;
+		}
+
+		.icon.style7 {
+			color: #b89c00;
+		}
+
+		.icon.style8 {
+			color: #ba48be;
+		}
+
 
 		@media screen and (max-width: 1680px) {
 

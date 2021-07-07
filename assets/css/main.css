@@ -2312,6 +2312,11 @@ input, select, textarea {
 			font-family: 'Font Awesome 5 Brands';
 		}
 
+		.icon.brands:hover
+		{
+			transform: scale(1.1);
+		}
+
 
 		.icon.major {
 			border: solid 1px;
@@ -2470,6 +2475,11 @@ input, select, textarea {
 			display: block;
 			margin: 0 0 2em 0;
 			width: 100%;
+			transition: 0.2s;
+		}
+
+		.image.fit:hover{
+			transform: scale(1.1);
 		}
 
 			.image.fit img {
@@ -2481,6 +2491,8 @@ input, select, textarea {
 			margin: 0 0 3em 0;
 			width: 100%;
 		}
+
+		
 
 			.image.main img {
 				width: 100%;
@@ -3317,7 +3329,7 @@ input, select, textarea {
 		}
 
 		#nav a:hover {
-			color: #111111;
+			color: #6b6b6b;
 		}
 
 		#nav strong, #nav b {
@@ -3383,6 +3395,7 @@ input, select, textarea {
 					#nav ul li a.active {
 						background-color: #ffffff;
 						box-shadow: none;
+						transform: translateY(2px);
 					}
 
 		#nav.alt {
@@ -3483,6 +3496,7 @@ input, select, textarea {
 			#main button:active,
 			#main .button:active {
 				background-color: rgba(222, 222, 222, 0.5);
+				transform: translateY(4px);
 			}
 
 			#main input[type="submit"].icon:before,
@@ -3490,7 +3504,7 @@ input, select, textarea {
 			#main input[type="button"].icon:before,
 			#main button.icon:before,
 			#main .button.icon:before {
-				color: rgba(99, 99, 99, 0.25);
+				color: rgba(97, 23, 23, 0.25);
 			}
 
 			#main input[type="submit"].primary,
@@ -3498,7 +3512,7 @@ input, select, textarea {
 			#main input[type="button"].primary,
 			#main button.primary,
 			#main .button.primary {
-				background-color: #8cc9f0;
+				background-color: #ff5454;
 				color: #ffffff !important;
 				box-shadow: none;
 			}
@@ -3508,7 +3522,7 @@ input, select, textarea {
 				#main input[type="button"].primary:hover,
 				#main button.primary:hover,
 				#main .button.primary:hover {
-					background-color: #9acff2;
+					background-color: #fa8181;
 				}
 
 				#main input[type="submit"].primary:active,

@@ -128,6 +128,7 @@ input, select, textarea {
   min-width: 360px;
 }
 
+
 .text::after {
   content: "";
   position: absolute;
@@ -3149,6 +3150,13 @@ input, select, textarea {
 
 		#header h1 {
 			margin: 0 0 0.25em 0;
+			animation-name: opacityChange;
+    		animation-duration: 2s
+		}
+
+		@keyframes opacityChange {
+			from{font-size: 2.0em;}
+			to {font-size: 3.25em;}
 		}
 
 		#header p {
@@ -3240,6 +3248,11 @@ input, select, textarea {
 
 					#header.alt h1 {
 						font-size: 2.5em;
+					}
+
+					@keyframes opacityChange {
+						from{font-size: 1.25em;}
+						to {font-size: 2.5em;}
 					}
 
 		}

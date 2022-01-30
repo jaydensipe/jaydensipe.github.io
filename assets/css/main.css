@@ -92,7 +92,7 @@ input, select, textarea {
 
 	html {
 		box-sizing: border-box;
-
+		zoom: 85%;
 	}
 
 	*, *:before, *:after {

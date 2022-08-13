@@ -7,14 +7,21 @@
 <html>
 
 <head>
-	<title>Portfolio - Jayden Sipe</title>
+	<title>Projects - Jayden Sipe</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
-	<script src="/assets/particles-js/particles.js"></script>
+	<script src="/assets/tsparticles/tsparticles.engine.min.js"></script>
+
+	<script
+		src="https://cdn.jsdelivr.net/npm/tsparticles-preset-confetti@2/tsparticles.preset.confetti.bundle.min.js"></script>
+
+	<script
+		src="https://cdn.jsdelivr.net/npm/tsparticles-preset-triangles@2/tsparticles.preset.triangles.bundle.min.js"></script>
+
 	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
@@ -22,7 +29,10 @@
 </head>
 
 <body class="is-preload">
-	<div id="particles-js"></div>
+
+	<!-- TS Particles -->
+	<div id="tsparticles"></div>
+
 	<!-- Wrapper -->
 	<div id="wrapper">
 

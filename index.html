@@ -14,11 +14,14 @@
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
-	<script src="/assets/particles-js/particles.js"></script>
-	<script src="
-		https://cdnjs.cloudflare.com/ajax/libs/tsparticles-particles.js/2.2.1/tsparticles.pjs.min.js"
-		integrity="sha512-EU4Bp4krVMkz5ju3ZG9w37U198v6trlJ6j9rKAi++8EeDhIT1kTsC/jhzUqtJau7Nn/WFFQEhjoacmoq7GsmLA=="
-		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="/assets/tsparticles/tsparticles.engine.min.js"></script>
+
+	<script
+		src="https://cdn.jsdelivr.net/npm/tsparticles-preset-confetti@2/tsparticles.preset.confetti.bundle.min.js"></script>
+
+	<script
+		src="https://cdn.jsdelivr.net/npm/tsparticles-preset-triangles@2/tsparticles.preset.triangles.bundle.min.js"></script>
+
 	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
@@ -27,13 +30,16 @@
 
 
 <body class="is-preload">
-	<div id="particles-js"></div>
+
+	<!-- TS Particles -->
+	<div id="tsparticles"></div>
+
 	<!-- Wrapper -->
 	<div id="wrapper">
 
 		<!-- Header -->
 		<header id="header" class="alt">
-			<div class="text">
+			<div class="text" id="name-text">
 				<h1><b>Jayden Sipe.</b></h1>
 			</div>
 			<ul class="icons">
@@ -79,7 +85,6 @@
 							programming, I strive to advance my knowledge in all areas of computer science.
 						</blockquote>
 					</div>
-					<span class="image"><img src="images/jayden.jpg" alt="" /></span>
 				</div>
 			</section>
 

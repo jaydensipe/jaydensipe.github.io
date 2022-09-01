@@ -123,27 +123,300 @@
 
 })(jQuery);
 
-// Controls styling of website based on month\
+// Controls styling of website based on month
 var date = new Date();
 var month = new Date().getMonth() + 1;
 
 switch (month) {
 	case 10:
+		// Halloween
 		$('#main').addClass('halloween-background');
+		$("<p>Happy Halloween! 🎃</p>").insertAfter("#name-text");
+
+		loadConfettiPreset(tsParticles);
+
+		tsParticles.load("tsparticles", {
+			"emitters": [
+				{
+					"position": {
+						"x": 0,
+						"y": 30
+					},
+					"rate": {
+						"quantity": 5,
+						"delay": 0.15
+					},
+					"particles": {
+						"move": {
+							"direction": "top-right",
+							"outModes": {
+								"top": "none",
+								"left": "none",
+								"default": "destroy"
+							}
+						}
+					}
+				},
+				{
+					"position": {
+						"x": 100,
+						"y": 30
+					},
+					"rate": {
+						"quantity": 5,
+						"delay": 0.15
+					},
+					"particles": {
+						"move": {
+							"direction": "top-left",
+							"outModes": {
+								"top": "none",
+								"right": "none",
+								"default": "destroy"
+							}
+						}
+					}
+				}
+			],
+			"particles": {
+				"color": {
+					"value": [
+						"#F4831B",
+						"#FF0000",
+						"#902EBB",
+					]
+				},
+				"move": {
+					"decay": 0.05,
+					"direction": "top",
+					"enable": true,
+					"gravity": {
+						"enable": true
+					},
+					"outModes": {
+						"top": "none",
+						"default": "destroy"
+					},
+					"speed": {
+						"min": 10,
+						"max": 50
+					}
+				},
+				"number": {
+					"value": 0
+				},
+				"opacity": {
+					"value": 1
+				},
+				"rotate": {
+					"value": {
+						"min": 0,
+						"max": 360
+					},
+					"direction": "random",
+					"animation": {
+						"enable": true,
+						"speed": 30
+					}
+				},
+				"tilt": {
+					"direction": "random",
+					"enable": true,
+					"value": {
+						"min": 0,
+						"max": 360
+					},
+					"animation": {
+						"enable": true,
+						"speed": 30
+					}
+				},
+				"size": {
+					"value": {
+						"min": 2,
+						"max": 4
+					},
+					"animation": {
+						"enable": true,
+						"startValue": "min",
+						"count": 1,
+						"speed": 16,
+						"sync": true
+					}
+				},
+				"roll": {
+					"darken": {
+						"enable": true,
+						"value": 25
+					},
+					"enable": true,
+					"speed": {
+						"min": 5,
+						"max": 15
+					}
+				},
+				"wobble": {
+					"distance": 30,
+					"enable": true,
+					"speed": {
+						"min": -7,
+						"max": 7
+					}
+				},
+				"shape": {
+					"type": "circle",
+					"options": {}
+				}
+			}
+		});
 		break;
-	case 8:
-		if (date.getUTCDate() === 12) {
+	case 12:
+
+		// New Years
+		if (date.getUTCDate() === 31) {
 			$('#main').addClass('new-years-background');
+			$("<p>Happy New Years! 🎊</p>").insertAfter("#name-text");
+			loadConfettiPreset(tsParticles);
 
-			tsParticles.load({ preset: "fireworks" });
-
+			tsParticles.load("tsparticles", {
+				"fullScreen": {
+					"zIndex": 1
+				},
+				"particles": {
+					"number": {
+						"value": 0
+					},
+					"color": {
+						"value": [
+							"#ffffff",
+							"#ff0000",
+							"#0000ff"
+						]
+					},
+					"shape": {
+						"type": [
+							"circle",
+							"square"
+						],
+						"options": {}
+					},
+					"opacity": {
+						"value": 1,
+						"animation": {
+							"enable": true,
+							"minimumValue": 0,
+							"speed": 2,
+							"startValue": "max",
+							"destroy": "min"
+						}
+					},
+					"size": {
+						"value": 4,
+						"random": {
+							"enable": true,
+							"minimumValue": 2
+						}
+					},
+					"links": {
+						"enable": false
+					},
+					"life": {
+						"duration": {
+							"sync": true,
+							"value": 5
+						},
+						"count": 1
+					},
+					"move": {
+						"enable": true,
+						"gravity": {
+							"enable": true,
+							"acceleration": 10
+						},
+						"speed": {
+							"min": 10,
+							"max": 20
+						},
+						"decay": 0.1,
+						"direction": "none",
+						"straight": false,
+						"outModes": {
+							"default": "destroy",
+							"top": "none"
+						}
+					},
+					"rotate": {
+						"value": {
+							"min": 0,
+							"max": 360
+						},
+						"direction": "random",
+						"move": true,
+						"animation": {
+							"enable": true,
+							"speed": 60
+						}
+					},
+					"tilt": {
+						"direction": "random",
+						"enable": true,
+						"move": true,
+						"value": {
+							"min": 0,
+							"max": 360
+						},
+						"animation": {
+							"enable": true,
+							"speed": 60
+						}
+					},
+					"roll": {
+						"darken": {
+							"enable": true,
+							"value": 25
+						},
+						"enable": true,
+						"speed": {
+							"min": 15,
+							"max": 25
+						}
+					},
+					"wobble": {
+						"distance": 30,
+						"enable": true,
+						"move": true,
+						"speed": {
+							"min": -15,
+							"max": 15
+						}
+					}
+				},
+				"emitters": {
+					"life": {
+						"count": 0,
+						"duration": 0.1,
+						"delay": 0.4
+					},
+					"rate": {
+						"delay": 0.1,
+						"quantity": 150
+					},
+					"size": {
+						"width": 0,
+						"height": 0
+					}
+				}
+			});
 			break;
 		}
 
-		$('#main').addClass('christmas-background');
-
+		// Christmas
 		// Controls particles, CREDIT: https://codepen.io/dariodev/pen/JRqbgK
-		particlesJS("particles-js", {
+		$('#main').addClass('christmas-background');
+		$("<p>Merry Christmas! 🎅</p>").insertAfter("#name-text");
+
+
+		tsParticles.load("tsparticles", {
 			particles: {
 				number: {
 					value: 52,
@@ -216,6 +489,15 @@ switch (month) {
 		});
 		break;
 	default:
+		// Default
 		$('#main').addClass('regular-background');
+		loadTrianglesPreset(tsParticles);
+
+		tsParticles.load('tsparticles', {
+			background: {
+				image: 'linear-gradient(to right, #434343 0%, black 100%)'
+			},
+			preset: 'triangles'
+		});
 		break;
 }

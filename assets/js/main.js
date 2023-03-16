@@ -490,14 +490,5 @@ switch (month) {
 		break;
 	default:
 		// Default
-		$('#main').addClass('regular-background');
-		loadTrianglesPreset(tsParticles);
-
-		tsParticles.load('tsparticles', {
-			background: {
-				image: 'linear-gradient(to right, #434343 0%, black 100%)'
-			},
-			preset: 'triangles'
-		});
-		break;
+		$('#main').addClass('regular-background');;
 }

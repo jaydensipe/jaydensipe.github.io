@@ -4877,7 +4877,6 @@ body.is-preload #intro:not(.hidden)+#header+#nav {
 	right: 0;
 	text-align: right;
 	top: 0;
-	vertical-align: middle;
 	width: 7rem;
 }
 

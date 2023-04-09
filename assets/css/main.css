@@ -160,6 +160,76 @@ textarea {
 	appearance: none;
 }
 
+/* Features */
+
+.features {
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-moz-flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-moz-justify-content: center;
+	-webkit-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+	width: calc(100% + 2em);
+	margin: 0 0 3em -2em;
+	padding: 0;
+	list-style: none;
+}
+
+.features li {
+	width: calc(33.33333% - 2em);
+	margin-left: 2em;
+	margin-top: 3em;
+	padding: 0;
+}
+
+.features li:nth-child(1),
+.features li:nth-child(2),
+.features li:nth-child(3) {
+	margin-top: 0;
+}
+
+.features li> :last-child {
+	margin-bottom: 0;
+}
+
+@media screen and (max-width: 980px) {
+
+	.features li {
+		width: calc(50% - 2em);
+	}
+
+	.features li:nth-child(3) {
+		margin-top: 3em;
+	}
+
+}
+
+@media screen and (max-width: 736px) {
+
+	.features {
+		width: 100%;
+		margin: 0 0 2em 0;
+	}
+
+	.features li {
+		width: 100%;
+		margin-left: 0;
+		margin-top: 2em;
+	}
+
+	.features li:nth-child(2),
+	.features li:nth-child(3) {
+		margin-top: 2em;
+	}
+
+}
+
 /* Basic */
 
 @-ms-viewport {
@@ -180,6 +250,7 @@ body {
 }
 
 html {
+	scroll-behavior: smooth;
 	box-sizing: border-box;
 }
 
@@ -251,17 +322,22 @@ textarea {
 }
 
 a {
-	-moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-	-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-	-ms-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-	border-bottom: dotted 1px;
-	text-decoration: none;
+	-moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out !important;
+	-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out !important;
+	-ms-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out !important;
+	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out !important;
+	text-decoration: none !important;
 }
 
-a:hover {
-	border-bottom-color: transparent;
+a:not(.icon, #navPanelToggle, .close, .logo, .links, li > a) {
+	border-bottom: dotted 1px !important;
 }
+
+
+a:hover {
+	border-bottom-color: transparent !important;
+}
+
 
 strong,
 b {
@@ -2683,63 +2759,6 @@ input[type="radio"]:focus+label:before {
 	box-shadow: 7px 7px blue, 14px 14px red;
 }
 
-.title-text::after {
-	content: "";
-	position: absolute;
-	top: -10px;
-	right: -40px;
-	/* Remove display: inline-block if not required to be on the same line as text etc */
-	display: inline-block;
-	background-color: #606060;
-	vertical-align: top;
-	width: 20px;
-	/* Set height to the line height of .text */
-	height: 100px;
-	/* 
-  Animation paramaters:
-  blink = animation-name, 
-  1s = animation-duration, 
-  step-end = animation-timing-function,
-  infinite = animation-iteration-count
-  */
-	-webkit-animation: blink 1s step-end infinite;
-	animation: blink 1s step-end infinite;
-}
-
-@media only screen and (min-width: 320px) and (max-width: 738px) {
-	.title-text::after {
-		display: none;
-	}
-}
-
-@-webkit-keyframes blink {
-	0% {
-		opacity: 1.0;
-	}
-
-	50% {
-		opacity: 0.0;
-	}
-
-	100% {
-		opacity: 1.0;
-	}
-}
-
-@keyframes blink {
-	0% {
-		opacity: 1.0;
-	}
-
-	50% {
-		opacity: 0.0;
-	}
-
-	100% {
-		opacity: 1.0;
-	}
-}
-
 /* Icon */
 
 .icon {
@@ -2815,6 +2834,11 @@ input[type="radio"]:focus+label:before {
 	display: block;
 	margin: 2.5rem 0;
 	width: 100%;
+	transition: 0.2s;
+}
+
+.image.fit:hover {
+	transform: scale(1.1);
 }
 
 .image.fit:first-child {
@@ -2823,6 +2847,7 @@ input[type="radio"]:focus+label:before {
 
 .image.fit img {
 	width: 100%;
+	transition: 0.2s;
 }
 
 .image.main {

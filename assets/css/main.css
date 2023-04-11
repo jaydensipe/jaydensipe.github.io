@@ -329,12 +329,12 @@ a {
 	text-decoration: none !important;
 }
 
-a:not(.icon, #navPanelToggle, .close, .logo, .links, li > a) {
+a:not(.icon, #navPanelToggle, .close, .logo, .links, li > a, .page) {
 	border-bottom: dotted 1px !important;
 }
 
 
-a:hover {
+a:hover:not(.page) {
 	border-bottom-color: transparent !important;
 }
 

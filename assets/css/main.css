@@ -1,5 +1,9 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900");
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=M+PLUS+1+Code&family=Questrial&family=Viga&display=swap');
+
 
 /*
 	Massively by HTML5 UP
@@ -331,6 +335,63 @@ a {
 
 a:not(.icon, #navPanelToggle, .close, .logo, .links, li > a, .page) {
 	border-bottom: dotted 1px !important;
+}
+
+.blinker h1::after {
+	content: "";
+	position: absolute;
+	/* Remove display: inline-block if not required to be on the same line as text etc */
+	display: inline-block;
+	background-color: #606060;
+	vertical-align: text-top;
+	width: 1rem;
+	margin-top: -1.5rem;
+	margin-left: 20px;
+	/* Set height to the line height of .text */
+	height: 6rem;
+	/* 
+  Animation paramaters:
+  blink = animation-name, 
+  1s = animation-duration, 
+  step-end = animation-timing-function,
+  infinite = animation-iteration-count
+  */
+	-webkit-animation: blink 1s step-end infinite;
+	animation: blink 1s step-end infinite;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 738px) {
+	.blinker h1::after {
+		display: none;
+	}
+}
+
+@-webkit-keyframes blink {
+	0% {
+		opacity: 1.0;
+	}
+
+	50% {
+		opacity: 0.0;
+	}
+
+	100% {
+		opacity: 1.0;
+	}
+}
+
+@keyframes blink {
+	0% {
+		opacity: 1.0;
+	}
+
+	50% {
+		opacity: 0.0;
+	}
+
+	100% {
+		opacity: 1.0;
+	}
 }
 
 

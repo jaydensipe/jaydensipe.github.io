@@ -4,7 +4,7 @@ import { fontFamily } from "tailwindcss/defaultTheme";
 const config = {
 	darkMode: ["class"],
 	content: ["./src/**/*.{html,js,svelte,ts}"],
-  safelist: ["dark"],
+	safelist: ["dark"],
 	theme: {
 		container: {
 			center: true,
@@ -14,6 +14,10 @@ const config = {
 			},
 		},
 		extend: {
+			boxShadow: {
+				"main-bg-light": "7px 7px #E3E2F0, 14px 14px #E2EFF0",
+				"main-bg-dark": "7px 7px #b94c4e, 14px 14px #5e2728"
+			},
 			colors: {
 				border: "hsl(var(--border) / <alpha-value>)",
 				input: "hsl(var(--input) / <alpha-value>)",

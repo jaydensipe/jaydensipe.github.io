@@ -1,10 +1,18 @@
 <script lang="ts">
     import DescriptiveCard from "$lib/components/jay/descriptive-card/descriptive-card.svelte";
+    import Footer from "$lib/components/jay/footer/footer.svelte";
     import NavBar from "$lib/components/jay/nav-bar/nav-bar.svelte";
 
     import * as Command from "$lib/components/ui/command";
-    import { Github, Linkedin, Gamepad2 } from "lucide-svelte";
+    import {
+        Github,
+        Linkedin,
+        Joystick,
+        LibraryBig,
+        Gamepad2,
+    } from "lucide-svelte";
     import { Separator } from "$lib/components/ui/separator";
+    import { Button } from "$lib/components/ui/button";
 </script>
 
 <head>
@@ -14,8 +22,9 @@
 <body class="container mx-auto flex flex-col items-center">
     <!-- Header -->
     <header class="text-center">
-        <h1 class="pt-16 pb-8 text-9xl">
-            <span class="text-gray-500">./</span> Jayden Sipe
+        <h1 class="pt-16 pb-8 text-9xl font-medium">
+            <span class="text-gray-500">./</span> Jayden
+            <span class="text-red-800">Sipe</span>
         </h1>
         <p class="mx-60 pb-8">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
@@ -24,7 +33,9 @@
             explicabo soluta quis cupiditate?
         </p>
         <p class="pb-8">
-            - Made with <a href="https://kit.svelte.dev/">SvelteKit</a> -
+            - Made with <a class="hyperlink" href="https://kit.svelte.dev/"
+                >SvelteKit</a
+            > -
         </p>
     </header>
 
@@ -48,7 +59,7 @@
                 </a>
                 <a href="https://jaydensippy.itch.io/">
                     <Command.Item class="cursor-pointer">
-                        <Gamepad2 class="mr-2 h-4 w-4" />
+                        <Joystick class="mr-2 h-4 w-4" />
                         <span>itch.io</span>
                     </Command.Item>
                 </a>
@@ -93,8 +104,8 @@
             </h2>
             <br />
             <p class="text-center mx-32 mb-8">
-                These are some of the games I have worked on in my own time to
-                better learn game development and programming techniques. These
+                These are the latest games I have worked on in my own time to
+                better master game development and programming techniques. These
                 games were created with various game engines.
             </p>
 
@@ -102,27 +113,33 @@
                 class="flex flex-wrap flex-shrink-0 flex-grow-0 justify-center"
             >
                 <DescriptiveCard
+                    name="B. D. P. T."
+                    link="https://jaydensippy.itch.io/burning-down-peasant-town"
+                    imageName="bdpt1.jpg"
+                    githubLink="https://github.com/jaydensipe/Burning-Down-Peasant-Town"
+                    description="A game made in two weeks for the Pirate Software - Game Jam 14, made using the Godot game engine."
+                ></DescriptiveCard>
+
+                <DescriptiveCard
+                    name="Bombah Bros"
+                    githubLink="https://github.com/jaydensipe/Squire-AI"
+                    imageName="bbros1.jpg"
+                    description="A W.I.P. multiplayer game made in the Godot game engine, similar to Super Smash Bros."
+                ></DescriptiveCard>
+
+                <DescriptiveCard
                     name="Splorer"
                     link="https://jaydensipe.github.io/splorer/"
                     imageName="splorerpic.webp"
                     githubLink="https://github.com/jaydensipe/Splorer"
-                    description="A simple game made in WebGL, hosted on a custom web page, made for my Computer Graphics class."
+                    description="A simple game made in WebGL, hosted on a custom web page; made for my Computer Graphics course."
                 ></DescriptiveCard>
+            </div>
 
-                <DescriptiveCard
-                    name="Solyanka"
-                    link="images/solyankaexperimentvideo.mp4"
-                    imageName="indevpic1.webp"
-                    description="Experimental game created while learning Unreal Engine 4, using Blueprints."
-                ></DescriptiveCard>
-
-                <DescriptiveCard
-                    name="IsoArcher"
-                    link="https://jaydensippy.itch.io/isoarcher"
-                    imageName="isoarcherpic.webp"
-                    githubLink="https://github.com/jaydensipe/IsoArcher"
-                    description="A collaborative game created with my friend Stephen, made in the Godot game engine using C#."
-                ></DescriptiveCard>
+            <div class="flex justify-center my-8">
+                <Button variant="outline"
+                    ><Gamepad2 strokeWidth="1.5" class="mr-2" />View More Games</Button
+                >
             </div>
         </article>
 
@@ -135,39 +152,46 @@
             </h2>
             <br />
             <p class="text-center mx-32 mb-8">
-                These are some of the random personal projects I have finished.
-                These may come from personal projects I have completed myself,
-                or with the assistance of an online course.
+                These are the latest of the random personal projects I have
+                finished. These may come from personal projects I have completed
+                myself, or with the assistance of an online course.
             </p>
             <div
                 class="flex flex-wrap flex-shrink-0 flex-grow-0 justify-center"
             >
                 <DescriptiveCard
-                    name="Splorer"
-                    link="https://jaydensipe.github.io/splorer/"
-                    imageName="splorerpic.webp"
-                    githubLink="https://github.com/jaydensipe/Splorer"
-                    description="A simple game made in WebGL, hosted on a custom web page, made for my Computer Graphics class."
+                    name="Jay's Reusable Components and Things"
+                    imageName="jrcat1.svg"
+                    githubLink="https://github.com/jaydensipe/Jays-Reusable-Components-and-Things"
+                    description="A package of reusable components and random things for the Godot game engine."
                 ></DescriptiveCard>
-
                 <DescriptiveCard
-                    name="Solyanka"
-                    link="images/solyankaexperimentvideo.mp4"
+                    name="Squire AI"
                     imageName="indevpic1.webp"
-                    githubLink="https://github.com/jaydensipe/Splorer"
-                    description="Experimental game created while learning Unreal Engine 4, using Blueprints."
+                    githubLink="https://github.com/jaydensipe/Squire-AI"
+                    description="P.O.C. AI assistant using ChatGPT integration, created for my Text Information Systems course."
                 ></DescriptiveCard>
 
                 <DescriptiveCard
-                    name="IsoArcher"
-                    link="https://jaydensippy.itch.io/isoarcher"
-                    imageName="isoarcherpic.webp"
-                    githubLink="https://github.com/jaydensipe/IsoArcher"
-                    description="A collaborative game created with my friend Stephen, made in the Godot game engine using C#."
+                    name="UdemusDateus"
+                    link="https://github.com/jaydensipe/Udemus-Dateus"
+                    imageName="udpic.webp"
+                    githubLink="https://github.com/jaydensipe/Splorer"
+                    description="A fully functional dating web app created with help from a Udemy course, using ASP.NET and Angular (hosted on Microsoft Azure)."
                 ></DescriptiveCard>
+            </div>
+
+            <div class="flex justify-center my-8">
+                <Button variant="outline"
+                    ><LibraryBig strokeWidth="1.5" class="mr-2" />View More
+                    Projects</Button
+                >
             </div>
         </article>
 
         <Separator class="my-16" />
     </main>
 </body>
+
+<!-- Footer -->
+<Footer />

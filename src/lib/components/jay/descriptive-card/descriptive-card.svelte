@@ -1,6 +1,6 @@
 <script lang="ts">
     export let name: string;
-    export let link: string;
+    export let link: string = "";
     export let imageName: string;
     export let githubLink: string = "";
     export let description: string;
@@ -13,23 +13,30 @@
         <Card.Header>
             <a class="m-0 p-0" href={link}>
                 <img
-                    class="w-full shadow-lg rounded-lg hover:scale-110 transition duration-150 ease-in-out"
+                    class="bg-red-100 w-full shadow-lg rounded-lg hover:scale-110 transition duration-150 ease-in-out"
                     src="/images/{imageName}"
                     alt=""
                 /></a
             >
             <br />
-            <Card.Title
-                ><a
-                    class="tracking-wide font-bold underline uppercase underline-offset-4 hover:decoration-red-800"
-                    href={link}
-                >
-                    {name}</a
-                >
+            <Card.Title>
+                {#if link}
+                    <a
+                        class="hyperlink tracking-wide font-bold uppercase"
+                        href={link}
+                    >
+                        {name}</a
+                    >
+                {:else}
+                    <span class="tracking-wide font-bold uppercase">
+                        {name}
+                    </span>
+                {/if}
+
                 {#if githubLink}
                     |
                     <a
-                        class="tracking-wide font-bold underline underline-offset-4"
+                        class="hyperlink tracking-wide font-bold"
                         href={githubLink}>GitHub</a
                     >
                 {/if}

@@ -7,6 +7,9 @@
         <NavButton name="About" />
         <NavButton name="Games" />
         <NavButton name="Personal Projects" />
-        <NavButton name="Resume" />
+        <NavButton
+            name="Resume"
+            link="https://jaydensipe.github.io/JaydenSipeResume.pdf"
+        />
     </ul>
 </nav>

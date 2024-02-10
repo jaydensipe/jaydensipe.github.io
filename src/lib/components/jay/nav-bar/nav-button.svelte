@@ -5,7 +5,7 @@
 
 <li>
     <a
-        class="transition ease-in-out delay-50 hover:font-medium hover:bg-white duration-300 p-6 block"
+        class="transition ease-in-out hover:font-semibold hover:bg-white hover:text-red-500 motion-safe:hover:skew-x-3 duration-300 p-6 block"
         href={link}>{name}</a
     >
 </li>

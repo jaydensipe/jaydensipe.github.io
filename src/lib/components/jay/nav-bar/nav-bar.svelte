@@ -1,12 +1,24 @@
 <script lang="ts">
     import NavButton from "./nav-button.svelte";
+
+    export let onMainPage = false;
 </script>
 
-<nav class="container mb-12 backdrop-opacity-0 bg-slate-100 shadow-inner">
-    <ul class="flex flex-row text-center justify-center">
-        <NavButton name="About" />
-        <NavButton name="Games" />
-        <NavButton name="Personal Projects" />
+<nav
+    class="container mb-12 p-4 sm:p-0 backdrop-opacity-0 bg-slate-100 shadow-inner"
+>
+    <ul
+        class="flex flex-col sm:flex-row divide-y sm:divide-none text-center justify-center"
+    >
+        <NavButton
+            name={onMainPage ? "About" : "Back to Home"}
+            link={onMainPage ? "#about" : "/"}
+        />
+        <NavButton name="Games" link={onMainPage ? "#games" : "/games"} />
+        <NavButton
+            name="Personal Projects"
+            link={onMainPage ? "#personal-projects" : "/personal-projects"}
+        />
         <NavButton
             name="Resume"
             link="https://jaydensipe.github.io/JaydenSipeResume.pdf"

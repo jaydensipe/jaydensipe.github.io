@@ -19,14 +19,14 @@
     <title>Portfolio - Jayden Sipe</title>
 </head>
 
-<body class="container mx-auto flex flex-col items-center">
+<body class="sm:mx-20 flex flex-col items-center justify-center">
     <!-- Header -->
     <header class="text-center">
-        <h1 class="pt-16 pb-8 text-9xl font-medium">
+        <h1 class="text-7xl sm:text-9xl pt-16 pb-8 font-medium">
             <span class="text-gray-500">./</span> Jayden
             <span class="text-red-800">Sipe</span>
         </h1>
-        <p class="mx-60 pb-8">
+        <p class="mx-8 max-w-4xl pb-8">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
             magnam molestias suscipit harum temporibus dolorum eligendi incidunt
             repudiandae reprehenderit commodi. Iure commodi ab rerum et aliquid
@@ -40,24 +40,27 @@
     </header>
 
     <!-- Command Bar -->
-    <Command.Root class="rounded-lg border shadow-md max-w-[450px]">
+    <Command.Root class="rounded-lg border shadow-md max-w-80 sm:max-w-[450px]">
         <Command.Input placeholder="Type a query to search..." />
         <Command.List>
             <Command.Empty>No results found.</Command.Empty>
             <Command.Group heading="Links">
-                <a href="https://github.com/jaydensipe"
+                <a href="https://github.com/jaydensipe" target="_blank"
                     ><Command.Item class="cursor-pointer">
                         <Github class="mr-2 h-4 w-4" />
                         <span>GitHub</span>
                     </Command.Item>
                 </a>
-                <a href="https://www.linkedin.com/in/jaydensipe/">
+                <a
+                    href="https://www.linkedin.com/in/jaydensipe/"
+                    target="_blank"
+                >
                     <Command.Item class="cursor-pointer">
                         <Linkedin class="mr-2 h-4 w-4" />
                         <span>LinkedIn</span>
                     </Command.Item>
                 </a>
-                <a href="https://jaydensippy.itch.io/">
+                <a href="https://jaydensippy.itch.io/" target="_blank">
                     <Command.Item class="cursor-pointer">
                         <Joystick class="mr-2 h-4 w-4" />
                         <span>itch.io</span>
@@ -70,10 +73,12 @@
     <Separator class="my-16" />
 
     <!-- Main Container -->
-    <main class="container bg-white pt-8 shadow-main-bg-light">
-        <NavBar />
+    <main
+        class="container bg-white pt-8 shadow-main-bg-light-mobile sm:shadow-main-bg-light"
+    >
+        <NavBar onMainPage={true} />
 
-        <div>
+        <section id="about">
             <blockquote class="mt-6 mb-4 border-l-2 pl-6 italic">
                 Since a young age, I have been mesmerized by computers and the
                 limitless things you can create with them. Around this time, I
@@ -91,19 +96,20 @@
             </blockquote>
 
             <p class="text-center">
-                Currently employed as a <b>Software Engineer</b>.
+                Currently <i>employed</i> as a <b>Software Engineer</b>.
             </p>
-        </div>
+        </section>
 
-        <Separator class="my-12" />
+        <Separator id="games" class="my-12" />
 
         <!-- Games -->
-        <article>
-            <h2 class="text-center font-bold text-4xl italic">
-                Games I have worked on over the years...
+        <section>
+            <h2 class="tracking-wide text-center font-bold text-4xl italic">
+                <span class="font-extrabold text-rose-600">Games</span> I have worked
+                on over the years...
             </h2>
             <br />
-            <p class="text-center mx-32 mb-8">
+            <p class="text-center sm:mx-32 mb-8">
                 These are the latest games I have worked on in my own time to
                 better master game development and programming techniques. These
                 games were created with various game engines.
@@ -116,6 +122,7 @@
                     name="B. D. P. T."
                     link="https://jaydensippy.itch.io/burning-down-peasant-town"
                     imageName="bdpt1.jpg"
+                    altImageText="Burning Down Peasant Town Game Image"
                     githubLink="https://github.com/jaydensipe/Burning-Down-Peasant-Town"
                     description="A game made in two weeks for the Pirate Software - Game Jam 14, made using the Godot game engine."
                 ></DescriptiveCard>
@@ -124,6 +131,7 @@
                     name="Bombah Bros"
                     githubLink="https://github.com/jaydensipe/Squire-AI"
                     imageName="bbros1.jpg"
+                    altImageText="Bombah Bros Game Image"
                     description="A W.I.P. multiplayer game made in the Godot game engine, similar to Super Smash Bros."
                 ></DescriptiveCard>
 
@@ -131,27 +139,30 @@
                     name="Splorer"
                     link="https://jaydensipe.github.io/splorer/"
                     imageName="splorerpic.webp"
+                    altImageText="Splorer Game Image"
                     githubLink="https://github.com/jaydensipe/Splorer"
                     description="A simple game made in WebGL, hosted on a custom web page; made for my Computer Graphics course."
                 ></DescriptiveCard>
             </div>
 
             <div class="flex justify-center my-8">
-                <Button variant="outline"
+                <Button variant="outline" href="/games"
                     ><Gamepad2 strokeWidth="1.5" class="mr-2" />View More Games</Button
                 >
             </div>
-        </article>
+        </section>
 
-        <Separator class="my-16" />
+        <Separator id="personal-projects" class="my-16" />
 
         <!-- Personal Projects -->
-        <article>
-            <h2 class="text-center font-bold text-4xl italic">
-                Personal Projects I have finished over the years...
+        <section>
+            <h2 class="tracking-wide text-center font-bold text-4xl italic">
+                <span class="font-extrabold text-cyan-600"
+                    >Personal Projects</span
+                > I have finished over the years...
             </h2>
             <br />
-            <p class="text-center mx-32 mb-8">
+            <p class="text-center sm:mx-32 mb-8">
                 These are the latest of the random personal projects I have
                 finished. These may come from personal projects I have completed
                 myself, or with the assistance of an online course.
@@ -162,12 +173,14 @@
                 <DescriptiveCard
                     name="Jay's Reusable Components and Things"
                     imageName="jrcat1.svg"
+                    altImageText="Jay's Reusable Components and Things Personal Project Image"
                     githubLink="https://github.com/jaydensipe/Jays-Reusable-Components-and-Things"
                     description="A package of reusable components and random things for the Godot game engine."
                 ></DescriptiveCard>
                 <DescriptiveCard
                     name="Squire AI"
                     imageName="indevpic1.webp"
+                    altImageText="Squire AI Personal Project Image"
                     githubLink="https://github.com/jaydensipe/Squire-AI"
                     description="P.O.C. AI assistant using ChatGPT integration, created for my Text Information Systems course."
                 ></DescriptiveCard>
@@ -176,18 +189,19 @@
                     name="UdemusDateus"
                     link="https://github.com/jaydensipe/Udemus-Dateus"
                     imageName="udpic.webp"
+                    altImageText="UdemusDateus Personal Project Image"
                     githubLink="https://github.com/jaydensipe/Splorer"
                     description="A fully functional dating web app created with help from a Udemy course, using ASP.NET and Angular (hosted on Microsoft Azure)."
                 ></DescriptiveCard>
             </div>
 
             <div class="flex justify-center my-8">
-                <Button variant="outline"
+                <Button variant="outline" href="/personal-projects"
                     ><LibraryBig strokeWidth="1.5" class="mr-2" />View More
                     Projects</Button
                 >
             </div>
-        </article>
+        </section>
 
         <Separator class="my-16" />
     </main>

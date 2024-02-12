@@ -10,7 +10,9 @@
 </script>
 
 <div>
-    <Card.Root class="bg-transparent w-96 text-center border-0 shadow-none">
+    <Card.Root
+        class="bg-transparent w-[23rem] text-center border-0 shadow-none"
+    >
         <Card.Header>
             <a class="m-0 p-0" href={link}>
                 <img
@@ -22,14 +24,9 @@
             <br />
             <Card.Title>
                 {#if link}
-                    <a
-                        class="hyperlink tracking-wide font-bold uppercase"
-                        href={link}
-                    >
-                        {name}</a
-                    >
+                    <a class="hyperlink card-title" href={link}> {name}</a>
                 {:else}
-                    <span class="tracking-wide font-bold uppercase">
+                    <span class="card-title">
                         {name}
                     </span>
                 {/if}

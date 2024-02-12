@@ -1,42 +1,123 @@
 <script lang="ts">
     import Footer from "$lib/components/jay/footer/footer.svelte";
     import NavBar from "$lib/components/jay/nav-bar/nav-bar.svelte";
+    import ProjectCard from "$lib/components/jay/project-card/project-card.svelte";
+    import PageHeader from "$lib/components/jay/page-header/page-header.svelte";
 
     import { Separator } from "$lib/components/ui/separator";
+    import { MoveLeft, MoveRight } from "lucide-svelte";
+    import * as Carousel from "$lib/components/ui/carousel/index.js";
 </script>
 
 <head>
     <title>Projects - Jayden Sipe</title>
 </head>
 
-<body class="sm:mx-20 flex flex-col items-center justify-center">
-    <!-- Header -->
-    <header class="text-center">
-        <h1 class="text-7xl sm:text-9xl pt-16 pb-8 font-medium">
-            Personal Projects
-        </h1>
-        <p class="mx-8 pb-8">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
-            magnam molestias suscipit harum temporibus dolorum eligendi incidunt
-            repudiandae reprehenderit commodi. Iure commodi ab rerum et aliquid
-            explicabo soluta quis cupiditate?
-        </p>
-    </header>
+<!-- Header -->
+<PageHeader
+    name="Personal Projects"
+    color="text-cyan-500"
+    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam magnam
+molestias suscipit harum temporibus dolorum eligendi incidunt
+repudiandae reprehenderit commodi. Iure commodi ab rerum et aliquid
+explicabo soluta quis cupiditate?"
+></PageHeader>
 
-    <Separator class="my-16" />
+<Separator class="my-16"></Separator>
 
-    <!-- Main Container -->
-    <main
-        class="container bg-white pt-8 shadow-main-bg-light-mobile sm:shadow-main-bg-light"
+<!-- Main Container -->
+<main
+    class="container bg-white pt-8 shadow-main-bg-light-mobile sm:shadow-main-bg-light"
+>
+    <NavBar />
+
+    <!-- Personal Projects Page -->
+    <section
+        class="flex flex-col justify-center items-center divide-y gap-8 mb-16 sm:mx-16"
     >
-        <NavBar />
+        <ProjectCard
+            name="Jay's Reusable Components and Things"
+            language="GDScript"
+            githubLink="https://github.com/jaydensipe/Jays-Reusable-Components-and-Things"
+            imageName="jrcat1.svg"
+            altImageText="Jay's Reusable Components and Things Project Big Image"
+            description="lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam magnam molestias suscipit harum temporibus dolorum eligendi incidunt repudiandae reprehenderit commodi. Iure commodi ab rerum et aliquid explicabo soluta quis cupiditate?"
+        ></ProjectCard>
+        <ProjectCard
+            name="Squire AI"
+            language="Python"
+            githubLink="https://github.com/jaydensipe/Squire-AI"
+            imageName="udpic2.webp"
+            altImageText="Squire AI Project Big Image"
+            description="lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam magnam molestias suscipit harum temporibus dolorum eligendi incidunt repudiandae reprehenderit commodi. Iure commodi ab rerum et aliquid explicabo soluta quis cupiditate?"
+        ></ProjectCard>
+        <ProjectCard
+            name="UdemusDateus"
+            language="Asp.NET Core & Angular"
+            githubLink="https://github.com/jaydensipe/Udemus-Dateus"
+            imageName="udpic2.webp"
+            altImageText="UdemusDateus Project Big Image"
+            description="This is a fully functioning dating web application created with help from a Udemy course. It utilizes ASP.NET Core for the backend and Angular for the frontend. Users can register, login and edit their profiles. Members are also able to like other members, upload photos for their profile, chat with other members, etc. Hosted on Microsoft's Azure Cloud Service."
+        ></ProjectCard>
+        <ProjectCard
+            name="The Gravestone Project"
+            language="React & Express.JS"
+            imageName="tgppic1.webp"
+            altImageText="The Gravestone Project Project Big Image"
+            description="This is the project that served as my capstone for my college degree. During development of this project, I worked as a frontend developer, but, as work piled up, took upon the role as a full-stack developer. This project taught me an immense amount about working with a team as well as providing for a sponsor that requested a product."
+        ></ProjectCard>
+        <ProjectCard
+            name="WhereWeLivin"
+            language=".NET Framework"
+            imageName="wwl2.webp"
+            altImageText="WhereWeLivin Project Big Image"
+            description="This is the project that served as my capstone for my college degree. During development of this project, I worked as a frontend developer, but, as work piled up, took upon the role as a full-stack developer. This project taught me an immense amount about working with a team as well as providing for a sponsor that requested a product."
+        ></ProjectCard>
 
-        <!-- Personal Projects Page -->
-        <section></section>
-
-        <Separator class="my-16" />
-    </main>
-</body>
+        <div
+            class=" bg-yellow-50 flex justify-center items-center flex-col p-2"
+        >
+            <div class="mt-8 text-lg flex flex-row gap-4 text-muted-foreground">
+                <MoveLeft></MoveLeft>Archived Projects ⚠️<MoveRight></MoveRight>
+            </div>
+            <p class="text-muted-foreground text-sm">
+                Old, nasty code lies ahead... (Swipe)
+            </p>
+            <Carousel.Root class="max-w-80 sm:max-w-none sm:w-full">
+                <Carousel.Content>
+                    <Carousel.Item class="p-4">
+                        <ProjectCard
+                            name="Get2Gather"
+                            language="MERN Stack"
+                            imageName="g2g2.webp"
+                            altImageText="Get2Gather Project Big Image"
+                            description="This is a project I worked on in college with a group of 6 others. It served as an event manager website where a user could: submit an event and groups, post comments and use other features you'd expect from a website. My part of this project was working on frontend using React, and in doing so learned a great amount about the software development process."
+                        ></ProjectCard></Carousel.Item
+                    >
+                    <Carousel.Item class="p-4">
+                        <ProjectCard
+                            name="Hangman"
+                            language="Java"
+                            imageName="hangmanpic2.webp"
+                            altImageText="Hangman Project Big Image"
+                            description="This is a simple Hangman game I created in Java during some free time. I used it as an opportunity to use Java Swing in a project that wasn't being used for school. This was made with Java using the IntelliJ IDE."
+                        ></ProjectCard></Carousel.Item
+                    >
+                    <Carousel.Item>
+                        <ProjectCard
+                            name="Arithmetic Helper"
+                            language="Java"
+                            githubLink="https://github.com/jaydensipe/Arithmetic-Helper-Java"
+                            imageName="ah1.webp"
+                            altImageText="Arithmetic Helper Project Big Image"
+                            description="This is an arithmetic helper I created in Java in my first year of college. It takes inputs on basic arithmetic math problems and can output how long it took you to solve each problem, show average solve time, display a scoreboard and other neat features. This was made with Java using the Eclipse IDE."
+                        ></ProjectCard></Carousel.Item
+                    >
+                </Carousel.Content>
+            </Carousel.Root>
+        </div>
+    </section>
+</main>
 
 <!-- Footer -->
 <Footer />

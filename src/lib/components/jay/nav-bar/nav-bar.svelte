@@ -5,7 +5,7 @@
 </script>
 
 <nav
-    class="container mb-12 p-4 sm:p-0 backdrop-opacity-0 bg-slate-100 shadow-inner"
+    class="mb-12 p-4 sm:p-0 backdrop-opacity-0 bg-slate-100 shadow-inner"
 >
     <ul
         class="flex flex-col sm:flex-row divide-y sm:divide-none text-center justify-center"

@@ -4,7 +4,9 @@
     let year = new Date().getFullYear();
 </script>
 
-<footer class="flex flex-col gap-4 my-16 items-center justify-center">
+<footer
+    class="flex flex-col gap-4 my-16 items-center justify-center text-sm sm:text-base"
+>
     <div class="flex flex-row gap-8">
         <a
             class="text-muted-foreground hyperlink decoration-dotted"

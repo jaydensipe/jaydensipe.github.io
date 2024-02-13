@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { base } from "$app/paths";
     import NavButton from "./nav-button.svelte";
 
     export let onMainPage = false;
@@ -8,15 +9,18 @@
     <ul
         class="flex flex-col sm:flex-row divide-y sm:divide-none text-center justify-center"
     >
-        <NavButton
-            name={onMainPage ? "About" : "Back to Home"}
-            link={onMainPage ? "#about" : "{base}/"}
-        />
-        <NavButton name="Games" link={onMainPage ? "#games" : "/games"} />
-        <NavButton
-            name="Personal Projects"
-            link={onMainPage ? "#personal-projects" : "/personal-projects"}
-        />
+        {#if onMainPage}
+            <NavButton name="About" link="#about" />
+            <NavButton name="Games" link="#games" />
+            <NavButton name="Personal Projects" link="#personal-projects" />
+        {:else}
+            <NavButton name="Back to Home" link="{base}/" />
+            <NavButton name="Games" link="{base}/games" />
+            <NavButton
+                name="Personal Projects"
+                link="{base}/personal-projects"
+            />
+        {/if}
         <NavButton
             name="Resume"
             link="https://jaydensipe.github.io/JaydenSipeResume.pdf"

@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { base } from "$app/paths";
+
     export let name: string;
     export let language: string;
     export let githubLink: string = "";
@@ -10,7 +12,7 @@
 <div class="pt-4">
     <img
         class="float-left max-w-40 max-h-40 sm:max-w-80 sm:max-h-80 p-4"
-        src="/images/{imageName}"
+        src="{base}/images/{imageName}"
         alt={altImageText}
     />
     <div class="text-right mt-4 sm:mt-8">

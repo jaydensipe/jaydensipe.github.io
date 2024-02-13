@@ -5,14 +5,12 @@
     export let imageName: string;
     export let altImageText: string;
     export let description: string;
-
-    import { base } from "$app/paths";
 </script>
 
 <div class="pt-4">
     <img
         class="float-left max-w-40 max-h-40 sm:max-w-80 sm:max-h-80 p-4"
-        src="{base}/images/{imageName}"
+        src="/images/{imageName}"
         alt={altImageText}
     />
     <div class="text-right mt-4 sm:mt-8">

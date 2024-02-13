@@ -9,7 +9,6 @@
 
     import * as Card from "$lib/components/ui/card";
     import Badge from "$lib/components/ui/badge/badge.svelte";
-    import { base } from "$app/paths";
 </script>
 
 <div class="flex flex-col justify-center items-center gap-8 sm:gap-10 sm:mx-8">
@@ -20,7 +19,7 @@
         <Card.Header>
             <img
                 class="bg-red-100 rounded-lg"
-                src="{base}/images/{imageName}"
+                src="/images/{imageName}"
                 alt={altImageText}
             />
             <br />

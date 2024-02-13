@@ -1,8 +1,6 @@
 <script lang="ts">
     export let name: string;
     export let link: string = "";
-
-    import { base } from "$app/paths";
 </script>
 
 <li>

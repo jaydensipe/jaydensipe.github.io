@@ -13,7 +13,7 @@ const config = {
     // See https://kit.svelte.dev/docs/adapters for more information about adapters.
     adapter: adapter(),
     paths: {
-      base: process.argv.includes('dev') ? '' : "/jaydensipe.github.io"
+      base: process.env.NODE_ENV === "production" ? "/jaydensipe.github.io" : "",
     }
   },
 };

@@ -8,6 +8,7 @@
     export let noFillBgColor: string = "";
 
     import * as Card from "$lib/components/ui/card";
+    import { base } from "$app/paths";
 </script>
 
 <div>
@@ -18,7 +19,7 @@
             <a class="m-0 p-0" href={link}>
                 <img
                     class="{noFillBgColor} w-full scale-90 sm:scale-100 shadow-lg rounded-lg motion-safe:hover:scale-100 sm:hover:scale-110 hover:motion-safe:skew-y-2 transition duration-150 ease-out"
-                    src="/images/{imageName}"
+                    src="{base}/images/{imageName}"
                     alt={altImageText}
                 /></a
             >

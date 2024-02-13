@@ -13,6 +13,7 @@
     } from "lucide-svelte";
     import { Separator } from "$lib/components/ui/separator";
     import { Button } from "$lib/components/ui/button";
+    import { base } from "$app/paths";
 </script>
 
 <head>
@@ -144,7 +145,7 @@
         </div>
 
         <div class="flex justify-center my-8">
-            <Button variant="outline" href="/games"
+            <Button variant="outline" href="{base}/games"
                 ><Gamepad2 strokeWidth="1.5" class="mr-2" />View More Games</Button
             >
         </div>
@@ -195,7 +196,7 @@
         </div>
 
         <div class="flex justify-center my-8 mb-16">
-            <Button variant="outline" href="/personal-projects"
+            <Button variant="outline" href="{base}/personal-projects"
                 ><LibraryBig strokeWidth="1.5" class="mr-2" />View More Projects</Button
             >
         </div>

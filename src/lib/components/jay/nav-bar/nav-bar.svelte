@@ -2,6 +2,7 @@
     import NavButton from "./nav-button.svelte";
 
     export let onMainPage = false;
+    import { base } from "$app/paths";
 </script>
 
 <nav
@@ -14,10 +15,10 @@
             name={onMainPage ? "About" : "Back to Home"}
             link={onMainPage ? "#about" : "/"}
         />
-        <NavButton name="Games" link={onMainPage ? "#games" : "/games"} />
+        <NavButton name="Games" link={onMainPage ? "#games" : "{base}/games"} />
         <NavButton
             name="Personal Projects"
-            link={onMainPage ? "#personal-projects" : "/personal-projects"}
+            link={onMainPage ? "#personal-projects" : "{base}/personal-projects"}
         />
         <NavButton
             name="Resume"

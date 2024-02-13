@@ -26,14 +26,18 @@
         <span class="text-red-800">Sipe</span>
     </h1>
     <p class="mx-8 pb-8">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam magnam
-        molestias suscipit harum temporibus dolorum eligendi incidunt
-        repudiandae reprehenderit commodi. Iure commodi ab rerum et aliquid
-        explicabo soluta quis cupiditate?
+        Explore my <span class="font-semibold">portfolio</span>, where you can
+        delve into my array of
+        <span class="font-semibold">game development</span>
+        and <span class="font-semibold">personal projects</span>, as well as
+        review my
+        <span class="font-semibold">professional experience</span> as a developer.
     </p>
     <p class="pb-8">
-        - Made with <a class="hyperlink" href="https://kit.svelte.dev/"
-            >SvelteKit</a
+        - Made with <a
+            class="hyperlink"
+            href="https://kit.svelte.dev/"
+            target="_blank">SvelteKit</a
         > -
     </p>
 </header>
@@ -76,18 +80,17 @@
 
     <section id="about">
         <blockquote class="mt-6 mb-4 border-l-2 pl-6 italic">
-            Since a young age, I have been mesmerized by computers and the
+            Since an early age, I have been mesmerized by computers and the
             limitless things you can create with them. Around this time, I also
             began gaming which only further boosted my curiosity about
-            computers. I greatly love how games can be used to tell an
-            interactive story and appreciate all genres. Some personal favorites
-            include: Half-Life: Alyx, Life is Strange, Team Fortress 2, It Takes
-            Two, Psychonauts, Hellblade: Senua's Sacrifice, Hades, The Forest,
+            computers. I love how games can be used to tell an interactive story
+            and appreciate all genres. Some personal favorites include
+            Half-Life: Alyx, Life is Strange, Team Fortress 2, It Takes Two,
+            Psychonauts, Hellblade: Senua's Sacrifice, Hades, The Forest,
             Garry's Mod, Minecraft, Bioshock Infinite and many more that, if
-            listed, will fill this entire page. <br /><br />
-            While games are perhaps a more expressive way of demonstrating software
-            development and programming, I strive to advance my knowledge in all
-            areas of computer science.
+            listed, will fill this entire page. <br /> <br /> While games are, perhaps,
+            a more expressive way of demonstrating software development and programming,
+            I strive to advance my knowledge in all areas of computer science.
         </blockquote>
 
         <p class="text-center">
@@ -161,7 +164,7 @@
         <p class="text-center sm:mx-32 mb-8">
             These are the latest of the random personal projects I have
             finished. These may come from personal projects I have completed
-            myself, or with the assistance of an online course.
+            myself, or with the aid of an online course.
         </p>
         <div class="flex flex-wrap flex-shrink-0 flex-grow-0 justify-center">
             <DescriptiveCard
@@ -170,13 +173,15 @@
                 altImageText="Jay's Reusable Components and Things Personal Project Image"
                 githubLink="https://github.com/jaydensipe/Jays-Reusable-Components-and-Things"
                 description="A package of reusable components and random things for the Godot game engine."
+                noFillBgColor="bg-red-100"
             ></DescriptiveCard>
             <DescriptiveCard
                 name="Squire AI"
-                imageName="indevpic1.webp"
+                imageName="squire.svg"
                 altImageText="Squire AI Personal Project Image"
                 githubLink="https://github.com/jaydensipe/Squire-AI"
                 description="P.O.C. AI assistant using ChatGPT integration, created for my Text Information Systems course."
+                noFillBgColor="bg-amber-100 p-4"
             ></DescriptiveCard>
 
             <DescriptiveCard

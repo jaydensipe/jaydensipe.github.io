@@ -16,12 +16,12 @@
     <div class="text-right mt-4 sm:mt-8">
         <span class="card-title text-sm sm:text-xl"
             ><a
-                class="hyperlink underline-offset-4 text-cyan-800"
+                class="hyperlink underline-offset-4 text-cyan-700"
                 href={githubLink}
             >
                 {name}</a
             >
-            made with <i class="text-cyan-800">{language}</i></span
+            made with <i class="text-cyan-700">{language}</i></span
         >
         <p class="mt-4">
             {description}

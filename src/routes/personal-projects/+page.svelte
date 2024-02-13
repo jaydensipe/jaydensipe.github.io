@@ -14,14 +14,7 @@
 </head>
 
 <!-- Header -->
-<PageHeader
-    name="Personal Projects"
-    color="text-cyan-500"
-    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam magnam
-molestias suscipit harum temporibus dolorum eligendi incidunt
-repudiandae reprehenderit commodi. Iure commodi ab rerum et aliquid
-explicabo soluta quis cupiditate?"
-></PageHeader>
+<PageHeader name="Personal Projects" color="text-cyan-500"></PageHeader>
 
 <Separator class="my-16"></Separator>
 
@@ -33,7 +26,7 @@ explicabo soluta quis cupiditate?"
 
     <!-- Personal Projects Page -->
     <section
-        class="flex flex-col justify-center items-center divide-y gap-8 mb-16 sm:mx-16"
+        class="flex flex-col justify-center items-center divide-y gap-8 mb-16 sm:mx-4"
     >
         <ProjectCard
             name="Jay's Reusable Components and Things"
@@ -47,9 +40,9 @@ explicabo soluta quis cupiditate?"
             name="Squire AI"
             language="Python"
             githubLink="https://github.com/jaydensipe/Squire-AI"
-            imageName="udpic2.webp"
+            imageName="squire.svg"
             altImageText="Squire AI Project Big Image"
-            description="lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam magnam molestias suscipit harum temporibus dolorum eligendi incidunt repudiandae reprehenderit commodi. Iure commodi ab rerum et aliquid explicabo soluta quis cupiditate?"
+            description="Squire is an AI (Artificial Intelligence) assistant built with modularity in mind to be able to add extra functionality easily. It was built using Python, along with spaCy, TensorFlow and LangChain. Created for a school project for the master's program at the University of Illinois Urbana-Champaign."
         ></ProjectCard>
         <ProjectCard
             name="UdemusDateus"
@@ -57,21 +50,21 @@ explicabo soluta quis cupiditate?"
             githubLink="https://github.com/jaydensipe/Udemus-Dateus"
             imageName="udpic2.webp"
             altImageText="UdemusDateus Project Big Image"
-            description="This is a fully functioning dating web application created with help from a Udemy course. It utilizes ASP.NET Core for the backend and Angular for the frontend. Users can register, login and edit their profiles. Members are also able to like other members, upload photos for their profile, chat with other members, etc. Hosted on Microsoft's Azure Cloud Service."
+            description="This is a fully functioning dating web app created with help from a Udemy course. It utilizes ASP.NET Core for the backend and Angular for the frontend. Users can register, login and edit their profiles. Members are also able to like other members, upload photos for their profile, chat with other members, etc. Previously hosted on Microsoft's Azure Cloud Service."
         ></ProjectCard>
         <ProjectCard
             name="The Gravestone Project"
             language="React & Express.JS"
             imageName="tgppic1.webp"
             altImageText="The Gravestone Project Project Big Image"
-            description="This is the project that served as my capstone for my college degree. During development of this project, I worked as a frontend developer, but, as work piled up, took upon the role as a full-stack developer. This project taught me an immense amount about working with a team as well as providing for a sponsor that requested a product."
+            description="This is the project that served as my capstone for my college degree. During development of this project, I worked as a frontend developer, but, as work piled up, took upon the role as a full-stack developer. This project taught me an immense amount about working with a team as well as providing for a client that requested a product."
         ></ProjectCard>
         <ProjectCard
             name="WhereWeLivin"
             language=".NET Framework"
             imageName="wwl2.webp"
             altImageText="WhereWeLivin Project Big Image"
-            description="This is the project that served as my capstone for my college degree. During development of this project, I worked as a frontend developer, but, as work piled up, took upon the role as a full-stack developer. This project taught me an immense amount about working with a team as well as providing for a sponsor that requested a product."
+            description="When talking with friends or family about the future, a topic that comes up a lot is potential places everyone would want to move to. I've always wanted an easy way to compile all these answers together to see if anyone shares common ground in their decisions. While that is my intended purpose for the application, it can be used in deciding any number of things, such as where to go on vacation, etc."
         ></ProjectCard>
 
         <div

@@ -11,7 +11,7 @@
     import Badge from "$lib/components/ui/badge/badge.svelte";
 </script>
 
-<div class="flex flex-col justify-center items-center gap-8 sm:gap-10 sm:mx-12">
+<div class="flex flex-col justify-center items-center gap-8 sm:gap-10 sm:mx-8">
     <Badge class="mt-8" variant="secondary">{date}</Badge>
     <Card.Root
         class="bg-transparent text-center shadow-sm sm:shadow-none sm:border-0"
@@ -28,13 +28,13 @@
             >
                 {#if link}
                     <a
-                        class="hyperlink card-title underline-offset-4 text-rose-800"
+                        class="hyperlink card-title underline-offset-4 text-rose-700"
                         href={link}
                     >
                         {name}</a
                     >
                 {:else}
-                    <span class="card-title text-rose-800">
+                    <span class="card-title text-rose-700">
                         {name}
                     </span>
                 {/if}

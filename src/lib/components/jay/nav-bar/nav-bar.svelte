@@ -10,7 +10,7 @@
     >
         <NavButton
             name={onMainPage ? "About" : "Back to Home"}
-            link={onMainPage ? "#about" : "/"}
+            link={onMainPage ? "#about" : "{base}/"}
         />
         <NavButton name="Games" link={onMainPage ? "#games" : "/games"} />
         <NavButton

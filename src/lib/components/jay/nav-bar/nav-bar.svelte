@@ -8,15 +8,15 @@
     <ul
         class="flex flex-col sm:flex-row divide-y sm:divide-none text-center justify-center"
     >
-        <!-- <NavButton
+        <NavButton
             name={onMainPage ? "About" : "Back to Home"}
-            link={onMainPage ? "#about" : "/"}
+            link={onMainPage ? "#about" : "{base}/"}
         />
-        <NavButton name="Games" link={onMainPage ? "#games" : "/games"} />
+        <NavButton name="Games" link={onMainPage ? "#games" : "{base}/games"} />
         <NavButton
             name="Personal Projects"
-            link={onMainPage ? "#personal-projects" : "/personal-projects"}
-        /> -->
+            link={onMainPage ? "#personal-projects" : "{base}/personal-projects"}
+        />
         <NavButton
             name="Resume"
             link="https://jaydensipe.github.io/JaydenSipeResume.pdf"

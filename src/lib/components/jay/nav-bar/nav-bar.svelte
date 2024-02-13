@@ -15,10 +15,10 @@
             name={onMainPage ? "About" : "Back to Home"}
             link={onMainPage ? "#about" : "/"}
         />
-        <NavButton name="Games" link={onMainPage ? "#games" : "{base}/games"} />
+        <NavButton name="Games" link="{base}/{onMainPage ? "#games" : "/games"}" />
         <NavButton
             name="Personal Projects"
-            link={onMainPage ? "#personal-projects" : "{base}/personal-projects"}
+            link="{base}/{onMainPage ? "#personal-projects" : "/personal-projects"}"
         />
         <NavButton
             name="Resume"

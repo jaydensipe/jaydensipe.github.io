@@ -187,7 +187,7 @@
 
             <DescriptiveCard
                 name="Narrative Visualization Exploration"
-                link="{base}/narrative-visualization"
+                link="{base}/narrative-visualization/index.html"
                 imageName="nve.svg"
                 altImageText="Narrative Visualization Exploration Personal Project Image"
                 githubLink="https://github.com/jaydensipe/Narrative-Visualization-Exploration"

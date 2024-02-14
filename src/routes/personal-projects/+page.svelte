@@ -45,6 +45,14 @@
             description="Squire is an AI (Artificial Intelligence) assistant built with modularity in mind to be able to add extra functionality easily. It was built using Python, along with spaCy, TensorFlow and LangChain. Created for a school project for the master's program at the University of Illinois Urbana-Champaign."
         ></ProjectCard>
         <ProjectCard
+            name="Narrative Visualization Exploration"
+            language="D3.js, Node.js"
+            githubLink="https://github.com/jaydensipe/Narrative-Visualization-Exploration"
+            imageName="nve.svg"
+            altImageText="Narrative Visualization Exploration Project Big Image"
+            description="lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam magnam molestias suscipit harum temporibus dolorum eligendi incidunt repudiandae reprehenderit commodi. Iure commodi ab rerum et aliquid explicabo soluta quis cupiditate?"
+        ></ProjectCard>
+        <ProjectCard
             name="UdemusDateus"
             language="Asp.NET Core & Angular"
             githubLink="https://github.com/jaydensipe/Udemus-Dateus"

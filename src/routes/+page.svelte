@@ -186,12 +186,13 @@
             ></DescriptiveCard>
 
             <DescriptiveCard
-                name="UdemusDateus"
-                link="https://github.com/jaydensipe/Udemus-Dateus"
-                imageName="udpic.webp"
-                altImageText="UdemusDateus Personal Project Image"
-                githubLink="https://github.com/jaydensipe/Splorer"
-                description="A fully functional dating web app created with help from a Udemy course, using ASP.NET and Angular (hosted on Microsoft Azure)."
+                name="Narrative Visualization Exploration"
+                link="{base}/narrative-visualization"
+                imageName="nve.svg"
+                altImageText="Narrative Visualization Exploration Personal Project Image"
+                githubLink="https://github.com/jaydensipe/Narrative-Visualization-Exploration"
+                description="An exploration into data visualization techniques, for my Data Visualization course."
+                noFillBgColor="bg-green-100 p-1"
             ></DescriptiveCard>
         </div>
 

@@ -1,6 +1,5 @@
 <script lang="ts">
     import DescriptiveCard from "$lib/components/jay/descriptive-card/descriptive-card.svelte";
-    import Footer from "$lib/components/jay/footer/footer.svelte";
     import NavBar from "$lib/components/jay/nav-bar/nav-bar.svelte";
 
     import * as Command from "$lib/components/ui/command";
@@ -10,10 +9,13 @@
         Joystick,
         LibraryBig,
         Gamepad2,
+        Moon,
+        Sun,
     } from "lucide-svelte";
     import { Separator } from "$lib/components/ui/separator";
     import { Button } from "$lib/components/ui/button";
     import { base } from "$app/paths";
+    import { toggleMode } from "mode-watcher";
 </script>
 
 <head>
@@ -48,6 +50,12 @@
     <Command.Input placeholder="Type a query to search..." />
     <Command.List>
         <Command.Empty>No results found.</Command.Empty>
+        <Command.Group heading="Actions">
+            <Command.Item onSelect={toggleMode} class="cursor-pointer">
+                <Sun class="mr-2 h-4 w-4" />
+                <span>Toggle Dark Mode</span>
+            </Command.Item></Command.Group
+        >
         <Command.Group heading="Links">
             <a href="https://github.com/jaydensipe" target="_blank"
                 ><Command.Item class="cursor-pointer">
@@ -75,7 +83,7 @@
 
 <!-- Main Container -->
 <main
-    class="container bg-white pt-8 shadow-main-bg-light-mobile sm:shadow-main-bg-light"
+    class="container bg-card pt-8 shadow-main-bg-light-mobile dark:shadow-main-bg-dark-mobile sm:dark:shadow-main-bg-dark sm:shadow-main-bg-light"
 >
     <NavBar onMainPage={true} />
 
@@ -104,7 +112,7 @@
     <!-- Games -->
     <section>
         <h2
-            class="tracking-wide text-center font-bold text-4xl italic bg-rose-50 p-4"
+            class="tracking-wide text-center font-bold text-4xl italic bg-rose-50 dark:bg-zinc-700 p-4"
         >
             <span class="font-extrabold text-rose-600">Games</span> I have worked
             on over the years...
@@ -156,7 +164,7 @@
     <!-- Personal Projects -->
     <section>
         <h2
-            class="tracking-wide text-center font-bold text-4xl italic bg-cyan-50 p-4"
+            class="tracking-wide text-center font-bold text-4xl italic bg-cyan-50 dark:bg-zinc-700 p-4"
         >
             <span class="font-extrabold text-cyan-600">Personal Projects</span> I
             have finished over the years...
@@ -203,6 +211,3 @@
         </div>
     </section>
 </main>
-
-<!-- Footer -->
-<Footer />

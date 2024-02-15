@@ -16,13 +16,21 @@
         class="bg-transparent w-[23rem] text-center border-0 shadow-none"
     >
         <Card.Header>
-            <a class="m-0 p-0" href={link}>
+            {#if link}
+                <a class="m-0 p-0" href={link}>
+                    <img
+                        class="{noFillBgColor} w-full scale-90 sm:scale-100 shadow-lg rounded-lg motion-safe:hover:scale-100 sm:hover:scale-110 hover:motion-safe:skew-y-2 transition duration-150 ease-out"
+                        src="{base}/images/{imageName}"
+                        alt={altImageText}
+                    /></a
+                >
+            {:else}
                 <img
                     class="{noFillBgColor} w-full scale-90 sm:scale-100 shadow-lg rounded-lg motion-safe:hover:scale-100 sm:hover:scale-110 hover:motion-safe:skew-y-2 transition duration-150 ease-out"
                     src="{base}/images/{imageName}"
                     alt={altImageText}
-                /></a
-            >
+                />
+            {/if}
             <br />
             <Card.Title>
                 {#if link}

@@ -25,7 +25,7 @@
             >
             made with <i class="text-cyan-700">{language}</i></span
         >
-        <p class="mt-4">
+        <p class="mt-4 text-sm sm:text-base">
             {description}
         </p>
     </div>

@@ -50,7 +50,7 @@
             </Card.Title>
         </Card.Header>
         <Card.Content>
-            <p class="max-w-6xl">
+            <p class="max-w-6xl text-sm sm:text-base">
                 {description}
             </p>
         </Card.Content>

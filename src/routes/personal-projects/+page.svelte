@@ -1,5 +1,4 @@
 <script lang="ts">
-    import Footer from "$lib/components/jay/footer/footer.svelte";
     import NavBar from "$lib/components/jay/nav-bar/nav-bar.svelte";
     import ProjectCard from "$lib/components/jay/project-card/project-card.svelte";
     import PageHeader from "$lib/components/jay/page-header/page-header.svelte";
@@ -20,7 +19,7 @@
 
 <!-- Main Container -->
 <main
-    class="container bg-white pt-8 shadow-main-bg-light-mobile sm:shadow-main-bg-light"
+    class="container bg-card pt-8 shadow-main-bg-light-mobile sm:shadow-main-bg-light"
 >
     <NavBar />
 
@@ -34,7 +33,7 @@
             githubLink="https://github.com/jaydensipe/Jays-Reusable-Components-and-Things"
             imageName="jrcat1.svg"
             altImageText="Jay's Reusable Components and Things Project Big Image"
-            description="lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam magnam molestias suscipit harum temporibus dolorum eligendi incidunt repudiandae reprehenderit commodi. Iure commodi ab rerum et aliquid explicabo soluta quis cupiditate?"
+            description="This is a set of reusable components for the Godot game engine. As I built games I noticed I was recreating the same functionality over and over again, so I decided to create a repository for them. This repository is a work in progress and will be updated as I create more games and find more components that can be made reusable."
         ></ProjectCard>
         <ProjectCard
             name="Squire AI"
@@ -50,7 +49,7 @@
             githubLink="https://github.com/jaydensipe/Narrative-Visualization-Exploration"
             imageName="nve.svg"
             altImageText="Narrative Visualization Exploration Project Big Image"
-            description="lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam magnam molestias suscipit harum temporibus dolorum eligendi incidunt repudiandae reprehenderit commodi. Iure commodi ab rerum et aliquid explicabo soluta quis cupiditate?"
+            description="This was a deep dive into a narrative visualization using the interactive slideshow structure. This was also a learning opportunity for D3.js. Note: take the data with a grain of salt, dataset was not verified. Created for a school project for the master's program at the University of Illinois Urbana-Champaign."
         ></ProjectCard>
         <ProjectCard
             name="UdemusDateus"
@@ -119,6 +118,3 @@
         </div>
     </section>
 </main>
-
-<!-- Footer -->
-<Footer />

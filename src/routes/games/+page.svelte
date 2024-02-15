@@ -1,5 +1,4 @@
 <script lang="ts">
-    import Footer from "$lib/components/jay/footer/footer.svelte";
     import NavBar from "$lib/components/jay/nav-bar/nav-bar.svelte";
     import GameCard from "$lib/components/jay/game-card/game-card.svelte";
 
@@ -18,7 +17,7 @@
 
 <!-- Main Container -->
 <main
-    class="container bg-white pt-8 shadow-main-bg-light-mobile sm:shadow-main-bg-light"
+    class="container bg-card pt-8 shadow-main-bg-light-mobile sm:shadow-main-bg-light"
 >
     <NavBar />
 
@@ -95,6 +94,3 @@
         />
     </section>
 </main>
-
-<!-- Footer -->
-<Footer />

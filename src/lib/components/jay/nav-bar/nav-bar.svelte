@@ -6,7 +6,7 @@
 </script>
 
 <nav
-    class="mb-12 p-4 sm:p-0 backdrop-opacity-0 dark:bg-rose-700 bg-slate-100 shadow-inner bg-opacity-90 backdrop-blur-sm"
+    class="mb-12 p-4 hidden sm:block sm:p-0 dark:bg-rose-700 bg-slate-100 shadow-inner backdrop-blur-sm"
 >
     <ul
         class="flex flex-col sm:flex-row divide-y sm:divide-none text-center justify-center"

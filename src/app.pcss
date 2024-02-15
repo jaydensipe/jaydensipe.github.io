@@ -55,13 +55,18 @@
   body {
     @apply bg-background text-foreground;
   }
+  main {
+    @apply container bg-card pt-8 shadow-main-bg-light-mobile dark:shadow-main-bg-dark-mobile sm:shadow-main-bg-light sm:dark:shadow-main-bg-dark 
+  }
+
   .card-title {
     @apply tracking-wide font-bold uppercase;
   }
+  
   .hyperlink {
     @apply underline underline-offset-2 decoration-from-font;
   }
   .hyperlink:hover {
-    @apply text-red-500 transition ease-in-out; 
+    @apply text-red-500 dark:text-green-500 transition ease-in-out; 
   }
 }

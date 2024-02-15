@@ -29,13 +29,13 @@
             >
                 {#if link}
                     <a
-                        class="hyperlink card-title underline-offset-4 text-rose-700"
+                        class="hyperlink card-title underline-offset-4 text-rose-700 dark:text-rose-500"
                         href={link}
                     >
                         {name}</a
                     >
                 {:else}
-                    <span class="card-title text-rose-700">
+                    <span class="card-title text-rose-700 dark:text-rose-500">
                         {name}
                     </span>
                 {/if}

@@ -6,6 +6,7 @@
     import { Separator } from "$lib/components/ui/separator";
     import { MoveLeft, MoveRight } from "lucide-svelte";
     import * as Carousel from "$lib/components/ui/carousel/index.js";
+    import PageSheet from "$lib/components/jay/page-sheet/page-sheet.svelte";
 </script>
 
 <head>
@@ -18,9 +19,7 @@
 <Separator class="my-16"></Separator>
 
 <!-- Main Container -->
-<main
-    class="container bg-card pt-8 shadow-main-bg-light-mobile sm:shadow-main-bg-light"
->
+<main>
     <NavBar />
 
     <!-- Personal Projects Page -->
@@ -75,7 +74,7 @@
         ></ProjectCard>
 
         <div
-            class=" bg-yellow-50 flex justify-center items-center flex-col p-2"
+            class=" bg-yellow-50 dark:bg-stone-800 flex justify-center items-center flex-col p-2"
         >
             <div class="mt-8 text-lg flex flex-row gap-4 text-muted-foreground">
                 <MoveLeft></MoveLeft>Archived Projects ⚠️<MoveRight></MoveRight>
@@ -118,3 +117,6 @@
         </div>
     </section>
 </main>
+
+<!-- Sheet -->
+<PageSheet></PageSheet>

@@ -16,9 +16,9 @@ const config = {
 		extend: {
 			boxShadow: {
 				"main-bg-light": "7px 7px #E3E2F0, 14px 14px #E2EFF0",
-				"main-bg-dark": "7px 7px #5747b8, 14px 14px #39b7c6",
+				"main-bg-dark": "7px 7px #12be94, 14px 14px #9412be",
 				"main-bg-light-mobile": "0px 7px #E3E2F0, 0px 14px #E2EFF0, 0px -7px #E3E2F0, 0px -14px #E2EFF0",
-				"main-bg-dark-mobile": "0px 7px #b94c4e, 0px 14px #5e2728, 0px -7px #b94c4e, 0px -14px #5e2728"
+				"main-bg-dark-mobile": "0px 7px #12be94, 0px 14px #9412be, 0px -7px #12be94, 0px -14px #9412be"
 			},
 			colors: {
 				border: "hsl(var(--border) / <alpha-value>)",

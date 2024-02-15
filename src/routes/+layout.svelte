@@ -3,6 +3,8 @@
 
     import { afterNavigate, beforeNavigate } from "$app/navigation";
     import { ModeWatcher } from "mode-watcher";
+    import PageSheet from "$lib/components/jay/page-sheet/page-sheet.svelte";
+
     import "../app.pcss";
     import "@fontsource-variable/montserrat";
 

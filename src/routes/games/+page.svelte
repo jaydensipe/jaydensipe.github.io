@@ -4,6 +4,7 @@
 
     import { Separator } from "$lib/components/ui/separator";
     import PageHeader from "$lib/components/jay/page-header/page-header.svelte";
+    import PageSheet from "$lib/components/jay/page-sheet/page-sheet.svelte";
 </script>
 
 <head>
@@ -16,9 +17,7 @@
 <Separator class="my-16" />
 
 <!-- Main Container -->
-<main
-    class="container bg-card pt-8 shadow-main-bg-light-mobile sm:shadow-main-bg-light"
->
+<main>
     <NavBar />
 
     <!-- Games Page -->
@@ -94,3 +93,6 @@
         />
     </section>
 </main>
+
+<!-- Sheet -->
+<PageSheet></PageSheet>

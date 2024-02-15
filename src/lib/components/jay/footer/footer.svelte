@@ -12,7 +12,7 @@
             class="text-muted-foreground hyperlink decoration-dotted"
             href="mailto: work@jaydensipe.com">work@jaydensipe.com</a
         >
-        <a href="https://www.linkedin.com/in/jaydensipe/" target="_blank"
+        <a href="https://github.com/jaydensipe" target="_blank"
             ><Github
                 class="text-muted-foreground hyperlink cursor-pointer hover:scale-105"
             /></a

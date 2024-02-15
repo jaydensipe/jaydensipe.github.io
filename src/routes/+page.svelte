@@ -16,6 +16,7 @@
     import { Button } from "$lib/components/ui/button";
     import { base } from "$app/paths";
     import { toggleMode } from "mode-watcher";
+    import PageSheet from "$lib/components/jay/page-sheet/page-sheet.svelte";
 </script>
 
 <head>
@@ -26,7 +27,7 @@
 <header class="text-center max-w-5xl">
     <h1 class="text-7xl sm:text-9xl pt-16 pb-8 font-medium">
         <span class="text-gray-500">./</span> Jayden
-        <span class="text-red-800">Sipe</span>
+        <span class="text-red-800 dark:text-red-600 on">Sipe</span>
     </h1>
     <p class="mx-8 pb-8">
         Explore my <span class="font-semibold">portfolio</span>, where you can
@@ -47,13 +48,13 @@
 
 <!-- Command Bar -->
 <Command.Root class="rounded-lg border shadow-md max-w-80 sm:max-w-[450px]">
-    <Command.Input placeholder="Type a query to search..." />
     <Command.List>
         <Command.Empty>No results found.</Command.Empty>
         <Command.Group heading="Actions">
             <Command.Item onSelect={toggleMode} class="cursor-pointer">
-                <Sun class="mr-2 h-4 w-4" />
-                <span>Toggle Dark Mode</span>
+                <Sun class="mr-2 h-4 w-4 scale-100 dark:scale-0 absolute" />
+                <Moon class="mr-2 h-4 w-4 scale-0 dark:scale-100 absolute" />
+                <span class="ml-6">Toggle Dark Mode</span>
             </Command.Item></Command.Group
         >
         <Command.Group heading="Links">
@@ -82,9 +83,7 @@
 <Separator class="my-16"></Separator>
 
 <!-- Main Container -->
-<main
-    class="container bg-card pt-8 shadow-main-bg-light-mobile dark:shadow-main-bg-dark-mobile sm:dark:shadow-main-bg-dark sm:shadow-main-bg-light"
->
+<main>
     <NavBar onMainPage={true} />
 
     <section id="about">
@@ -112,7 +111,7 @@
     <!-- Games -->
     <section>
         <h2
-            class="tracking-wide text-center font-bold text-4xl italic bg-rose-50 dark:bg-zinc-700 p-4"
+            class="tracking-wide text-center font-bold text-4xl italic bg-rose-50 dark:bg-stone-700 p-4"
         >
             <span class="font-extrabold text-rose-600">Games</span> I have worked
             on over the years...
@@ -164,7 +163,7 @@
     <!-- Personal Projects -->
     <section>
         <h2
-            class="tracking-wide text-center font-bold text-4xl italic bg-cyan-50 dark:bg-zinc-700 p-4"
+            class="tracking-wide text-center font-bold text-4xl italic bg-cyan-50 dark:bg-gray-700 p-4"
         >
             <span class="font-extrabold text-cyan-600">Personal Projects</span> I
             have finished over the years...
@@ -211,3 +210,6 @@
         </div>
     </section>
 </main>
+
+<!-- Sheet -->
+<PageSheet></PageSheet>

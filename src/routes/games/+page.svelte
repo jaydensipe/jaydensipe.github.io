@@ -7,9 +7,13 @@
     import PageSheet from "$lib/components/jay/page-sheet/page-sheet.svelte";
 </script>
 
-<head>
+<svelte:head>
     <title>Games - Jayden Sipe</title>
-</head>
+    <meta
+        name="description"
+        content="Explore my games page, where you can view my array of game development projects and delve into the details of each one."
+    />
+</svelte:head>
 
 <!-- Header -->
 <PageHeader name="Games" color="text-rose-500"></PageHeader>
@@ -28,7 +32,7 @@
             name="Burning Down Peasant Town"
             link="https://jaydensippy.itch.io/burning-down-peasant-town"
             date="January 26th, 2024"
-            imageName="bdpt2.jpg"
+            imageName="bdpt2.webp"
             altImageText="Burning Down Peasant Town Game Big Image"
             githubLink="https://github.com/jaydensipe/Burning-Down-Peasant-Town"
             description="Burning Down Peasant Town is a chaotic fire management, tower defense-esque, FPS hybrid game about wreaking havoc on a village full of Peasants. This was created in two weeks for the Pirate Software Game Jam 14, with my best friend Stephen Schaefer. The theme of the Game Jam was “It’s spreading” and this is our interpretation of that. This was our first real exploration with creating a 3D game and emphasized on building reusable workflows we could apply to other projects, for example, preferring composition over inheritance."

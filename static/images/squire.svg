@@ -1,62 +1,32 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-	 viewBox="0 0 480 480" xml:space="preserve">
-<path style="fill:#FFB600;" d="M448,407.2c0,18.4-15.2,32.8-32.8,32.8H64.8C47.2,440,32,424.8,32,407.2V64.8
-	C32,47.2,47.2,32,64.8,32h349.6c18.4,0,32.8,15.2,32.8,32.8v342.4H448z"/>
-<path style="fill:#EDA006;" d="M32,64.8C32,47.2,47.2,32,64.8,32h349.6c18.4,0,32.8,15.2,32.8,32.8V408c0,18.4-15.2,32-32.8,32"/>
-<rect x="104" y="104" style="fill:#FF8500;" width="272" height="272"/>
-<g>
-	<polyline style="fill:#ED6E06;" points="104,104 376,104 376,376 	"/>
-	<path style="fill:#ED6E06;" d="M208,60.8c0,4-4,7.2-8,7.2l0,0c-4,0-8-3.2-8-7.2V7.2c0-4,4-7.2,8-7.2l0,0c4,0,8,3.2,8,7.2V60.8z"/>
-	<path style="fill:#ED6E06;" d="M248,60.8c0,4-4,7.2-8,7.2l0,0c-4,0-8-3.2-8-7.2V7.2c0-4,4-7.2,8-7.2l0,0c4,0,8,3.2,8,7.2V60.8z"/>
-	<path style="fill:#ED6E06;" d="M288,60.8c0,4-4,7.2-8,7.2l0,0c-4,0-8-3.2-8-7.2V7.2c0-4,4-7.2,8-7.2l0,0c4,0,8,3.2,8,7.2V60.8z"/>
-	<path style="fill:#ED6E06;" d="M248,472.8c0,4-4,7.2-8,7.2l0,0c-4,0-8-3.2-8-7.2v-53.6c0-4,4-7.2,8-7.2l0,0c4,0,8,3.2,8,7.2V472.8z
-		"/>
-	<path style="fill:#ED6E06;" d="M208,472.8c0,4-4,7.2-8,7.2l0,0c-4,0-8-3.2-8-7.2v-53.6c0-4,4-7.2,8-7.2l0,0c4,0,8,3.2,8,7.2V472.8z
-		"/>
-	<path style="fill:#ED6E06;" d="M288,472.8c0,4-4,7.2-8,7.2l0,0c-4,0-8-3.2-8-7.2v-53.6c0-4,4-7.2,8-7.2l0,0c4,0,8,3.2,8,7.2V472.8z
-		"/>
-	<path style="fill:#ED6E06;" d="M419.2,208c-4,0-7.2-4-7.2-8l0,0c0-4,3.2-8,7.2-8h53.6c4,0,7.2,4,7.2,8l0,0c0,4-3.2,8-7.2,8H419.2z"
-		/>
-	<path style="fill:#ED6E06;" d="M419.2,248c-4,0-7.2-4-7.2-8l0,0c0-4,3.2-8,7.2-8h53.6c4,0,7.2,4,7.2,8l0,0c0,4-3.2,8-7.2,8H419.2z"
-		/>
-	<path style="fill:#ED6E06;" d="M419.2,288c-4,0-7.2-4-7.2-8l0,0c0-4,3.2-8,7.2-8h53.6c4,0,7.2,4,7.2,8l0,0c0,4-3.2,8-7.2,8H419.2z"
-		/>
-	<path style="fill:#ED6E06;" d="M7.2,208c-4,0-7.2-4-7.2-8l0,0c0-4,3.2-8,7.2-8h53.6c4,0,7.2,4,7.2,8l0,0c0,4-3.2,8-7.2,8H7.2z"/>
-	<path style="fill:#ED6E06;" d="M7.2,248c-4,0-7.2-4-7.2-8l0,0c0-4,3.2-8,7.2-8h53.6c4,0,7.2,4,7.2,8l0,0c0,4-3.2,8-7.2,8H7.2z"/>
-	<path style="fill:#ED6E06;" d="M7.2,288c-4,0-7.2-4-7.2-8l0,0c0-4,3.2-8,7.2-8h53.6c4,0,7.2,4,7.2,8l0,0c0,4-3.2,8-7.2,8H7.2z"/>
-</g>
-<g>
-	<circle style="fill:#EDEA83;" cx="79.2" cy="76.8" r="15.2"/>
-	<circle style="fill:#EDEA83;" cx="400.8" cy="76.8" r="15.2"/>
-	<circle style="fill:#EDEA83;" cx="79.2" cy="403.2" r="15.2"/>
-	<circle style="fill:#EDEA83;" cx="400.8" cy="403.2" r="15.2"/>
-</g>
-<g>
-	<g>
-		<polyline style="fill:#EFB025;stroke:#EDEA82;stroke-linecap:round;stroke-miterlimit:10;" points="140,200 140,268 192,268 		"/>
-		<polyline style="fill:#EFB025;stroke:#EDEA82;stroke-linecap:round;stroke-miterlimit:10;" points="196,248 196,324 212,324 
-			212,356 280,356 		"/>
-		<line style="fill:none;stroke:#EDEA82;stroke-linecap:round;stroke-miterlimit:10;" x1="176" y1="236" x2="216" y2="236"/>
-		<polyline style="fill:#EFB025;stroke:#EDEA82;stroke-linecap:round;stroke-miterlimit:10;" points="254.4,300 309.6,356 268,356 
-			268,314.4 		"/>
-		<path style="fill:#EFB025;stroke:#EDEA82;stroke-linecap:round;stroke-miterlimit:10;" d="M165.6,352.8c-13.6,0-24-11.2-24-24
-			c0-13.6,11.2-24,24-24"/>
-		<polyline style="fill:#EFB025;stroke:#EDEA82;stroke-linecap:round;stroke-miterlimit:10;" points="120,164 140,164 140,184 		"/>
-	</g>
-	<g>
-		<polyline style="fill:#F48619;stroke:#EDEA82;stroke-linecap:round;stroke-miterlimit:10;" points="340,280 340,212 288,212 		"/>
-		<polyline style="fill:#F48619;stroke:#EDEA82;stroke-linecap:round;stroke-miterlimit:10;" points="284,232 284,156 268,156 
-			268,124 200,124 		"/>
-	</g>
-	<line style="fill:none;stroke:#EDEA82;stroke-linecap:round;stroke-miterlimit:10;" x1="304" y1="244" x2="264" y2="244"/>
-	<g>
-		<polyline style="fill:#F48619;stroke:#EDEA82;stroke-linecap:round;stroke-miterlimit:10;" points="225.6,181.6 170.4,124 
-			212,124 212,168 		"/>
-		<path style="fill:#F48619;stroke:#EDEA82;stroke-linecap:round;stroke-miterlimit:10;" d="M314.4,127.2c13.6,0,24,11.2,24,24
-			c0,13.6-11.2,24-24,24"/>
-		<polyline style="fill:#F48619;stroke:#EDEA82;stroke-linecap:round;stroke-miterlimit:10;" points="360,316 340,316 340,296 		"/>
-	</g>
-</g>
-</svg>
+<?xml version="1.0" ?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg width="800px" height="800px" viewBox="0 0 128 128" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<style type="text/css">
+	.st0{fill:#1CA2BB;}
+	.st1{fill:#EAC100;}
+</style>
+<g id="_x31_2_3D_Printing"/>
+<g id="_x31_1_VR_Gear"/>
+<g id="_x31_0_Virtual_reality"/>
+<g id="_x39__Augmented_reality"/>
+<g id="_x38__Teleport"/>
+<g id="_x37__Glassess"/>
+<g id="_x36__Folding_phone"/>
+<g id="_x35__Drone"/>
+<g id="_x34__Retina_scan"/>
+<g id="_x33__Smartwatch"/>
+<g id="_x32__Bionic_Arm"/>
+<g id="_x31__Chip">
+<g>
+<rect class="st0" height="48" width="32" x="48" y="36"/>
+<circle class="st1" cx="20" cy="28" r="8"/>
+<circle class="st1" cx="20" cy="92" r="8"/>
+<circle class="st1" cx="108" cy="52" r="8"/>
+<circle class="st1" cx="96" cy="100" r="8"/>
+<g>
+<path d="M108,40c-5.2,0-9.6,3.3-11.3,8H84V32h-8V20h-8v12h-8V20h-8v12h-8v16H24v-8.7c4.7-1.7,8-6.1,8-11.3c0-6.6-5.4-12-12-12     S8,21.4,8,28c0,5.2,3.3,9.6,8,11.3V56h28v8H16v16.7c-4.7,1.7-8,6.1-8,11.3c0,6.6,5.4,12,12,12s12-5.4,12-12c0-5.2-3.3-9.6-8-11.3     V72h20v16h8v12h8V88h8v12h8V88h8V72h8v16.7c-4.7,1.7-8,6.1-8,11.3c0,6.6,5.4,12,12,12s12-5.4,12-12c0-5.2-3.3-9.6-8-11.3V64H84     v-8h12.7c1.7,4.7,6.1,8,11.3,8c6.6,0,12-5.4,12-12S114.6,40,108,40z M20,24c2.2,0,4,1.8,4,4s-1.8,4-4,4s-4-1.8-4-4S17.8,24,20,24     z M20,96c-2.2,0-4-1.8-4-4s1.8-4,4-4s4,1.8,4,4S22.2,96,20,96z M96,104c-2.2,0-4-1.8-4-4s1.8-4,4-4s4,1.8,4,4S98.2,104,96,104z      M76,80H52V40h24V80z M108,56c-2.2,0-4-1.8-4-4s1.8-4,4-4s4,1.8,4,4S110.2,56,108,56z"/>
+<rect height="8" width="8" x="56" y="64"/>
+</g>
+</g>
+</g>
+</svg>

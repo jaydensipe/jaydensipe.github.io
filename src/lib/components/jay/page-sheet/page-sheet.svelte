@@ -1,13 +1,16 @@
 <script lang="ts">
     import {
         Menu,
-        ArrowLeftToLine,
+        ArrowLeftCircle,
         Github,
         Joystick,
         Linkedin,
         Moon,
         Sun,
         ArrowRightToLine,
+        ExternalLink,
+        LibraryBig,
+        Gamepad2,
     } from "lucide-svelte";
     import * as Sheet from "$lib/components/ui/sheet";
     import Separator from "$lib/components/ui/separator/separator.svelte";
@@ -24,35 +27,52 @@
     <Sheet.Content side="left">
         <Sheet.Header>
             <Sheet.Title
-                ><div class="flex flex-row gap-2 items-center">
+                ><div
+                    class="flex flex-row gap-2 items-center text-sm sm:text-lg"
+                >
                     <a class="hyperlink" href="{base}/"
-                        ><ArrowLeftToLine></ArrowLeftToLine></a
+                        ><ArrowLeftCircle></ArrowLeftCircle></a
                     >{$page.url.pathname.toUpperCase()}
                 </div></Sheet.Title
             >
             <Sheet.Description>
-                <div class="flex flex-col gap-6 items-start p-4">
+                <div class="flex flex-col gap-5 items-start p-4">
                     {#if $page.url.pathname == "/games"}
                         <a href="{base}/personal-projects">
-                            <p class="hyperlink decoration-transparent text-lg">
-                                Personal Projects
+                            <p
+                                class="flex flex-row items-center hyperlink decoration-transparent text-lg"
+                            >
+                                <LibraryBig
+                                    strokeWidth="1.5"
+                                    class="mr-2"
+                                />Personal Projects
                             </p>
                         </a>
                     {:else if $page.url.pathname == "/personal-projects"}
                         <a href="{base}/games">
-                            <p class="hyperlink decoration-transparent text-lg">
+                            <p
+                                class="flex flex-row items-center hyperlink decoration-transparent text-lg"
+                            >
+                                <Gamepad2 strokeWidth="1.5" class="mr-2" />
                                 Games
                             </p>
                         </a>
                     {:else if $page.url.pathname == "/"}
                         <a href="{base}/games">
-                            <p class="hyperlink decoration-transparent text-lg">
-                                Games
+                            <p
+                                class="flex flex-row items-center hyperlink decoration-transparent text-lg"
+                            >
+                                <Gamepad2 strokeWidth="1.5" class="mr-2" />Games
                             </p>
                         </a>
                         <a href="{base}/personal-projects">
-                            <p class="hyperlink decoration-transparent text-lg">
-                                Personal Projects
+                            <p
+                                class="flex flex-row items-center hyperlink decoration-transparent text-lg"
+                            >
+                                <LibraryBig
+                                    strokeWidth="1.5"
+                                    class="mr-2"
+                                />Personal Projects
                             </p>
                         </a>
                     {/if}
@@ -60,9 +80,12 @@
                         href="https://jaydensipe.github.io/JaydenSipeResume.pdf"
                         target="_blank"
                     >
-                        <p class="hyperlink decoration-transparent text-lg">
-                            Resume
-                        </p>
+                        <span
+                            class="flex flex-row gap-2 items-center hyperlink decoration-transparent text-lg"
+                        >
+                            <p>Resume</p>
+                            <ExternalLink></ExternalLink>
+                        </span>
                     </a>
 
                     <div class="flex flex-row gap-8">

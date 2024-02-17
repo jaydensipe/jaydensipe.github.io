@@ -19,9 +19,13 @@
     import PageSheet from "$lib/components/jay/page-sheet/page-sheet.svelte";
 </script>
 
-<head>
+<svelte:head>
     <title>Portfolio - Jayden Sipe</title>
-</head>
+    <meta
+        name="description"
+        content="Explore my portfolio, where you can delve into my array of game development and personal projects, as well as review my professional experience as a developer."
+    />
+</svelte:head>
 
 <!-- Header -->
 <header class="text-center max-w-5xl">
@@ -127,7 +131,7 @@
             <DescriptiveCard
                 name="B. D. P. T."
                 link="https://jaydensippy.itch.io/burning-down-peasant-town"
-                imageName="bdpt1.jpg"
+                imageName="bdpt1.webp"
                 altImageText="Burning Down Peasant Town Game Image"
                 githubLink="https://github.com/jaydensipe/Burning-Down-Peasant-Town"
                 description="A game made in two weeks for the Pirate Software - Game Jam 14, made using the Godot game engine."
@@ -189,7 +193,7 @@
                 altImageText="Squire AI Personal Project Image"
                 githubLink="https://github.com/jaydensipe/Squire-AI"
                 description="P.O.C. AI assistant using ChatGPT integration, created for my Text Information Systems course."
-                noFillBgColor="bg-amber-100 p-4"
+                noFillBgColor="bg-blue-100 p-4"
             ></DescriptiveCard>
 
             <DescriptiveCard

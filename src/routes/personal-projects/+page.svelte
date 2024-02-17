@@ -9,9 +9,13 @@
     import PageSheet from "$lib/components/jay/page-sheet/page-sheet.svelte";
 </script>
 
-<head>
+<svelte:head>
     <title>Projects - Jayden Sipe</title>
-</head>
+    <meta
+        name="description"
+        content="Explore my personal projects page, where you can view my array of projects and delve into the details of each one."
+    />
+</svelte:head>
 
 <!-- Header -->
 <PageHeader name="Personal Projects" color="text-cyan-500"></PageHeader>

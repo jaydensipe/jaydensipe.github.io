@@ -62,24 +62,36 @@
             </Command.Item></Command.Group
         >
         <Command.Group heading="Links">
-            <a href="https://github.com/jaydensipe" target="_blank"
-                ><Command.Item class="cursor-pointer">
+            <Command.Item class="cursor-pointer">
+                <a
+                    class="flex flex-row items-center"
+                    href="https://github.com/jaydensipe"
+                    target="_blank"
+                >
                     <Github class="mr-2 h-4 w-4" />
                     <span>GitHub</span>
-                </Command.Item>
-            </a>
-            <a href="https://www.linkedin.com/in/jaydensipe/" target="_blank">
-                <Command.Item class="cursor-pointer">
+                </a>
+            </Command.Item>
+            <Command.Item class="cursor-pointer">
+                <a
+                    class="flex flex-row items-center"
+                    href="https://www.linkedin.com/in/jaydensipe/"
+                    target="_blank"
+                >
                     <Linkedin class="mr-2 h-4 w-4" />
                     <span>LinkedIn</span>
-                </Command.Item>
-            </a>
-            <a href="https://jaydensippy.itch.io/" target="_blank">
-                <Command.Item class="cursor-pointer">
+                </a>
+            </Command.Item>
+            <Command.Item class="cursor-pointer">
+                <a
+                    class="flex flex-row items-center"
+                    href="https://jaydensippy.itch.io/"
+                    target="_blank"
+                >
                     <Joystick class="mr-2 h-4 w-4" />
                     <span>itch.io</span>
-                </Command.Item>
-            </a>
+                </a>
+            </Command.Item>
         </Command.Group>
     </Command.List>
 </Command.Root>

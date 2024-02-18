@@ -21,6 +21,7 @@
 
 <Sheet.Root>
     <Sheet.Trigger
+        aria-label="Open Menu"
         class="bg-card bg-opacity-50 shadow-lg backdrop-blur-lg rounded-md p-2 flex flex-row gap-2 decoration-trasparent hyperlink fixed left-4 top-4"
         ><Menu></Menu><ArrowRightToLine></ArrowRightToLine></Sheet.Trigger
     >

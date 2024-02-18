@@ -12,17 +12,26 @@
             class="text-muted-foreground hyperlink decoration-dotted"
             href="mailto: work@jaydensipe.com">work@jaydensipe.com</a
         >
-        <a href="https://github.com/jaydensipe" target="_blank"
+        <a
+            href="https://github.com/jaydensipe"
+            aria-label="Github Link"
+            target="_blank"
             ><Github
                 class="text-muted-foreground hyperlink cursor-pointer hover:scale-105"
             /></a
         >
-        <a href="https://www.linkedin.com/in/jaydensipe/" target="_blank"
+        <a
+            href="https://www.linkedin.com/in/jaydensipe/"
+            aria-label="LinkedIn Link"
+            target="_blank"
             ><Linkedin
                 class="text-muted-foreground hyperlink cursor-pointer hover:scale-105"
             /></a
         >
-        <a href="https://jaydensippy.itch.io/" target="_blank"
+        <a
+            href="https://jaydensippy.itch.io/"
+            target="_blank"
+            aria-label="itch.io Link"
             ><Joystick
                 class="text-muted-foreground hyperlink cursor-pointer hover:scale-105"
             /></a

@@ -19,6 +19,7 @@
             {#if link}
                 <a class="m-0 p-0" href={link}>
                     <img
+                        loading="lazy"
                         class="{noFillBgColor} w-full scale-90 sm:scale-100 shadow-lg rounded-lg motion-safe:hover:scale-100 sm:hover:scale-110 hover:motion-safe:skew-y-2 transition duration-150 ease-out"
                         src="{base}/images/{imageName}"
                         alt={altImageText}
@@ -26,6 +27,7 @@
                 >
             {:else}
                 <img
+                    loading="lazy"
                     class="{noFillBgColor} w-full scale-90 sm:scale-100 shadow-lg rounded-lg motion-safe:hover:scale-100 sm:hover:scale-110 hover:motion-safe:skew-y-2 transition duration-150 ease-out"
                     src="{base}/images/{imageName}"
                     alt={altImageText}

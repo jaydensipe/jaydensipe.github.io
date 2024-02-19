@@ -68,7 +68,7 @@
         <GameCard
             name="Solyanka"
             date="February 11, 2021"
-            link="images/solyankaexperimentvideo.mp4"
+            link="assets/solyankaexperimentvideo.mp4"
             imgSrc={solyankaImage}
             altImageText="Solyanka Game Big Image"
             description="Solyanka is a game I created while learning Unreal Engine 4, as following a linear tutorial of someone making a game really isn't how I learn best. While developing, I learned a vast number of things about Unreal Engine. Summing up most of what I learned includes: A.I. with behavior trees and blackboards, understanding the importance of not using EventTick excessively, widgets and user interface, blueprint programming, using Blender to create 3D models, landscape tools, utilizing a day/night cycle, using Megascans' Assets and just generally the Unreal Editor."

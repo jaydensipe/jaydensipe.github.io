@@ -7,7 +7,7 @@ const config = {
     tailwindcss(),
     //But others, like autoprefixer, need to run after,
     autoprefixer,
-   
+
   ],
 };
 

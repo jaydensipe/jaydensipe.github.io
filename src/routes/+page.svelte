@@ -1,6 +1,7 @@
 <script lang="ts">
     import DescriptiveCard from "$lib/components/jay/descriptive-card/descriptive-card.svelte";
     import NavBar from "$lib/components/jay/nav-bar/nav-bar.svelte";
+    import PageSheet from "$lib/components/jay/page-sheet/page-sheet.svelte";
 
     import * as Command from "$lib/components/ui/command";
     import {
@@ -16,14 +17,13 @@
     import { Button } from "$lib/components/ui/button";
     import { base } from "$app/paths";
     import { toggleMode } from "mode-watcher";
-    import PageSheet from "$lib/components/jay/page-sheet/page-sheet.svelte";
 
     import bdpt1Image from "$lib/images/bdpt1.webp?enhanced";
     import bbros1Image from "$lib/images/bbros1.jpg?enhanced";
     import splorerImage from "$lib/images/splorerpic.webp?enhanced";
-    import jrCat1Image from "$lib/images/jrcat1.svg?enhanced";
-    import squireImage from "$lib/images/squire.svg?enhanced";
-    import nveImage from "$lib/images/nve.svg?enhanced";
+    import jrCat1Image from "$lib/images/jrcat1.png?enhanced";
+    import squireImage from "$lib/images/squire.png?enhanced";
+    import nveImage from "$lib/images/nve.png?enhanced";
 </script>
 
 <svelte:head>
@@ -63,7 +63,7 @@
         <Command.Empty>No results found.</Command.Empty>
         <Command.Group heading="Actions">
             <Command.Item onSelect={toggleMode} class="cursor-pointer">
-                <div class="m-1">
+                <div class="m-1 sm:m-0">
                     <Sun class="mr-2 h-4 w-4 scale-100 dark:scale-0 absolute" />
                     <Moon
                         class="mr-2 h-4 w-4 scale-0 dark:scale-100 absolute"
@@ -75,7 +75,7 @@
         <Command.Group heading="Links">
             <Command.Item class="cursor-pointer">
                 <a
-                    class="flex flex-row items-center m-1"
+                    class="flex flex-row items-center m-1 sm:m-0"
                     href="https://github.com/jaydensipe"
                     target="_blank"
                 >
@@ -85,7 +85,7 @@
             </Command.Item>
             <Command.Item class="cursor-pointer">
                 <a
-                    class="flex flex-row items-center m-1"
+                    class="flex flex-row items-center m-1 sm:m-0"
                     href="https://www.linkedin.com/in/jaydensipe/"
                     target="_blank"
                 >
@@ -95,7 +95,7 @@
             </Command.Item>
             <Command.Item class="cursor-pointer">
                 <a
-                    class="flex flex-row items-center m-1"
+                    class="flex flex-row items-center m-1 sm:m-0"
                     href="https://jaydensippy.itch.io/"
                     target="_blank"
                 >
@@ -202,15 +202,15 @@
             myself, or with the aid of an online course.
         </p>
         <div class="flex flex-wrap flex-shrink-0 flex-grow-0 justify-center">
-            <!-- <DescriptiveCard
+            <DescriptiveCard
                 name="Jay's Reusable Components and Things"
                 imgSrc={jrCat1Image}
                 altImageText="Jay's Reusable Components and Things Personal Project Image"
                 githubLink="https://github.com/jaydensipe/Jays-Reusable-Components-and-Things"
                 description="A package of reusable components and random things for the Godot game engine."
                 noFillBgColor="bg-red-100"
-            ></DescriptiveCard> -->
-            <!-- <DescriptiveCard
+            ></DescriptiveCard>
+            <DescriptiveCard
                 name="Squire AI"
                 imgSrc={squireImage}
                 altImageText="Squire AI Personal Project Image"
@@ -227,7 +227,7 @@
                 githubLink="https://github.com/jaydensipe/Narrative-Visualization-Exploration"
                 description="An exploration into data visualization techniques, for my Data Visualization course."
                 noFillBgColor="bg-green-100 p-1"
-            ></DescriptiveCard> -->
+            ></DescriptiveCard>
         </div>
 
         <div class="flex justify-center my-8 mb-16">

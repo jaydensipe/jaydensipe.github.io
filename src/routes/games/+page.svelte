@@ -1,10 +1,10 @@
 <script lang="ts">
     import NavBar from "$lib/components/jay/nav-bar/nav-bar.svelte";
     import GameCard from "$lib/components/jay/game-card/game-card.svelte";
-
-    import { Separator } from "$lib/components/ui/separator";
     import PageHeader from "$lib/components/jay/page-header/page-header.svelte";
     import PageSheet from "$lib/components/jay/page-sheet/page-sheet.svelte";
+
+    import { Separator } from "$lib/components/ui/separator";
 
     import bdpt2Image from "$lib/images/bdpt2.webp?enhanced";
     import bbrosImage from "$lib/images/bbros2.jpg?enhanced";

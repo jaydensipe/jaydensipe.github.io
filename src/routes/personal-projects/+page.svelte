@@ -2,15 +2,15 @@
     import NavBar from "$lib/components/jay/nav-bar/nav-bar.svelte";
     import ProjectCard from "$lib/components/jay/project-card/project-card.svelte";
     import PageHeader from "$lib/components/jay/page-header/page-header.svelte";
+    import PageSheet from "$lib/components/jay/page-sheet/page-sheet.svelte";
 
     import { Separator } from "$lib/components/ui/separator";
     import { MoveLeft, MoveRight } from "lucide-svelte";
     import * as Carousel from "$lib/components/ui/carousel/index.js";
-    import PageSheet from "$lib/components/jay/page-sheet/page-sheet.svelte";
 
-    import jrcat1Image from "$lib/images/jrcat1.svg?enhanced";
-    import squireImage from "$lib/images/squire.svg?enhanced";
-    import nveImage from "$lib/images/nve.svg?enhanced";
+    import jrcat1Image from "$lib/images/jrcat1.png?enhanced";
+    import squireImage from "$lib/images/squire.png?enhanced";
+    import nveImage from "$lib/images/nve.png?enhanced";
     import udemusDateusImage from "$lib/images/udpic2.webp?enhanced";
     import tgppImage from "$lib/images/tgppic1.webp?enhanced";
     import wwlImage from "$lib/images/wwl2.webp?enhanced";
@@ -45,7 +45,6 @@
             language="GDScript"
             githubLink="https://github.com/jaydensipe/Jays-Reusable-Components-and-Things"
             imgSrc={jrcat1Image}
-            svg={true}
             altImageText="Jay's Reusable Components and Things Project Big Image"
             description="This is a set of reusable components for the Godot game engine. As I built games I noticed I was recreating the same functionality over and over again, so I decided to create a repository for them. This repository is a work in progress and will be updated as I create more games and find more components that can be made reusable."
         ></ProjectCard>
@@ -54,7 +53,6 @@
             language="Python"
             githubLink="https://github.com/jaydensipe/Squire-AI"
             imgSrc={squireImage}
-            svg={true}
             altImageText="Squire AI Project Big Image"
             description="Squire is an AI (Artificial Intelligence) assistant built with modularity in mind to be able to add extra functionality easily. It was built using Python, along with spaCy, TensorFlow and LangChain. Created for a school project for the master's program at the University of Illinois Urbana-Champaign."
         ></ProjectCard>
@@ -63,7 +61,6 @@
             language="D3.js, Node.js"
             githubLink="https://github.com/jaydensipe/Narrative-Visualization-Exploration"
             imgSrc={nveImage}
-            svg={true}
             altImageText="Narrative Visualization Exploration Project Big Image"
             description="This was a deep dive into a narrative visualization using the interactive slideshow structure. This was also a learning opportunity for D3.js. Note: take the data with a grain of salt, dataset was not verified. Created for a school project for the master's program at the University of Illinois Urbana-Champaign."
         ></ProjectCard>

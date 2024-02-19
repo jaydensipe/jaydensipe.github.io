@@ -1,21 +1,20 @@
 <script lang="ts">
-    import { base } from "$app/paths";
-
     export let name: string;
     export let language: string;
     export let githubLink: string = "";
-    export let imageName: string;
+    export let imgSrc: string;
+    export let svg: boolean = false;
     export let altImageText: string;
     export let description: string;
 </script>
 
 <div class="pt-4">
     <div class="float-left max-w-40 max-h-40 sm:max-w-80 sm:max-h-80 p-4">
-        <img
-            class="rounded-lg"
-            src="{base}/images/{imageName}"
-            alt={altImageText}
-        />
+        {#if svg}
+            <img class="rounded-lg" src={imgSrc} alt={altImageText} />
+        {:else}
+            <enhanced:img class="rounded-lg" src={imgSrc} alt={altImageText} />
+        {/if}
     </div>
     <div class="text-right mt-4 sm:mt-8">
         <span class="card-title text-sm sm:text-xl"

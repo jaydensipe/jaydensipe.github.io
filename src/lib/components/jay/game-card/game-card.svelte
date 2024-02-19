@@ -2,14 +2,13 @@
     export let name: string;
     export let link: string = "";
     export let date: string;
-    export let imageName: string;
+    export let imgSrc: string;
     export let altImageText: string;
     export let githubLink: string = "";
     export let description: string;
 
     import * as Card from "$lib/components/ui/card";
     import Badge from "$lib/components/ui/badge/badge.svelte";
-    import { base } from "$app/paths";
 </script>
 
 <div class="flex flex-col justify-center items-center gap-8 sm:gap-10 sm:mx-8">
@@ -18,9 +17,9 @@
         class="bg-transparent text-center shadow-sm sm:shadow-none sm:border-0"
     >
         <Card.Header>
-            <img
+            <enhanced:img
                 class="bg-red-100 rounded-lg"
-                src="{base}/images/{imageName}"
+                src={imgSrc}
                 alt={altImageText}
             />
             <br />

@@ -1,14 +1,13 @@
 <script lang="ts">
     export let name: string;
     export let link: string = "";
-    export let imageName: string;
+    export let imgSrc: string;
     export let altImageText: string;
     export let githubLink: string = "";
     export let description: string;
     export let noFillBgColor: string = "";
 
     import * as Card from "$lib/components/ui/card";
-    import { base } from "$app/paths";
 </script>
 
 <div>
@@ -18,18 +17,18 @@
         <Card.Header>
             {#if link}
                 <a class="m-0 p-0" href={link}>
-                    <img
+                    <enhanced:img
                         loading="lazy"
                         class="{noFillBgColor} w-full scale-90 sm:scale-100 shadow-lg rounded-lg motion-safe:hover:scale-100 sm:hover:scale-110 hover:motion-safe:skew-y-2 transition duration-150 ease-out"
-                        src="{base}/images/{imageName}"
+                        src={imgSrc}
                         alt={altImageText}
                     /></a
                 >
             {:else}
-                <img
+                <enhanced:img
                     loading="lazy"
                     class="{noFillBgColor} w-full scale-90 sm:scale-100 shadow-lg rounded-lg motion-safe:hover:scale-100 sm:hover:scale-110 hover:motion-safe:skew-y-2 transition duration-150 ease-out"
-                    src="{base}/images/{imageName}"
+                    src={imgSrc}
                     alt={altImageText}
                 />
             {/if}

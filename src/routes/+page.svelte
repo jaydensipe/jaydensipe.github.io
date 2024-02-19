@@ -17,6 +17,13 @@
     import { base } from "$app/paths";
     import { toggleMode } from "mode-watcher";
     import PageSheet from "$lib/components/jay/page-sheet/page-sheet.svelte";
+
+    import bdpt1Image from "$lib/images/bdpt1.webp?enhanced";
+    import bbros1Image from "$lib/images/bbros1.jpg?enhanced";
+    import splorerImage from "$lib/images/splorerpic.webp?enhanced";
+    import jrCat1Image from "$lib/images/jrcat1.svg?enhanced";
+    import squireImage from "$lib/images/squire.svg?enhanced";
+    import nveImage from "$lib/images/nve.svg?enhanced";
 </script>
 
 <svelte:head>
@@ -56,15 +63,19 @@
         <Command.Empty>No results found.</Command.Empty>
         <Command.Group heading="Actions">
             <Command.Item onSelect={toggleMode} class="cursor-pointer">
-                <Sun class="mr-2 h-4 w-4 scale-100 dark:scale-0 absolute" />
-                <Moon class="mr-2 h-4 w-4 scale-0 dark:scale-100 absolute" />
-                <span class="ml-6">Toggle Dark Mode</span>
+                <div class="m-1">
+                    <Sun class="mr-2 h-4 w-4 scale-100 dark:scale-0 absolute" />
+                    <Moon
+                        class="mr-2 h-4 w-4 scale-0 dark:scale-100 absolute"
+                    />
+                    <span class="ml-6">Toggle Dark Mode</span>
+                </div>
             </Command.Item></Command.Group
         >
         <Command.Group heading="Links">
             <Command.Item class="cursor-pointer">
                 <a
-                    class="flex flex-row items-center"
+                    class="flex flex-row items-center m-1"
                     href="https://github.com/jaydensipe"
                     target="_blank"
                 >
@@ -74,7 +85,7 @@
             </Command.Item>
             <Command.Item class="cursor-pointer">
                 <a
-                    class="flex flex-row items-center"
+                    class="flex flex-row items-center m-1"
                     href="https://www.linkedin.com/in/jaydensipe/"
                     target="_blank"
                 >
@@ -84,7 +95,7 @@
             </Command.Item>
             <Command.Item class="cursor-pointer">
                 <a
-                    class="flex flex-row items-center"
+                    class="flex flex-row items-center m-1"
                     href="https://jaydensippy.itch.io/"
                     target="_blank"
                 >
@@ -143,7 +154,7 @@
             <DescriptiveCard
                 name="B. D. P. T."
                 link="https://jaydensippy.itch.io/burning-down-peasant-town"
-                imageName="bdpt1.webp"
+                imgSrc={bdpt1Image}
                 altImageText="Burning Down Peasant Town Game Image"
                 githubLink="https://github.com/jaydensipe/Burning-Down-Peasant-Town"
                 description="A game made in two weeks for the Pirate Software - Game Jam 14, made using the Godot game engine."
@@ -152,7 +163,7 @@
             <DescriptiveCard
                 name="Bombah Bros"
                 githubLink="https://github.com/jaydensipe/Squire-AI"
-                imageName="bbros1.jpg"
+                imgSrc={bbros1Image}
                 altImageText="Bombah Bros Game Image"
                 description="A W.I.P. multiplayer game made in the Godot game engine, similar to Super Smash Bros."
             ></DescriptiveCard>
@@ -160,7 +171,7 @@
             <DescriptiveCard
                 name="Splorer"
                 link="https://jaydensipe.github.io/splorer/"
-                imageName="splorerpic.webp"
+                imgSrc={splorerImage}
                 altImageText="Splorer Game Image"
                 githubLink="https://github.com/jaydensipe/Splorer"
                 description="A simple game made in WebGL, hosted on a custom web page; made for my Computer Graphics course."
@@ -191,17 +202,17 @@
             myself, or with the aid of an online course.
         </p>
         <div class="flex flex-wrap flex-shrink-0 flex-grow-0 justify-center">
-            <DescriptiveCard
+            <!-- <DescriptiveCard
                 name="Jay's Reusable Components and Things"
-                imageName="jrcat1.svg"
+                imgSrc={jrCat1Image}
                 altImageText="Jay's Reusable Components and Things Personal Project Image"
                 githubLink="https://github.com/jaydensipe/Jays-Reusable-Components-and-Things"
                 description="A package of reusable components and random things for the Godot game engine."
                 noFillBgColor="bg-red-100"
-            ></DescriptiveCard>
-            <DescriptiveCard
+            ></DescriptiveCard> -->
+            <!-- <DescriptiveCard
                 name="Squire AI"
-                imageName="squire.svg"
+                imgSrc={squireImage}
                 altImageText="Squire AI Personal Project Image"
                 githubLink="https://github.com/jaydensipe/Squire-AI"
                 description="P.O.C. AI assistant using ChatGPT integration, created for my Text Information Systems course."
@@ -211,12 +222,12 @@
             <DescriptiveCard
                 name="Narrative Visualization Exploration"
                 link="{base}/narrative-visualization/index.html"
-                imageName="nve.svg"
+                imgSrc={nveImage}
                 altImageText="Narrative Visualization Exploration Personal Project Image"
                 githubLink="https://github.com/jaydensipe/Narrative-Visualization-Exploration"
                 description="An exploration into data visualization techniques, for my Data Visualization course."
                 noFillBgColor="bg-green-100 p-1"
-            ></DescriptiveCard>
+            ></DescriptiveCard> -->
         </div>
 
         <div class="flex justify-center my-8 mb-16">

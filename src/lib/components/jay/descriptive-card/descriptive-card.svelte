@@ -12,7 +12,7 @@
 
 <div>
     <Card.Root
-        class="bg-transparent w-[23rem] text-center border-0 shadow-none"
+        class="bg-transparent w-[21rem] text-center border-0 shadow-none"
     >
         <Card.Header>
             {#if link}

@@ -12,11 +12,12 @@
         Gamepad2,
         Moon,
         Sun,
+        NotepadText,
     } from "lucide-svelte";
     import { Separator } from "$lib/components/ui/separator";
     import { Button } from "$lib/components/ui/button";
     import { base } from "$app/paths";
-    import { toggleMode } from "mode-watcher";
+    import { toggleMode, mode } from "mode-watcher";
 
     import bdpt1Image from "$lib/images/bdpt1.webp?enhanced";
     import bbros1Image from "$lib/images/bbros1.jpg?enhanced";
@@ -24,6 +25,7 @@
     import jrCat1Image from "$lib/images/jrcat1.png?enhanced";
     import squireImage from "$lib/images/squire.png?enhanced";
     import nveImage from "$lib/images/nve.png?enhanced";
+    import Saos from "saos";
 </script>
 
 <svelte:head>
@@ -36,10 +38,26 @@
 
 <!-- Header -->
 <header class="text-center max-w-5xl">
-    <h1 class="text-7xl sm:text-9xl pt-16 pb-8 font-medium">
-        <span class="text-gray-500">./</span> Jayden
-        <span class="text-red-800 dark:text-red-600 on">Sipe</span>
-    </h1>
+    {#if $mode === "dark"}
+        <Saos
+            animation={"text-pop-up-top-dark 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both"}
+        >
+            <h1 class="text-7xl sm:text-9xl pt-32 pb-8 font-medium">
+                <span class="text-gray-500">./</span> Jayden
+                <span class="text-red-800 dark:text-red-600 on">Sipe</span>
+            </h1>
+        </Saos>
+    {:else}
+        <Saos
+            animation={"text-pop-up-top-light 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both"}
+        >
+            <h1 class="text-7xl sm:text-9xl pt-32 pb-8 font-medium">
+                <span class="text-gray-500">./</span> Jayden
+                <span class="text-red-800 dark:text-red-600 on">Sipe</span>
+            </h1>
+        </Saos>
+    {/if}
+
     <p class="mx-8 pb-8">
         Explore my <span class="font-semibold">portfolio</span>, where you can
         delve into my array of
@@ -72,6 +90,18 @@
                 </div>
             </Command.Item></Command.Group
         >
+        <Command.Group heading="Experience">
+            <Command.Item class="cursor-pointer">
+                <a
+                    class="flex flex-row items-center m-1 sm:m-0"
+                    href="https://jaydensipe.github.io/JaydenSipeResume.pdf"
+                    target="_blank"
+                >
+                    <NotepadText class="mr-2 h-4 w-4" />
+                    <span>Resume</span>
+                </a>
+            </Command.Item>
+        </Command.Group>
         <Command.Group heading="Links">
             <Command.Item class="cursor-pointer">
                 <a

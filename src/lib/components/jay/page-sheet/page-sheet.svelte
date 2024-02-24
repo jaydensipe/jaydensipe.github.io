@@ -8,7 +8,7 @@
         Moon,
         Sun,
         ArrowRightToLine,
-        ExternalLink,
+        NotepadText,
         LibraryBig,
         Gamepad2,
     } from "lucide-svelte";
@@ -38,56 +38,77 @@
             >
             <Sheet.Description>
                 <div class="flex flex-col gap-5 items-start p-4">
-                    {#if $page.url.pathname == "/games"}
-                        <a href="{base}/personal-projects">
-                            <p
-                                class="flex flex-row items-center hyperlink decoration-transparent text-lg"
-                            >
-                                <LibraryBig
-                                    strokeWidth="1.5"
-                                    class="mr-2"
-                                />Personal Projects
-                            </p>
-                        </a>
-                    {:else if $page.url.pathname == "/personal-projects"}
-                        <a href="{base}/games">
-                            <p
-                                class="flex flex-row items-center hyperlink decoration-transparent text-lg"
-                            >
-                                <Gamepad2 strokeWidth="1.5" class="mr-2" />
-                                Games
-                            </p>
-                        </a>
-                    {:else if $page.url.pathname == "/"}
-                        <a href="{base}/games">
-                            <p
-                                class="flex flex-row items-center hyperlink decoration-transparent text-lg"
-                            >
-                                <Gamepad2 strokeWidth="1.5" class="mr-2" />Games
-                            </p>
-                        </a>
-                        <a href="{base}/personal-projects">
-                            <p
-                                class="flex flex-row items-center hyperlink decoration-transparent text-lg"
-                            >
-                                <LibraryBig
-                                    strokeWidth="1.5"
-                                    class="mr-2"
-                                />Personal Projects
-                            </p>
-                        </a>
-                    {/if}
-                    <a
-                        href="https://jaydensipe.github.io/JaydenSipeResume.pdf"
-                        target="_blank"
-                    >
-                        <span
-                            class="flex flex-row gap-2 items-center hyperlink decoration-transparent text-lg"
+                    <ul class="py-3">
+                        {#if $page.url.pathname == "/games"}
+                            <li>
+                                <a href="{base}/personal-projects">
+                                    <p
+                                        class="flex flex-row items-center hyperlink decoration-transparent text-lg"
+                                    >
+                                        Personal Projects
+                                        <LibraryBig
+                                            strokeWidth="1.5"
+                                            class="ml-2"
+                                        />
+                                    </p>
+                                </a>
+                            </li>
+                        {:else if $page.url.pathname == "/personal-projects"}
+                            <li>
+                                <a href="{base}/games">
+                                    <p
+                                        class="flex flex-row items-center hyperlink decoration-transparent text-lg"
+                                    >
+                                        Games
+                                        <Gamepad2
+                                            strokeWidth="1.5"
+                                            class="ml-2"
+                                        />
+                                    </p>
+                                </a>
+                            </li>
+                        {:else if $page.url.pathname == "/"}
+                            <li>
+                                <a href="{base}/games">
+                                    <p
+                                        class="flex flex-row items-center hyperlink decoration-transparent text-lg"
+                                    >
+                                        Games
+                                        <Gamepad2
+                                            strokeWidth="1.5"
+                                            class="ml-2"
+                                        />
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{base}/personal-projects">
+                                    <p
+                                        class="flex flex-row items-center hyperlink decoration-transparent text-lg"
+                                    >
+                                        Personal Projects
+                                        <LibraryBig
+                                            strokeWidth="1.5"
+                                            class="ml-2"
+                                        />
+                                    </p>
+                                </a>
+                            </li>
+                        {/if}
+                        <a
+                            href="https://jaydensipe.github.io/JaydenSipeResume.pdf"
+                            target="_blank"
                         >
-                            <p>Resume</p>
-                            <ExternalLink></ExternalLink>
-                        </span>
-                    </a>
+                            <span
+                                class="flex flex-row gap-2 items-center hyperlink decoration-transparent text-lg"
+                            >
+                                <p>Resume</p>
+                                <NotepadText></NotepadText>
+                            </span>
+                        </a>
+                    </ul>
+
+                    <Separator></Separator>
 
                     <div class="flex flex-row gap-8">
                         <a href="https://github.com/jaydensipe" target="_blank"
@@ -117,7 +138,6 @@
                             <Moon class="scale-0 dark:scale-100 absolute" />
                         </div>
                     </div>
-                    <Separator></Separator>
                 </div>
             </Sheet.Description>
         </Sheet.Header>

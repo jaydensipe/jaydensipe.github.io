@@ -3,8 +3,6 @@
 
     import { afterNavigate, beforeNavigate } from "$app/navigation";
     import { ModeWatcher } from "mode-watcher";
-    import Saos from "saos";
-
     import "../app.pcss";
 
     // Fixes scroll behaivour when going to a new page: https://github.com/sveltejs/kit/pull/8723#issuecomment-1423522635
@@ -64,57 +62,20 @@
         }
     }
 
-    @keyframes -global-text-pop-up-top-light {
+    @keyframes -global-swing-in-top-fwd {
         0% {
-            -webkit-transform: translateY(0);
-            transform: translateY(0);
-            -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-            text-shadow: none;
+            -webkit-transform: rotateX(-100deg);
+            transform: rotateX(-100deg);
+            -webkit-transform-origin: top;
+            transform-origin: top;
+            opacity: 0;
         }
         100% {
-            -webkit-transform: translateY(-50px);
-            transform: translateY(-50px);
-            -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-            text-shadow:
-                0 1px 0 #f4f4f5,
-                0 2px 0 #f4f4f5,
-                0 3px 0 #f4f4f5,
-                0 4px 0 #f4f4f5,
-                0 5px 0 #f4f4f5,
-                0 6px 0 #f4f4f5,
-                0 7px 0 #f4f4f5,
-                0 8px 0 #f4f4f5,
-                0 9px 0 #f4f4f5,
-                0 50px 30px rgba(0, 0, 0, 0.3);
-        }
-    }
-
-    @keyframes -global-text-pop-up-top-dark {
-        0% {
-            -webkit-transform: translateY(0);
-            transform: translateY(0);
-            -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-            text-shadow: none;
-        }
-        100% {
-            -webkit-transform: translateY(-50px);
-            transform: translateY(-50px);
-            -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-            text-shadow:
-                0 1px 0 #292524,
-                0 2px 0 #292524,
-                0 3px 0 #292524,
-                0 4px 0 #292524,
-                0 5px 0 #292524,
-                0 6px 0 #292524,
-                0 7px 0 #292524,
-                0 8px 0 #292524,
-                0 9px 0 #292524,
-                0 50px 30px rgba(0, 0, 0, 0.3);
+            -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+            -webkit-transform-origin: top;
+            transform-origin: top;
+            opacity: 1;
         }
     }
 </style>

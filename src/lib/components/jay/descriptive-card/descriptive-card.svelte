@@ -13,7 +13,8 @@
 
 <div>
     <Saos
-        animation={"scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both"}
+        once
+        animation={"scale-in-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both"}
     >
         <Card.Root
             class="bg-transparent w-[21rem] text-center border-0 shadow-none"

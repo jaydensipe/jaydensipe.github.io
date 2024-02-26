@@ -29,7 +29,7 @@
         <Sheet.Header>
             <Sheet.Title
                 ><div
-                    class="flex flex-row gap-2 items-center text-sm sm:text-lg"
+                    class="flex flex-row gap-2 items-center text-sm sm:text-lg font-bold"
                 >
                     <a class="hyperlink" href="{base}/"
                         ><ArrowLeftCircle></ArrowLeftCircle></a

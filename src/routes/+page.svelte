@@ -17,7 +17,7 @@
     import { Separator } from "$lib/components/ui/separator";
     import { Button } from "$lib/components/ui/button";
     import { base } from "$app/paths";
-    import { toggleMode, mode } from "mode-watcher";
+    import { toggleMode } from "mode-watcher";
 
     import bdpt1Image from "$lib/images/bdpt1.webp?enhanced";
     import bbros1Image from "$lib/images/bbros1.jpg?enhanced";
@@ -25,7 +25,6 @@
     import jrCat1Image from "$lib/images/jrcat1.png?enhanced";
     import squireImage from "$lib/images/squire.png?enhanced";
     import nveImage from "$lib/images/nve.png?enhanced";
-    import Saos from "saos";
 </script>
 
 <svelte:head>
@@ -38,26 +37,10 @@
 
 <!-- Header -->
 <header class="text-center max-w-5xl">
-    {#if $mode === "dark"}
-        <Saos
-            animation={"text-pop-up-top-dark 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both"}
-        >
-            <h1 class="text-7xl sm:text-9xl pt-32 pb-8 font-medium">
-                <span class="text-gray-500">./</span> Jayden
-                <span class="text-red-800 dark:text-red-600 on">Sipe</span>
-            </h1>
-        </Saos>
-    {:else}
-        <Saos
-            animation={"text-pop-up-top-light 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both"}
-        >
-            <h1 class="text-7xl sm:text-9xl pt-32 pb-8 font-medium">
-                <span class="text-gray-500">./</span> Jayden
-                <span class="text-red-800 dark:text-red-600 on">Sipe</span>
-            </h1>
-        </Saos>
-    {/if}
-
+    <h1 class="text-7xl sm:text-9xl pt-20 pb-8 font-medium">
+        <span class="text-gray-500">./</span> Jayden
+        <span class="text-red-700 dark:text-red-600">Sipe</span>
+    </h1>
     <p class="mx-8 pb-8">
         Explore my <span class="font-semibold">portfolio</span>, where you can
         delve into my array of
@@ -81,7 +64,7 @@
         <Command.Empty>No results found.</Command.Empty>
         <Command.Group heading="Actions">
             <Command.Item onSelect={toggleMode} class="cursor-pointer">
-                <div class="m-1 sm:m-0">
+                <div class="flex flex-row items-center m-1 sm:m-0">
                     <Sun class="mr-2 h-4 w-4 scale-100 dark:scale-0 absolute" />
                     <Moon
                         class="mr-2 h-4 w-4 scale-0 dark:scale-100 absolute"
@@ -170,16 +153,16 @@
         <h2
             class="tracking-wide text-center font-bold text-4xl italic bg-rose-50 dark:bg-stone-700 p-4"
         >
-            <span class="font-extrabold text-rose-600">Games</span> I have worked
-            on over the years...
+            <span class="font-black text-rose-600">Games</span> I have worked on
+            over the years...
         </h2>
         <br />
         <p class="text-center sm:mx-32 mb-8">
-            These are the latest games I have worked on in my own time to better
-            master game development and programming techniques. These games were
-            created with various game engines.
+            These are the latest <a href="{base}/games" class="hyperlink"
+                >games</a
+            > I have worked on in my own time to better master game development and
+            programming techniques. These games were created with various game engines.
         </p>
-
         <div class="flex flex-wrap flex-shrink-0 flex-grow-0 justify-center">
             <DescriptiveCard
                 name="B. D. P. T."
@@ -222,13 +205,15 @@
         <h2
             class="tracking-wide text-center font-bold text-4xl italic bg-cyan-50 dark:bg-gray-700 p-4"
         >
-            <span class="font-extrabold text-cyan-600">Personal Projects</span> I
-            have finished over the years...
+            <span class="font-black text-cyan-600">Personal Projects</span> I have
+            finished over the years...
         </h2>
         <br />
         <p class="text-center sm:mx-32 mb-8">
-            These are the latest of the random personal projects I have
-            finished. These may come from personal projects I have completed
+            These are the latest of the random <a
+                class="hyperlink"
+                href="{base}/personal-projects">personal projects</a
+            > I have finished. These may come from personal projects I have completed
             myself, or with the aid of an online course.
         </p>
         <div class="flex flex-wrap flex-shrink-0 flex-grow-0 justify-center">

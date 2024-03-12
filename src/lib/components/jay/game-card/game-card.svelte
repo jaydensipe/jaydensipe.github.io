@@ -14,7 +14,7 @@
 
 <Saos
     once
-    animation={"swing-in-top-fwd 0.75s cubic-bezier(0.175, 0.885, 0.320, 1.275) both"}
+    animation={"swing-in-top-fwd 0.45s cubic-bezier(0.230, 1.000, 0.320, 1.000) both"}
 >
     <div
         class="flex flex-col justify-center items-center gap-8 sm:gap-10 sm:mx-8"

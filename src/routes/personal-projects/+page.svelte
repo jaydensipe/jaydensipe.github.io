@@ -82,6 +82,7 @@
         <ProjectCard
             name="WhereWeLivin"
             language=".NET Framework"
+            githubLink="https://github.com/jaydensipe/Where-We-Livin"
             imgSrc={wwlImage}
             altImageText="WhereWeLivin Project Big Image"
             description="When talking with friends or family about the future, a topic that comes up a lot is potential places everyone would want to move to. I've always wanted an easy way to compile all these answers together to see if anyone shares common ground in their decisions. While that is my intended purpose for the application, it can be used in deciding any number of things, such as where to go on vacation, etc."
@@ -111,6 +112,7 @@
                         <ProjectCard
                             name="Hangman"
                             language="Java"
+                            githubLink="https://github.com/jaydensipe/Hangman-Java"
                             imgSrc={hangmanImage}
                             altImageText="Hangman Project Big Image"
                             description="This is a simple Hangman game I created in Java during some free time. I used it as an opportunity to use Java Swing in a project that wasn't being used for school. This was made with Java using the IntelliJ IDE."

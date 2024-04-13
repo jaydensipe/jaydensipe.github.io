@@ -19,12 +19,16 @@
         </div>
         <div class="text-center mt-4 sm:mt-8">
             <span class="card-title text-sm sm:text-xl"
-                ><a
-                    class="hyperlink underline-offset-4 text-cyan-700 dark:text-cyan-500"
-                    href={githubLink}
-                >
-                    {name}</a
-                >
+                >{#if githubLink}
+                    <a
+                        class="hyperlink underline-offset-4 text-cyan-700 dark:text-cyan-500"
+                        href={githubLink}
+                    >
+                        {name}</a
+                    >
+                {:else}
+                    <span class="text-cyan-700 dark:text-cyan-500">{name}</span>
+                {/if}
                 made with
                 <i class="text-cyan-700 dark:text-cyan-500">{language}</i></span
             >

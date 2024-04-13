@@ -175,7 +175,7 @@
 
             <DescriptiveCard
                 name="Bombah Bros"
-                githubLink="https://github.com/jaydensipe/Squire-AI"
+                githubLink="https://github.com/jaydensipe/Bombah-Bros"
                 imgSrc={bbros1Image}
                 altImageText="Bombah Bros Game Image"
                 description="A W.I.P. multiplayer game made in the Godot game engine, similar to Super Smash Bros."

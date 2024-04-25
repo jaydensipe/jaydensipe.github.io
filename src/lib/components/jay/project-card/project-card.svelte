@@ -1,6 +1,7 @@
 <script lang="ts">
     export let name: string;
     export let language: string;
+    export let languageIcons: any[] = [];
     export let githubLink: string = "";
     export let imgSrc: string;
     export let altImageText: string;
@@ -30,7 +31,12 @@
                     <span class="text-cyan-700 dark:text-cyan-500">{name}</span>
                 {/if}
                 made with
-                <i class="text-cyan-700 dark:text-cyan-500">{language}</i></span
+                <i class="text-cyan-700 dark:text-cyan-500"
+                    >{language}
+                    {#each languageIcons as icon}
+                        <svelte:component this={icon}></svelte:component>
+                    {/each}</i
+                ></span
             >
             <p class="mt-4 text-sm sm:text-base">
                 {description}

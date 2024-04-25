@@ -8,6 +8,7 @@
     import { MoveLeft, MoveRight } from "lucide-svelte";
     import * as Carousel from "$lib/components/ui/carousel/index.js";
 
+    // Images
     import jrcat1Image from "$lib/images/jrcat1.png?enhanced";
     import squireImage from "$lib/images/squire.png?enhanced";
     import nveImage from "$lib/images/nve.png?enhanced";
@@ -17,6 +18,10 @@
     import g2gImage from "$lib/images/g2g2.webp?enhanced";
     import hangmanImage from "$lib/images/hangmanpic2.webp?enhanced";
     import ahImage from "$lib/images/ah1.webp?enhanced";
+
+    // Icons
+    import SvelteLogo from "virtual:icons/logos/svelte-icon";
+    import GodotLogo from "virtual:icons/logos/godot-icon";
 </script>
 
 <svelte:head>
@@ -43,6 +48,7 @@
         <ProjectCard
             name="Jay's Reusable Components and Things"
             language="GDScript"
+            languageIcons={[SvelteLogo, GodotLogo]}
             githubLink="https://github.com/jaydensipe/Jays-Reusable-Components-and-Things"
             imgSrc={jrcat1Image}
             altImageText="Jay's Reusable Components and Things Project Big Image"

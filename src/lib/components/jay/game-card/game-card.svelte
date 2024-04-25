@@ -21,7 +21,7 @@
     >
         <Badge class="mt-8" variant="secondary">{date}</Badge>
         <Card.Root
-            class="bg-transparent text-center shadow-sm sm:shadow-none sm:border-0"
+            class="bg-transparent text-center shadow-md sm:border-0 bg-secondary"
         >
             <Card.Header>
                 <enhanced:img
@@ -31,7 +31,7 @@
                 />
                 <br />
                 <Card.Title
-                    class="text-lg sm:text-2xl sm:mx-0 mx-4 bg-secondary p-2"
+                    class="text-lg sm:text-2xl sm:mx-0 mx-4 p-2 bg-zinc-200 dark:bg-zinc-700"
                 >
                     {#if link}
                         <a
@@ -58,7 +58,7 @@
                 </Card.Title>
             </Card.Header>
             <Card.Content>
-                <p class="max-w-6xl text-sm sm:text-base">
+                <p class="text-sm sm:text-base">
                     {description}
                 </p>
             </Card.Content>

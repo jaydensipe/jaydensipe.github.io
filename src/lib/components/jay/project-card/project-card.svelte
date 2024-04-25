@@ -6,6 +6,7 @@
     export let imgSrc: string;
     export let altImageText: string;
     export let description: string;
+    export let isArchived: boolean = false;
 
     import Saos from "saos";
 </script>
@@ -14,11 +15,21 @@
     once
     animation={"swing-in-top-fwd 0.45s cubic-bezier(0.230, 1.000, 0.320, 1.000) both"}
 >
-    <div class="pt-4">
-        <div class="float-left max-w-40 max-h-40 sm:max-w-80 sm:max-h-80 p-4">
-            <enhanced:img class="rounded-lg" src={imgSrc} alt={altImageText} />
-        </div>
-        <div class="text-center mt-4 sm:mt-8">
+    <div class="p-4 flex flex-col items-center">
+        <div
+            class="text-center mt-4 flex flex-col items-center sm:block sm:border-0 p-4 text-card-foreground {!isArchived
+                ? 'bg-secondary shadow-md rounded-md'
+                : ''}"
+        >
+            <div
+                class="sm:float-left sm:absolute max-w-36 max-h-36 sm:max-w-24 sm:max-h-24 p-4"
+            >
+                <enhanced:img
+                    class="rounded-lg"
+                    src={imgSrc}
+                    alt={altImageText}
+                />
+            </div>
             <span class="card-title text-sm sm:text-xl"
                 >{#if githubLink}
                     <a
@@ -30,14 +41,17 @@
                 {:else}
                     <span class="text-cyan-700 dark:text-cyan-500">{name}</span>
                 {/if}
-                made with
+                created with
                 <i class="text-cyan-700 dark:text-cyan-500"
                     >{language}
-                    {#each languageIcons as icon}
-                        <svelte:component this={icon}></svelte:component>
-                    {/each}</i
-                ></span
+                </i></span
             >
+            <div class="flex flex-row gap-4 justify-center p-4">
+                {#each languageIcons as icon}
+                    <svelte:component this={icon} style="font-size: 1.5rem;"
+                    ></svelte:component>
+                {/each}
+            </div>
             <p class="mt-4 text-sm sm:text-base">
                 {description}
             </p>

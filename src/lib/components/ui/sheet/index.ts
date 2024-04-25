@@ -80,12 +80,12 @@ export const sheetTransitions = {
 	left: {
 		in: {
 			x: "-100%",
-			duration: 500,
+			duration: 350,
 			opacity: 1,
 		},
 		out: {
 			x: "-100%",
-			duration: 300,
+			duration: 250,
 			opacity: 1,
 		},
 	},
@@ -97,7 +97,7 @@ export const sheetTransitions = {
 		},
 		out: {
 			x: "100%",
-			duration: 300,
+			duration: 150,
 			opacity: 1,
 		},
 	},

@@ -20,8 +20,16 @@
     import ahImage from "$lib/images/ah1.webp?enhanced";
 
     // Icons
-    import SvelteLogo from "virtual:icons/logos/svelte-icon";
     import GodotLogo from "virtual:icons/logos/godot-icon";
+    import PythonLogo from "virtual:icons/logos/python";
+    import D3Logo from "virtual:icons/logos/d3";
+    import NodeJSLogo from "virtual:icons/logos/nodejs-icon";
+    import DotNetLogo from "virtual:icons/logos/dotnet";
+    import AngularLogo from "virtual:icons/logos/angular-icon";
+    import ReactLogo from "virtual:icons/logos/react";
+    import JSLogo from "virtual:icons/logos/javascript";
+    import MongoDBLogo from "virtual:icons/logos/mongodb-icon";
+    import Java from "virtual:icons/logos/java";
 </script>
 
 <svelte:head>
@@ -33,7 +41,7 @@
 </svelte:head>
 
 <!-- Header -->
-<PageHeader name="Personal Projects" color="text-cyan-500"></PageHeader>
+<PageHeader name="- Personal Projects -" color="text-cyan-500"></PageHeader>
 
 <Separator class="my-16"></Separator>
 
@@ -48,7 +56,7 @@
         <ProjectCard
             name="Jay's Reusable Components and Things"
             language="GDScript"
-            languageIcons={[SvelteLogo, GodotLogo]}
+            languageIcons={[GodotLogo]}
             githubLink="https://github.com/jaydensipe/Jays-Reusable-Components-and-Things"
             imgSrc={jrcat1Image}
             altImageText="Jay's Reusable Components and Things Project Big Image"
@@ -57,6 +65,7 @@
         <ProjectCard
             name="Squire AI"
             language="Python"
+            languageIcons={[PythonLogo]}
             githubLink="https://github.com/jaydensipe/Squire-AI"
             imgSrc={squireImage}
             altImageText="Squire AI Project Big Image"
@@ -65,6 +74,7 @@
         <ProjectCard
             name="Narrative Visualization Exploration"
             language="D3.js, Node.js"
+            languageIcons={[D3Logo, NodeJSLogo]}
             githubLink="https://github.com/jaydensipe/Narrative-Visualization-Exploration"
             imgSrc={nveImage}
             altImageText="Narrative Visualization Exploration Project Big Image"
@@ -73,6 +83,7 @@
         <ProjectCard
             name="UdemusDateus"
             language="Asp.NET Core & Angular"
+            languageIcons={[DotNetLogo, AngularLogo]}
             githubLink="https://github.com/jaydensipe/Udemus-Dateus"
             imgSrc={udemusDateusImage}
             altImageText="UdemusDateus Project Big Image"
@@ -81,6 +92,7 @@
         <ProjectCard
             name="The Gravestone Project"
             language="React & Express.JS"
+            languageIcons={[ReactLogo, JSLogo]}
             imgSrc={tgppImage}
             altImageText="The Gravestone Project Project Big Image"
             description="This is the project that served as my capstone for my college degree. During development of this project, I worked as a frontend developer, but, as work piled up, took upon the role as a full-stack developer. This project taught me an immense amount about working with a team as well as providing for a client that requested a product."
@@ -88,6 +100,7 @@
         <ProjectCard
             name="WhereWeLivin"
             language=".NET Framework"
+            languageIcons={[DotNetLogo]}
             githubLink="https://github.com/jaydensipe/Where-We-Livin"
             imgSrc={wwlImage}
             altImageText="WhereWeLivin Project Big Image"
@@ -109,29 +122,40 @@
                         <ProjectCard
                             name="Get2Gather"
                             language="MERN Stack"
+                            languageIcons={[
+                                MongoDBLogo,
+                                JSLogo,
+                                ReactLogo,
+                                NodeJSLogo,
+                            ]}
                             imgSrc={g2gImage}
                             altImageText="Get2Gather Project Big Image"
                             description="This is a project I worked on in college with a group of 6 others. It served as an event manager website where a user could: submit an event and groups, post comments and use other features you'd expect from a website. My part of this project was working on frontend using React, and in doing so learned a great amount about the software development process."
+                            isArchived={true}
                         ></ProjectCard></Carousel.Item
                     >
                     <Carousel.Item class="p-4">
                         <ProjectCard
                             name="Hangman"
                             language="Java"
+                            languageIcons={[Java]}
                             githubLink="https://github.com/jaydensipe/Hangman-Java"
                             imgSrc={hangmanImage}
                             altImageText="Hangman Project Big Image"
                             description="This is a simple Hangman game I created in Java during some free time. I used it as an opportunity to use Java Swing in a project that wasn't being used for school. This was made with Java using the IntelliJ IDE."
+                            isArchived={true}
                         ></ProjectCard></Carousel.Item
                     >
                     <Carousel.Item>
                         <ProjectCard
                             name="Arithmetic Helper"
                             language="Java"
+                            languageIcons={[Java]}
                             githubLink="https://github.com/jaydensipe/Arithmetic-Helper-Java"
                             imgSrc={ahImage}
                             altImageText="Arithmetic Helper Project Big Image"
                             description="This is an arithmetic helper I created in Java in my first year of college. It takes inputs on basic arithmetic math problems and can output how long it took you to solve each problem, show average solve time, display a scoreboard and other neat features. This was made with Java using the Eclipse IDE."
+                            isArchived={true}
                         ></ProjectCard></Carousel.Item
                     >
                 </Carousel.Content>

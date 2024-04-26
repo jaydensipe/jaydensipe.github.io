@@ -30,7 +30,7 @@
 </svelte:head>
 
 <!-- Header -->
-<PageHeader name="- Games -" color="text-rose-500"></PageHeader>
+<PageHeader name="Games" color="text-rose-500"></PageHeader>
 
 <Separator class="my-16" />
 

@@ -41,7 +41,7 @@
 </svelte:head>
 
 <!-- Header -->
-<PageHeader name="- Personal Projects -" color="text-cyan-500"></PageHeader>
+<PageHeader name="Personal Projects" color="text-cyan-500"></PageHeader>
 
 <Separator class="my-16"></Separator>
 

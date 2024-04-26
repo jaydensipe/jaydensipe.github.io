@@ -17,12 +17,12 @@
 >
     <div class="p-4 flex flex-col items-center">
         <div
-            class="text-center mt-4 flex flex-col items-center sm:block sm:border-0 p-4 text-card-foreground {!isArchived
+            class="text-center mt-4 flex flex-col items-center sm:border-0 p-4 text-card-foreground {!isArchived
                 ? 'bg-secondary shadow-md rounded-md'
                 : ''}"
         >
             <div
-                class="sm:float-left sm:absolute max-w-36 max-h-36 sm:max-w-24 sm:max-h-24 p-4"
+                class="sm:float-left sm:absolute left-4 max-w-36 max-h-36 sm:max-w-24 sm:max-h-24 p-4"
             >
                 <enhanced:img
                     class="rounded-lg"
@@ -30,22 +30,23 @@
                     alt={altImageText}
                 />
             </div>
-            <span class="card-title text-sm sm:text-xl"
-                >{#if githubLink}
+            <div class="card-title text-sm sm:text-xl max-w-lg">
+                {#if githubLink}
                     <a
-                        class="hyperlink underline-offset-4 text-cyan-700 dark:text-cyan-500"
+                        class="font-extrabold hyperlink underline-offset-4 text-cyan-700 dark:text-cyan-500"
                         href={githubLink}
                     >
                         {name}</a
                     >
                 {:else}
-                    <span class="text-cyan-700 dark:text-cyan-500">{name}</span>
+                    <span
+                        class="text-cyan-700 dark:text-cyan-500 font-extrabold"
+                        >{name}</span
+                    >
                 {/if}
                 created with
-                <i class="text-cyan-700 dark:text-cyan-500"
-                    >{language}
-                </i></span
-            >
+                <i class="text-cyan-700 dark:text-cyan-500">{language} </i>
+            </div>
             <div class="flex flex-row gap-4 justify-center p-4">
                 {#each languageIcons as icon}
                     <svelte:component this={icon} style="font-size: 1.5rem;"

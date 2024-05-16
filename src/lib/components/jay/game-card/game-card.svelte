@@ -7,10 +7,12 @@
     export let altImageText: string;
     export let githubLink: string = "";
     export let description: string;
+    export let archived: boolean = false;
 
     import * as Card from "$lib/components/ui/card";
     import Saos from "saos";
     import Badge from "$lib/components/ui/badge/badge.svelte";
+    import * as Tooltip from "$lib/components/ui/tooltip";
 </script>
 
 <Saos
@@ -60,8 +62,23 @@
                 <p class="text-sm sm:text-base">
                     {description}
                 </p>
-                <svelte:component this={engineLogo} style="font-size: 1.0rem;"
-                ></svelte:component>
+                <span class="flex flex-row justify-between">
+                    <svelte:component
+                        this={engineLogo}
+                        style="font-size: 1.0rem;"
+                    ></svelte:component>
+                    {#if archived}
+                        <Tooltip.Root>
+                            <Tooltip.Trigger
+                                ><Badge variant="destructive">Archived ⚠️</Badge
+                                ></Tooltip.Trigger
+                            >
+                            <Tooltip.Content>
+                                <p>Contains mildly horrible code... be wary!</p>
+                            </Tooltip.Content>
+                        </Tooltip.Root>
+                    {/if}
+                </span>
             </Card.Content>
         </Card.Root>
     </div>

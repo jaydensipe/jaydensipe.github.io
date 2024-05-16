@@ -2,8 +2,21 @@
     import DescriptiveCard from "$lib/components/jay/descriptive-card/descriptive-card.svelte";
     import NavBar from "$lib/components/jay/nav-bar/nav-bar.svelte";
     import PageSheet from "$lib/components/jay/page-sheet/page-sheet.svelte";
-
+    import { Separator } from "$lib/components/ui/separator";
+    import { Button } from "$lib/components/ui/button";
+    import { base } from "$app/paths";
+    import { toggleMode } from "mode-watcher";
     import * as Command from "$lib/components/ui/command";
+
+    // Images
+    import bdpt1Image from "$lib/images/bdpt1.webp?enhanced";
+    import bbros1Image from "$lib/images/bbros1.jpg?enhanced";
+    import splorerImage from "$lib/images/splorerpic.webp?enhanced";
+    import jrCat1Image from "$lib/images/jrcat1.png?enhanced";
+    import squireImage from "$lib/images/squire.png?enhanced";
+    import nveImage from "$lib/images/nve.png?enhanced";
+
+    // Icons
     import {
         Github,
         Linkedin,
@@ -14,17 +27,6 @@
         Sun,
         NotepadText,
     } from "lucide-svelte";
-    import { Separator } from "$lib/components/ui/separator";
-    import { Button } from "$lib/components/ui/button";
-    import { base } from "$app/paths";
-    import { toggleMode } from "mode-watcher";
-
-    import bdpt1Image from "$lib/images/bdpt1.webp?enhanced";
-    import bbros1Image from "$lib/images/bbros1.jpg?enhanced";
-    import splorerImage from "$lib/images/splorerpic.webp?enhanced";
-    import jrCat1Image from "$lib/images/jrcat1.png?enhanced";
-    import squireImage from "$lib/images/squire.png?enhanced";
-    import nveImage from "$lib/images/nve.png?enhanced";
 </script>
 
 <svelte:head>
@@ -76,7 +78,7 @@
         <Command.Group heading="Experience">
             <Command.Item class="cursor-pointer">
                 <a
-                    class="flex flex-row items-center m-1 sm:m-0"
+                    class="flex flex-row items-center m-1 sm:m-0 w-full"
                     href="https://jaydensipe.github.io/JaydenSipeResume.pdf"
                     target="_blank"
                 >
@@ -88,7 +90,7 @@
         <Command.Group heading="Links">
             <Command.Item class="cursor-pointer">
                 <a
-                    class="flex flex-row items-center m-1 sm:m-0"
+                    class="flex flex-row items-center m-1 sm:m-0 w-full"
                     href="https://github.com/jaydensipe"
                     target="_blank"
                 >
@@ -98,7 +100,7 @@
             </Command.Item>
             <Command.Item class="cursor-pointer">
                 <a
-                    class="flex flex-row items-center m-1 sm:m-0"
+                    class="flex flex-row items-center m-1 sm:m-0 w-full"
                     href="https://www.linkedin.com/in/jaydensipe/"
                     target="_blank"
                 >
@@ -108,7 +110,7 @@
             </Command.Item>
             <Command.Item class="cursor-pointer">
                 <a
-                    class="flex flex-row items-center m-1 sm:m-0"
+                    class="flex flex-row items-center m-1 sm:m-0 w-full"
                     href="https://jaydensippy.itch.io/"
                     target="_blank"
                 >

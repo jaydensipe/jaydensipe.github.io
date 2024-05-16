@@ -93,6 +93,7 @@
             altImageText="IsoArcher Game Big Image"
             githubLink="https://github.com/jaydensipe/IsoArcher"
             description="IsoArcher is a collaborative game I made with my best friend Stephen Schaefer. He worked on the art side of things, while I worked on programming. It's a simple game about shooting goblins with arrows and using gold to upgrade your weapon. This was our first-time working experimenting with a 3D environment, as well as creating a game in C#. This game taught me a lot about collaboratively working with another person, and how to structure the game based on that fact."
+            archived={true}
         />
 
         <GameCard
@@ -104,6 +105,7 @@
             altImageText="FarmNer Game Big Image"
             githubLink="https://github.com/jaydensipe/FarmNer-Revival"
             description="FarmNer was the second game I've ever created. It was made using the Godot game engine in GDScript. It is a horror game with a health bar, item looting, and AI that can target and attack you. This game taught me how to use Godot's tools more efficiently and how to manage a larger game."
+            archived={true}
         />
 
         <GameCard
@@ -115,6 +117,7 @@
             altImageText="Gunnkour Game Big Image"
             githubLink="https://github.com/jaydensipe/Gunnkour"
             description="Gunnkour was the first game I've ever made. It was made using the Godot game engine in GDScript. It is a platformer game that uses gun physics to propel you to make longer jumps. This game taught me a huge amount about the game development process from start to finish. It was my first real time attempting to create something in the form of a game, using what I learned in school and applied it to the game development process."
+            archived={true}
         />
     </section>
 </main>

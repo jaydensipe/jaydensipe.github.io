@@ -18,8 +18,8 @@
 
     // Icons
     import {
-        Github,
         Linkedin,
+        Github,
         Joystick,
         LibraryBig,
         Gamepad2,

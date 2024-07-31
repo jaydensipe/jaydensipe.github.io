@@ -7,6 +7,7 @@
     import { Separator } from "$lib/components/ui/separator";
 
     // Images
+    import acfc2Image from "$lib/images/acfc2.webp?enhanced";
     import bdpt2Image from "$lib/images/bdpt2.webp?enhanced";
     import bbrosImage from "$lib/images/bbros2.jpg?enhanced";
     import splorerImage from "$lib/images/splorerpic1.webp?enhanced";
@@ -42,6 +43,17 @@
     <section
         class="flex flex-col justify-center items-center divide-y gap-8 mb-16"
     >
+        <GameCard
+            name="A Concoction for Creeps"
+            link="https://jaydensippy.itch.io/a-concoction-for-creeps"
+            date="July 31st, 2024"
+            imgSrc={acfc2Image}
+            engineLogo={GodotLogo}
+            altImageText="A Concoction for Creeps Game Big Image"
+            githubLink="https://github.com/jaydensipe/A-Concoction-For-Creeps"
+            description="A Concoction for Creeps is a tabletop potion crafting puzzle game where you play the role of an Bartending Alchemist slowly losing their mind in a hellish speakeasy located in the deep dark pits of the unknown, overrun by the shadow denizens that reside there. This was created in two weeks for the Pirate Software Game Jam 15, with my best friend Stephen Schaefer (and others). The theme of the Game Jam was “Alchemy & Shadows” and this is our interpretation of that."
+        />
+
         <GameCard
             name="Burning Down Peasant Town"
             link="https://jaydensippy.itch.io/burning-down-peasant-town"

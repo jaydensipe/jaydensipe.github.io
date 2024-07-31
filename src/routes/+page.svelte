@@ -9,9 +9,9 @@
     import * as Command from "$lib/components/ui/command";
 
     // Images
+    import acfcImage from "$lib/images/acfc1.webp?enhanced";
     import bdpt1Image from "$lib/images/bdpt1.webp?enhanced";
     import bbros1Image from "$lib/images/bbros1.jpg?enhanced";
-    import splorerImage from "$lib/images/splorerpic.webp?enhanced";
     import jrCat1Image from "$lib/images/jrcat1.png?enhanced";
     import squireImage from "$lib/images/squire.png?enhanced";
     import nveImage from "$lib/images/nve.png?enhanced";
@@ -167,7 +167,16 @@
         </p>
         <div class="flex flex-wrap flex-shrink-0 flex-grow-0 justify-center">
             <DescriptiveCard
-                name="B. D. P. T."
+                name="A Concoction for <br/> Creeps"
+                link="https://jaydensippy.itch.io/a-concoction-for-creeps"
+                imgSrc={acfcImage}
+                altImageText="A Concoction for Creeps Game Image"
+                githubLink="https://github.com/jaydensipe/A-Concoction-For-Creeps"
+                description="A game also made in two weeks for the Pirate Software - Game Jam 15, made using Godot."
+            ></DescriptiveCard>
+
+            <DescriptiveCard
+                name="Burning Down Peasant Town"
                 link="https://jaydensippy.itch.io/burning-down-peasant-town"
                 imgSrc={bdpt1Image}
                 altImageText="Burning Down Peasant Town Game Image"
@@ -181,15 +190,6 @@
                 imgSrc={bbros1Image}
                 altImageText="Bombah Bros Game Image"
                 description="A W.I.P. multiplayer game made in the Godot game engine, similar to Super Smash Bros."
-            ></DescriptiveCard>
-
-            <DescriptiveCard
-                name="Splorer"
-                link="https://jaydensipe.github.io/splorer/"
-                imgSrc={splorerImage}
-                altImageText="Splorer Game Image"
-                githubLink="https://github.com/jaydensipe/Splorer"
-                description="A simple game made in WebGL, hosted on a custom web page; made for my Computer Graphics course."
             ></DescriptiveCard>
         </div>
 
@@ -220,7 +220,7 @@
         </p>
         <div class="flex flex-wrap flex-shrink-0 flex-grow-0 justify-center">
             <DescriptiveCard
-                name="Jay's Reusable Components and Things"
+                name="Jay's Reusable Components and <br/> Things"
                 imgSrc={jrCat1Image}
                 altImageText="Jay's Reusable Components and Things Personal Project Image"
                 githubLink="https://github.com/jaydensipe/Jays-Reusable-Components-and-Things"

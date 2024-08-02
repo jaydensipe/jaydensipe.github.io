@@ -9,6 +9,7 @@
     import * as Carousel from "$lib/components/ui/carousel/index.js";
 
     // Images
+    import gdLocalHistoryImage from "$lib/images/gdlocalhistory.png?enhanced";
     import jrcat1Image from "$lib/images/jrcat1.png?enhanced";
     import squireImage from "$lib/images/squire.png?enhanced";
     import nveImage from "$lib/images/nve.png?enhanced";
@@ -53,6 +54,15 @@
     <section
         class="flex flex-col justify-center items-center divide-y gap-8 mb-16 sm:mx-4"
     >
+        <ProjectCard
+            name="GD Local History"
+            language="GDScript"
+            languageIcons={[GodotLogo]}
+            githubLink="https://github.com/jaydensipe/GD-Local-History"
+            imgSrc={gdLocalHistoryImage}
+            altImageText="GD Local History Project Big Image"
+            description="Similar to the feature found in Visual Studio Code (and many other IDEs), GD Local History keeps a snapshot of each previous version of a script (upon saving that script with changes that differ from previous version), in the event you need to view past iterations. I created this plugin after an unfortunate event of replacing a script with an old version to test, and accidentally quitting the engine, thus losing my changes..."
+        ></ProjectCard>
         <ProjectCard
             name="Jay's Reusable Components and Things"
             language="GDScript"

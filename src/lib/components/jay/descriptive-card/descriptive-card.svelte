@@ -1,7 +1,7 @@
 <script lang="ts">
     export let name: string;
     export let link: string = "";
-    export let imgSrc: string;
+    export let imgSrc;
     export let altImageText: string;
     export let githubLink: string = "";
     export let description: string;

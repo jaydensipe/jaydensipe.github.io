@@ -12,9 +12,9 @@
     import acfcImage from "$lib/images/acfc1.webp?enhanced";
     import bdpt1Image from "$lib/images/bdpt1.webp?enhanced";
     import bbros1Image from "$lib/images/bbros1.jpg?enhanced";
+    import gdLocalHistoryImage from "$lib/images/gdlocalhistory.png?enhanced";
     import jrCat1Image from "$lib/images/jrcat1.png?enhanced";
     import squireImage from "$lib/images/squire.png?enhanced";
-    import nveImage from "$lib/images/nve.png?enhanced";
 
     // Icons
     import {
@@ -220,6 +220,15 @@
         </p>
         <div class="flex flex-wrap flex-shrink-0 flex-grow-0 justify-center">
             <DescriptiveCard
+                name="GD Local History"
+                link="https://github.com/jaydensipe/GD-Local-History"
+                imgSrc={gdLocalHistoryImage}
+                altImageText="GD Local History Project Image"
+                githubLink="https://github.com/jaydensipe/GD-Local-History"
+                description="A local code history plugin for Godot, similar to those found in many IDEs."
+                noFillBgColor="bg-gray-100 p-1"
+            ></DescriptiveCard>
+            <DescriptiveCard
                 name="Jay's Reusable Components and <br/> Things"
                 imgSrc={jrCat1Image}
                 altImageText="Jay's Reusable Components and Things Personal Project Image"
@@ -234,16 +243,6 @@
                 githubLink="https://github.com/jaydensipe/Squire-AI"
                 description="P.O.C. AI assistant using ChatGPT integration, created for my Text Information Systems course."
                 noFillBgColor="bg-blue-100 p-4"
-            ></DescriptiveCard>
-
-            <DescriptiveCard
-                name="Narrative Visualization Exploration"
-                link="{base}/narrative-visualization/index.html"
-                imgSrc={nveImage}
-                altImageText="Narrative Visualization Exploration Personal Project Image"
-                githubLink="https://github.com/jaydensipe/Narrative-Visualization-Exploration"
-                description="An exploration into data visualization techniques, for my Data Visualization course."
-                noFillBgColor="bg-green-100 p-1"
             ></DescriptiveCard>
         </div>
 

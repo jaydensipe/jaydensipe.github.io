@@ -2,7 +2,7 @@
     export let name: string;
     export let link: string = "";
     export let date: string;
-    export let imgSrc: string;
+    export let imgSrc;
     export let engineLogo: any;
     export let altImageText: string;
     export let githubLink: string = "";

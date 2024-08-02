@@ -3,7 +3,7 @@
     export let language: string;
     export let languageIcons: any[] = [];
     export let githubLink: string = "";
-    export let imgSrc: string;
+    export let imgSrc;
     export let altImageText: string;
     export let description: string;
     export let isArchived: boolean = false;

@@ -11,7 +11,7 @@
     // Images
     import acfcImage from "$lib/images/acfc1.webp?enhanced";
     import bdpt1Image from "$lib/images/bdpt1.webp?enhanced";
-    import bbros1Image from "$lib/images/bbros1.jpg?enhanced";
+    import bbros1Image from "$lib/images/bbros1.webp?enhanced";
     import gdLocalHistoryImage from "$lib/images/gdlocalhistory.png?enhanced";
     import jrCat1Image from "$lib/images/jrcat1.png?enhanced";
     import squireImage from "$lib/images/squire.png?enhanced";

@@ -9,7 +9,7 @@
     // Images
     import acfc2Image from "$lib/images/acfc2.webp?enhanced";
     import bdpt2Image from "$lib/images/bdpt2.webp?enhanced";
-    import bbrosImage from "$lib/images/bbros2.jpg?enhanced";
+    import bbrosImage from "$lib/images/bbros2.webp?enhanced";
     import splorerImage from "$lib/images/splorerpic1.webp?enhanced";
     import solyankaImage from "$lib/images/indevgamepic.webp?enhanced";
     import isoarcherImage from "$lib/images/isoarcherpic2.webp?enhanced";
@@ -53,7 +53,6 @@
             githubLink="https://github.com/jaydensipe/A-Concoction-For-Creeps"
             description="A Concoction for Creeps is a tabletop potion crafting puzzle game where you play the role of an Bartending Alchemist slowly losing their mind in a hellish speakeasy located in the deep dark pits of the unknown, overrun by the shadow denizens that reside there. This was created in two weeks for the Pirate Software Game Jam 15, with my best friend Stephen Schaefer (and others). The theme of the Game Jam was “Alchemy & Shadows” and this is our interpretation of that."
         />
-
         <GameCard
             name="Burning Down Peasant Town"
             link="https://jaydensippy.itch.io/burning-down-peasant-town"
@@ -64,7 +63,6 @@
             githubLink="https://github.com/jaydensipe/Burning-Down-Peasant-Town"
             description="Burning Down Peasant Town is a chaotic fire management, tower defense-esque, FPS hybrid game about wreaking havoc on a village full of Peasants. This was created in two weeks for the Pirate Software Game Jam 14, with my best friend Stephen Schaefer. The theme of the Game Jam was “It’s spreading” and this is our interpretation of that. This was our first real exploration with creating a 3D game and emphasized on building reusable workflows we could apply to other projects, for example, preferring composition over inheritance."
         />
-
         <GameCard
             name="Bombah Bros"
             date="T.B.D."
@@ -74,7 +72,6 @@
             githubLink="https://github.com/jaydensipe/Bombah-Bros"
             description="Bombah Bros is a W.I.P. multiplayer game created in the Godot game engine, similar (gameplay-wise) to Super Smash Bros. This served as my first attempt at creating a multiplayer game, accompanied by learning the game engine’s network implementation and hosting a Linux server to allow players to connect to each other (peer-to-peer). "
         />
-
         <GameCard
             name="Splorer"
             date="November 19, 2021"
@@ -85,7 +82,6 @@
             githubLink="https://github.com/jaydensipe/Splorer"
             description="Splorer is a game created for a Computer Graphics course during my time at college. It helped me understand how games are built on a lower level. Some of the topics covered during creating this project were fragment and vertex shader writing, WebGL development (TWGL.js as a small helper library) and learning to develop in a way that didn't require a game engine."
         />
-
         <GameCard
             name="Solyanka"
             date="February 11, 2021"
@@ -95,7 +91,6 @@
             altImageText="Solyanka Game Big Image"
             description="Solyanka is a game I created while learning Unreal Engine 4, as following a linear tutorial of someone making a game really isn't how I learn best. While developing, I learned a vast number of things about Unreal Engine. Summing up most of what I learned includes: A.I. with behavior trees and blackboards, understanding the importance of not using EventTick excessively, widgets and user interface, blueprint programming, using Blender to create 3D models, landscape tools, utilizing a day/night cycle, using Megascans' Assets and just generally the Unreal Editor."
         />
-
         <GameCard
             name="IsoArcher"
             date="September 30, 2020"
@@ -107,7 +102,6 @@
             description="IsoArcher is a collaborative game I made with my best friend Stephen Schaefer. He worked on the art side of things, while I worked on programming. It's a simple game about shooting goblins with arrows and using gold to upgrade your weapon. This was our first-time working experimenting with a 3D environment, as well as creating a game in C#. This game taught me a lot about collaboratively working with another person, and how to structure the game based on that fact."
             archived={true}
         />
-
         <GameCard
             name="FarmNer"
             date="May 30, 2020"
@@ -119,7 +113,6 @@
             description="FarmNer was the second game I've ever created. It was made using the Godot game engine in GDScript. It is a horror game with a health bar, item looting, and AI that can target and attack you. This game taught me how to use Godot's tools more efficiently and how to manage a larger game."
             archived={true}
         />
-
         <GameCard
             name="Gunnkour"
             date="March 30, 2020"

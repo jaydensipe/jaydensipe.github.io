@@ -9,8 +9,8 @@
         Sun,
         ArrowRightToLine,
         NotepadText,
-        LibraryBig,
-        Gamepad2,
+        Layers,
+        Swords,
     } from "lucide-svelte";
     import * as Sheet from "$lib/components/ui/sheet";
     import Separator from "$lib/components/ui/separator/separator.svelte";
@@ -46,7 +46,7 @@
                                         class="flex flex-row items-center hyperlink decoration-transparent text-lg"
                                     >
                                         Personal Projects
-                                        <LibraryBig
+                                        <Layers
                                             strokeWidth="1.5"
                                             class="ml-2"
                                         />
@@ -60,7 +60,7 @@
                                         class="flex flex-row items-center hyperlink decoration-transparent text-lg"
                                     >
                                         Games
-                                        <Gamepad2
+                                        <Swords
                                             strokeWidth="1.5"
                                             class="ml-2"
                                         />
@@ -74,7 +74,7 @@
                                         class="flex flex-row items-center hyperlink decoration-transparent text-lg"
                                     >
                                         Games
-                                        <Gamepad2
+                                        <Swords
                                             strokeWidth="1.5"
                                             class="ml-2"
                                         />
@@ -87,7 +87,7 @@
                                         class="flex flex-row items-center hyperlink decoration-transparent text-lg"
                                     >
                                         Personal Projects
-                                        <LibraryBig
+                                        <Layers
                                             strokeWidth="1.5"
                                             class="ml-2"
                                         />
@@ -103,7 +103,7 @@
                                 class="flex flex-row gap-2 items-center hyperlink decoration-transparent text-lg"
                             >
                                 <p>Resume</p>
-                                <NotepadText></NotepadText>
+                                <NotepadText strokeWidth="1.5" />
                             </span>
                         </a>
                     </ul>

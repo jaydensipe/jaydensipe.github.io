@@ -15,10 +15,21 @@ const config = {
 		},
 		extend: {
 			boxShadow: {
+				// Normal Styles
 				"main-bg-light": "7px 7px #E3E2F0, 14px 14px #E2EFF0",
-				"main-bg-dark": "7px 7px #12be94, 14px 14px #9412be",
+				"main-bg-light-halloween": "7px 7px #F7D9FF, 14px 14px #FFE8D2",
+				"main-bg-light-christmas": "7px 7px #FFDDDD, 14px 14px #DDECE1",
+				"main-bg-dark": "7px 7px #12BE94, 14px 14px #9412BE",
+				"main-bg-dark-halloween": "7px 7px #FF7600, 14px 14px #52006A",
+				"main-bg-dark-christmas": "7px 7px #35B25C, 14px 14px #BB0000",
+				"main-bg-dark-new-years": "7px 7px #c154c1, 14px 14px #FFD700",
+				// Mobile Styles
 				"main-bg-light-mobile": "0px 7px #E3E2F0, 0px 14px #E2EFF0, 0px -7px #E3E2F0, 0px -14px #E2EFF0",
-				"main-bg-dark-mobile": "0px 7px #12be94, 0px 14px #9412be, 0px -7px #12be94, 0px -14px #9412be"
+				"main-bg-light-halloween-mobile": "0px 7px #F7D9FF, 0px 14px #FFE8D2, 0px -7px #F7D9FF, 0px -14px #FFE8D2",
+				"main-bg-light-christmas-mobile": "0px 7px #FFDDDD, 0px 14px #DDECE1, 0px -7px #FFDDDD, 0px -14px #DDECE1",
+				"main-bg-dark-mobile": "0px 7px #12BE94, 0px 14px #9412BE, 0px -7px #12BE94, 0px -14px #9412BE",
+				"main-bg-dark-halloween-mobile": "0px 7px #FF7600, 0px 14px #52006A, 0px -7px #FF7600, 0px -14px #52006A",
+				"main-bg-dark-christmas-mobile": "0px 7px #35B25C, 0px 14px #BB0000, 0px -7px #35B25C, 0px -14px #BB0000",
 			},
 			colors: {
 				border: "hsl(var(--border) / <alpha-value>)",

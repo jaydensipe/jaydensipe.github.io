@@ -3,10 +3,11 @@
     import ProjectCard from "$lib/components/jay/project-card/project-card.svelte";
     import PageHeader from "$lib/components/jay/page-header/page-header.svelte";
     import PageSheet from "$lib/components/jay/page-sheet/page-sheet.svelte";
+    import PageContainer from "$lib/components/jay/page-container/page-container.svelte";
 
+    import * as Carousel from "$lib/components/ui/carousel/index.js";
     import { Separator } from "$lib/components/ui/separator";
     import { MoveLeft, MoveRight } from "lucide-svelte";
-    import * as Carousel from "$lib/components/ui/carousel/index.js";
 
     // Images
     import gdLocalHistoryImage from "$lib/images/gdlocalhistory.png?enhanced";
@@ -47,7 +48,7 @@
 <Separator class="my-16"></Separator>
 
 <!-- Main Container -->
-<main>
+<PageContainer>
     <NavBar />
 
     <!-- Personal Projects Page -->
@@ -172,7 +173,7 @@
             </Carousel.Root>
         </div>
     </section>
-</main>
+</PageContainer>
 
 <!-- Sheet -->
 <PageSheet></PageSheet>

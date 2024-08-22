@@ -3,6 +3,7 @@
     import GameCard from "$lib/components/jay/game-card/game-card.svelte";
     import PageHeader from "$lib/components/jay/page-header/page-header.svelte";
     import PageSheet from "$lib/components/jay/page-sheet/page-sheet.svelte";
+    import PageContainer from "$lib/components/jay/page-container/page-container.svelte";
 
     import { Separator } from "$lib/components/ui/separator";
 
@@ -36,7 +37,7 @@
 <Separator class="my-16" />
 
 <!-- Main Container -->
-<main>
+<PageContainer>
     <NavBar />
 
     <!-- Games Page -->
@@ -125,7 +126,7 @@
             archived={true}
         />
     </section>
-</main>
+</PageContainer>
 
 <!-- Sheet -->
 <PageSheet></PageSheet>

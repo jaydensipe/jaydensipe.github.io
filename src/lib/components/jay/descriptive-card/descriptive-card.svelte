@@ -40,7 +40,9 @@
                 <br />
                 <Card.Title>
                     {#if link}
-                        <a class="hyperlink card-title" href={link}>{@html name}</a>
+                        <a class="hyperlink card-title" href={link}
+                            >{@html name}</a
+                        >
                     {:else}
                         <span class="card-title">
                             {@html name}

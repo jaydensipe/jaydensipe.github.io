@@ -2,11 +2,18 @@
     import DescriptiveCard from "$lib/components/jay/descriptive-card/descriptive-card.svelte";
     import NavBar from "$lib/components/jay/nav-bar/nav-bar.svelte";
     import PageSheet from "$lib/components/jay/page-sheet/page-sheet.svelte";
+    import PageContainer from "$lib/components/jay/page-container/page-container.svelte";
+    import * as Command from "$lib/components/ui/command";
+    import {
+        holidayStore,
+        musicPlayingStore,
+        SupportedHolidays,
+        playThemedHolidayMusic,
+    } from "../stores/global-store";
     import { Separator } from "$lib/components/ui/separator";
     import { Button } from "$lib/components/ui/button";
     import { base } from "$app/paths";
     import { toggleMode } from "mode-watcher";
-    import * as Command from "$lib/components/ui/command";
 
     // Images
     import acfcImage from "$lib/images/acfc1.webp?enhanced";
@@ -21,10 +28,12 @@
         Linkedin,
         Github,
         Joystick,
-        LibraryBig,
-        Gamepad2,
+        Layers,
+        Swords,
         Moon,
         Sun,
+        Disc,
+        Disc3,
         NotepadText,
     } from "lucide-svelte";
 </script>
@@ -51,13 +60,32 @@
         review my
         <span class="font-semibold">professional experience</span> as a developer.
     </p>
-    <p class="pb-8">
-        - Made with <a
-            class="hyperlink"
-            href="https://kit.svelte.dev/"
-            target="_blank">SvelteKit</a
-        > -
-    </p>
+    {#if $holidayStore === SupportedHolidays.Halloween}
+        <div class="pb-8">
+            <p>- 🎃 Happy Halloween! 🎃 -</p>
+            {#if $musicPlayingStore}
+                <p>
+                    🎶 © Music was created and is owned by <a
+                        class="hyperlink"
+                        href="https://www.valvesoftware.com/en/"
+                        >Valve Corporation</a
+                    >.🎶
+                </p>
+            {/if}
+        </div>
+    {:else if $holidayStore === SupportedHolidays.Christmas}
+        <p class="pb-8">- 🎄 Happy Holidays! 🎄 -</p>
+    {:else if $holidayStore === SupportedHolidays.NewYears}
+        <p class="pb-8">- 🎊 Happy New Years! 🎊 -</p>
+    {:else}
+        <p class="pb-8">
+            - Made with <a
+                class="hyperlink"
+                href="https://kit.svelte.dev/"
+                target="_blank">SvelteKit</a
+            > -
+        </p>
+    {/if}
 </header>
 
 <!-- Command Bar -->
@@ -65,6 +93,22 @@
     <Command.List>
         <Command.Empty>No results found.</Command.Empty>
         <Command.Group heading="Actions">
+            {#if $holidayStore !== SupportedHolidays.None}
+                <Command.Item
+                    onSelect={() => playThemedHolidayMusic()}
+                    class="cursor-pointer"
+                >
+                    <div class="flex flex-row items-center m-1 sm:m-0">
+                        {#if $musicPlayingStore}
+                            <Disc3 class="mr-2 h-4 w-4 scale-100 absolute" />
+                            <span class="ml-6">Stop Holiday Themed Music</span>
+                        {:else}
+                            <Disc class="mr-2 h-4 w-4 scale-100 absolute" />
+                            <span class="ml-6">Play Holiday Themed Music</span>
+                        {/if}
+                    </div>
+                </Command.Item>
+            {/if}
             <Command.Item onSelect={toggleMode} class="cursor-pointer">
                 <div class="flex flex-row items-center m-1 sm:m-0">
                     <Sun class="mr-2 h-4 w-4 scale-100 dark:scale-0 absolute" />
@@ -73,8 +117,8 @@
                     />
                     <span class="ml-6">Toggle Dark Mode</span>
                 </div>
-            </Command.Item></Command.Group
-        >
+            </Command.Item>
+        </Command.Group>
         <Command.Group heading="Experience">
             <Command.Item class="cursor-pointer">
                 <a
@@ -125,7 +169,7 @@
 <Separator class="my-16"></Separator>
 
 <!-- Main Container -->
-<main>
+<PageContainer>
     <NavBar onMainPage={true} />
 
     <section id="about">
@@ -174,7 +218,6 @@
                 githubLink="https://github.com/jaydensipe/A-Concoction-For-Creeps"
                 description="A game also made in two weeks for the Pirate Software - Game Jam 15, made using Godot."
             ></DescriptiveCard>
-
             <DescriptiveCard
                 name="Burning Down Peasant Town"
                 link="https://jaydensippy.itch.io/burning-down-peasant-town"
@@ -183,7 +226,6 @@
                 githubLink="https://github.com/jaydensipe/Burning-Down-Peasant-Town"
                 description="A game made in two weeks for the Pirate Software - Game Jam 14, made using the Godot game engine."
             ></DescriptiveCard>
-
             <DescriptiveCard
                 name="Bombah Bros"
                 githubLink="https://github.com/jaydensipe/Bombah-Bros"
@@ -195,7 +237,7 @@
 
         <div class="flex justify-center my-8">
             <Button variant="outline" href="{base}/games"
-                ><Gamepad2 strokeWidth="1.5" class="mr-2" />View More Games</Button
+                ><Swords strokeWidth="1.5" class="mr-2" />View More Games</Button
             >
         </div>
     </section>
@@ -248,11 +290,11 @@
 
         <div class="flex justify-center my-8 mb-16">
             <Button variant="outline" href="{base}/personal-projects"
-                ><LibraryBig strokeWidth="1.5" class="mr-2" />View More Projects</Button
+                ><Layers strokeWidth="1.5" class="mr-2" />View More Projects</Button
             >
         </div>
     </section>
-</main>
+</PageContainer>
 
 <!-- Sheet -->
 <PageSheet></PageSheet>

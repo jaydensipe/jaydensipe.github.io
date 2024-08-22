@@ -12,8 +12,8 @@
 
 <CommandPrimitive.Root
 	class={cn(
-		"flex h-full w-full flex-col overflow-hidden rounded-md bg-popover text-popover-foreground",
-		className
+		"flex h-full w-full flex-col overflow-hidden rounded-md bg-popover text-popover-foreground bg-opacity-50 shadow-lg backdrop-blur-lg p-2 decoration-trasparent",
+		className,
 	)}
 	bind:value
 	{...$$restProps}

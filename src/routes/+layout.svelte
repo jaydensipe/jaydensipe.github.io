@@ -1,5 +1,6 @@
 <script lang="ts">
     import Footer from "$lib/components/jay/footer/footer.svelte";
+    import HolidayParticles from "$lib/components/jay/holiday-particles/holiday-particles.svelte";
 
     import { afterNavigate, beforeNavigate } from "$app/navigation";
     import { ModeWatcher } from "mode-watcher";
@@ -24,6 +25,9 @@
 
 <!-- Dark Mode Toggle -->
 <ModeWatcher />
+
+<!-- Holiday Particles -->
+<HolidayParticles />
 
 <slot />
 

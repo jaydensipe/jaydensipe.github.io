@@ -5,7 +5,7 @@
 </script>
 
 <footer
-    class="flex flex-col gap-4 my-16 items-center justify-center text-sm sm:text-base"
+    class="flex flex-col gap-4 my-16 items-center justify-center text-sm sm:text-base bg-card bg-opacity-50 backdrop-blur-lg rounded-md p-6 decoration-trasparent"
 >
     <div class="flex flex-row gap-8">
         <a

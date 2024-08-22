@@ -19,8 +19,24 @@ export enum SupportedHolidays {
 
 export const holidayStore = writable(getHoliday());
 export const musicPlayingStore = writable(false);
-
 let currentPlayingTrack: Sound | null = null;
+
+function getHoliday(): SupportedHolidays {
+    const today = new Date();
+    const month = today.getMonth();
+    const day = today.getDate();
+
+    if (month === 9) {
+        return SupportedHolidays.Halloween;
+    } else if (month === 11) {
+        return SupportedHolidays.Christmas;
+    } else if (month === 0 && day === 1) {
+        return SupportedHolidays.NewYears;
+    }
+
+    return SupportedHolidays.None;
+}
+
 export function playThemedHolidayMusic(): void {
     if (get(musicPlayingStore)) {
         currentPlayingTrack?.stop();
@@ -37,20 +53,4 @@ export function playThemedHolidayMusic(): void {
 
     currentPlayingTrack?.play();
     musicPlayingStore.set(true);
-}
-
-function getHoliday(): SupportedHolidays {
-    const today = new Date();
-    const month = today.getMonth();
-    const day = today.getDate();
-
-    if (month === 9) {
-        return SupportedHolidays.Halloween;
-    } else if (month === 11) {
-        return SupportedHolidays.Christmas;
-    } else if (month === 0 && day === 1) {
-        return SupportedHolidays.NewYears;
-    }
-
-    return SupportedHolidays.NewYears;
 }

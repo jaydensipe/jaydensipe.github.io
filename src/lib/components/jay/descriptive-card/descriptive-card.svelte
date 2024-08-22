@@ -8,6 +8,7 @@
     export let noFillBgColor: string = "";
 
     import * as Card from "$lib/components/ui/card";
+    import Separator from "$lib/components/ui/separator/separator.svelte";
     import Saos from "saos";
 </script>
 
@@ -59,10 +60,11 @@
                 </Card.Title>
             </Card.Header>
             <Card.Content>
-                <p>
+                <p class="text-sm md:text-base">
                     {description}
                 </p>
             </Card.Content>
-        </Card.Root></Saos
-    >
+        </Card.Root>
+        <Separator class="md:hidden"></Separator>
+    </Saos>
 </div>

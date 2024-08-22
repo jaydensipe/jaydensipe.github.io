@@ -4,7 +4,7 @@
     import {
         holidayStore,
         SupportedHolidays,
-    } from "../../../../stores/global-store";
+    } from "../../../../stores/holiday-store";
     import { mode } from "mode-watcher";
 
     let holidayParticleConfig = {
@@ -56,7 +56,7 @@
                         y: 30,
                     },
                     rate: {
-                        quantity: 10,
+                        quantity: 7,
                         delay: 0.15,
                     },
                     particles: {
@@ -76,7 +76,7 @@
                         y: 30,
                     },
                     rate: {
-                        quantity: 10,
+                        quantity: 7,
                         delay: 0.15,
                     },
                     particles: {
@@ -107,8 +107,8 @@
                         default: "destroy",
                     },
                     speed: {
-                        min: 10,
-                        max: 50,
+                        min: 20,
+                        max: 70,
                     },
                 },
                 rotate: {
@@ -136,7 +136,7 @@
                 },
                 size: {
                     value: {
-                        min: 3,
+                        min: 2,
                         max: 4,
                     },
                 },
@@ -166,15 +166,9 @@
             },
         },
         newYears: {
-            fullScreen: {
-                zIndex: 1,
-            },
             particles: {
-                number: {
-                    value: 0,
-                },
                 color: {
-                    value: ["#00FFFC", "#FC00FF", "#fffc00"],
+                    value: ["#CB00F0", "#FFF6C7", "#F05200"],
                 },
                 shape: {
                     type: ["circle", "square"],
@@ -194,17 +188,14 @@
                 },
                 size: {
                     value: {
-                        min: 2,
+                        min: 3,
                         max: 4,
                     },
-                },
-                links: {
-                    enable: false,
                 },
                 life: {
                     duration: {
                         sync: true,
-                        value: 5,
+                        value: 7,
                     },
                     count: 1,
                 },
@@ -216,7 +207,7 @@
                     },
                     speed: {
                         min: 10,
-                        max: 20,
+                        max: 50,
                     },
                     decay: 0.1,
                     direction: "none",
@@ -279,12 +270,8 @@
                     delay: 0.4,
                 },
                 rate: {
-                    delay: 0.1,
-                    quantity: 150,
-                },
-                size: {
-                    width: 0,
-                    height: 0,
+                    delay: 0.25,
+                    quantity: 200,
                 },
             },
         },
@@ -303,6 +290,7 @@
     {#if $mode === "dark"}
         <Particles
             id="tsparticles"
+            class="hidden md:block"
             style="z-index: -1;"
             options={holidayParticleConfig.halloween}
             on:particlesLoaded={onParticlesLoaded}
@@ -310,6 +298,7 @@
     {:else}
         <Particles
             id="tsparticles"
+            class="hidden md:block"
             style="z-index: -1;"
             options={{
                 ...holidayParticleConfig.halloween,
@@ -327,6 +316,7 @@
     {#if $mode === "dark"}
         <Particles
             id="tsparticles"
+            class="hidden md:block"
             style="z-index: -1;"
             options={holidayParticleConfig.christmas}
             on:particlesLoaded={onParticlesLoaded}
@@ -334,6 +324,7 @@
     {:else}
         <Particles
             id="tsparticles"
+            class="hidden md:block"
             style="z-index: -1;"
             options={{
                 ...holidayParticleConfig.christmas,
@@ -348,10 +339,29 @@
         />
     {/if}
 {:else if $holidayStore === SupportedHolidays.NewYears}
-    <Particles
-        id="tsparticles"
-        style="z-index: -1;"
-        options={holidayParticleConfig.newYears}
-        on:particlesLoaded={onParticlesLoaded}
-    />
+    {#if $mode === "dark"}
+        <Particles
+            id="tsparticles"
+            class="hidden md:block"
+            style="z-index: -1;"
+            options={holidayParticleConfig.newYears}
+            on:particlesLoaded={onParticlesLoaded}
+        />
+    {:else}
+        <Particles
+            id="tsparticles"
+            class="hidden md:block"
+            style="z-index: -1;"
+            options={{
+                ...holidayParticleConfig.newYears,
+                particles: {
+                    ...holidayParticleConfig.newYears.particles,
+                    color: {
+                        value: ["#F9DBFF", "#FFF6C7", "#FFD4BE"],
+                    },
+                },
+            }}
+            on:particlesLoaded={onParticlesLoaded}
+        />
+    {/if}
 {/if}

@@ -2,7 +2,7 @@
     import {
         holidayStore,
         SupportedHolidays,
-    } from "../../../../stores/global-store";
+    } from "../../../../stores/holiday-store";
 </script>
 
 {#if $holidayStore === SupportedHolidays.Halloween}
@@ -19,7 +19,7 @@
     </main>
 {:else if $holidayStore === SupportedHolidays.NewYears}
     <main
-        class="container bg-card pt-8 shadow-main-bg-light-halloween-mobile dark:shadow-main-bg-dark-halloween-mobile sm:shadow-main-bg-light-halloween sm:dark:shadow-main-bg-dark-new-years"
+        class="container bg-card pt-8 shadow-main-bg-light-new-years-mobile dark:shadow-main-bg-dark-new-years-mobile sm:shadow-main-bg-light-new-years sm:dark:shadow-main-bg-dark-new-years"
     >
         <slot />
     </main>

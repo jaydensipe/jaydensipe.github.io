@@ -9,7 +9,7 @@
         musicPlayingStore,
         SupportedHolidays,
         playThemedHolidayMusic,
-    } from "../stores/global-store";
+    } from "../stores/holiday-store";
     import { Separator } from "$lib/components/ui/separator";
     import { Button } from "$lib/components/ui/button";
     import { base } from "$app/paths";
@@ -93,7 +93,7 @@
     <Command.List>
         <Command.Empty>No results found.</Command.Empty>
         <Command.Group heading="Actions">
-            {#if $holidayStore !== SupportedHolidays.None}
+            {#if $holidayStore !== SupportedHolidays.None && $holidayStore !== SupportedHolidays.NewYears}
                 <Command.Item
                     onSelect={() => playThemedHolidayMusic()}
                     class="cursor-pointer"
@@ -242,7 +242,7 @@
         </div>
     </section>
 
-    <Separator id="personal-projects" class="my-16" />
+    <Separator id="personal-projects" class="hidden md:block my-16" />
 
     <!-- Personal Projects -->
     <section>

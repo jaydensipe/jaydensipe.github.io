@@ -242,7 +242,7 @@
         </div>
     </section>
 
-    <Separator id="personal-projects" class="hidden md:block my-16" />
+    <Separator id="personal-projects" class="hidden sm:block my-16" />
 
     <!-- Personal Projects -->
     <section>

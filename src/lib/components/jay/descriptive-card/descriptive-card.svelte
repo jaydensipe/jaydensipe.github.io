@@ -65,6 +65,6 @@
                 </p>
             </Card.Content>
         </Card.Root>
-        <Separator class="md:hidden"></Separator>
+        <Separator class="sm:hidden"></Separator>
     </Saos>
 </div>

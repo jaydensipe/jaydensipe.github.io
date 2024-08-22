@@ -290,7 +290,7 @@
     {#if $mode === "dark"}
         <Particles
             id="tsparticles"
-            class="hidden md:block"
+            class="hidden sm:block"
             style="z-index: -1;"
             options={holidayParticleConfig.halloween}
             on:particlesLoaded={onParticlesLoaded}
@@ -298,7 +298,7 @@
     {:else}
         <Particles
             id="tsparticles"
-            class="hidden md:block"
+            class="hidden sm:block"
             style="z-index: -1;"
             options={{
                 ...holidayParticleConfig.halloween,
@@ -316,7 +316,7 @@
     {#if $mode === "dark"}
         <Particles
             id="tsparticles"
-            class="hidden md:block"
+            class="hidden sm:block"
             style="z-index: -1;"
             options={holidayParticleConfig.christmas}
             on:particlesLoaded={onParticlesLoaded}
@@ -324,7 +324,7 @@
     {:else}
         <Particles
             id="tsparticles"
-            class="hidden md:block"
+            class="hidden sm:block"
             style="z-index: -1;"
             options={{
                 ...holidayParticleConfig.christmas,
@@ -342,7 +342,7 @@
     {#if $mode === "dark"}
         <Particles
             id="tsparticles"
-            class="hidden md:block"
+            class="hidden sm:block"
             style="z-index: -1;"
             options={holidayParticleConfig.newYears}
             on:particlesLoaded={onParticlesLoaded}
@@ -350,7 +350,7 @@
     {:else}
         <Particles
             id="tsparticles"
-            class="hidden md:block"
+            class="hidden sm:block"
             style="z-index: -1;"
             options={{
                 ...holidayParticleConfig.newYears,

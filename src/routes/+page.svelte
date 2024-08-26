@@ -263,7 +263,7 @@
         <div class="flex flex-wrap flex-shrink-0 flex-grow-0 justify-center">
             <DescriptiveCard
                 name="GD Local History"
-                link="https://github.com/jaydensipe/GD-Local-History"
+                link="https://godotengine.org/asset-library/asset/3266"
                 imgSrc={gdLocalHistoryImage}
                 altImageText="GD Local History Project Image"
                 githubLink="https://github.com/jaydensipe/GD-Local-History"

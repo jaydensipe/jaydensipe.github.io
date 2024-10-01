@@ -1,14 +1,26 @@
 import { writable } from "svelte/store";
-import { Sound } from "svelte-sound";
+import { Howl, Howler } from 'howler';
 import { get } from "svelte/store";
 
 // Halloween Music
 import halloweenMp3 from "$lib/music/halloween.mp3";
-const halloweenSound: Sound = new Sound(halloweenMp3, { volume: 0.1, loop: true, html5: true, preload: "metadata" });
+const halloweenSound = new Howl({
+    src: [halloweenMp3],
+    loop: true,
+    volume: 0.1,
+    html5: true,
+    preload: "metadata"
+});
 
 // Christmas Music
 import christmasMp3 from "$lib/music/christmas.mp3";
-const christmasSound: Sound = new Sound(christmasMp3, { volume: 0.1, loop: true, html5: true, preload: "metadata" });
+const christmasSound = new Howl({
+    src: [christmasMp3],
+    loop: true,
+    volume: 0.1,
+    html5: true,
+    preload: "metadata"
+});
 
 export enum SupportedHolidays {
     None = 0,
@@ -19,7 +31,7 @@ export enum SupportedHolidays {
 
 export const holidayStore = writable(getHoliday());
 export const musicPlayingStore = writable(false);
-let currentPlayingTrack: Sound | null = null;
+let currentPlayingTrack: Howl | null = null;
 
 function getHoliday(): SupportedHolidays {
     const today = new Date();

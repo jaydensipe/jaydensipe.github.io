@@ -69,7 +69,7 @@
                         class="hyperlink"
                         href="https://www.valvesoftware.com/en/"
                         >Valve Corporation</a
-                    >.🎶
+                    >. 🎶
                 </p>
             {/if}
         </div>

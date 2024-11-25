@@ -119,7 +119,7 @@
         ></ProjectCard>
 
         <div
-            class="cursor-grab bg-yellow-50 dark:bg-stone-800 flex justify-center items-center flex-col p-2"
+            class="bg-yellow-50 dark:bg-stone-800 flex justify-center items-center flex-col p-2"
         >
             <div class="mt-8 text-lg flex flex-row gap-4 text-muted-foreground">
                 <MoveLeft></MoveLeft>Archived Projects ⚠️<MoveRight></MoveRight>

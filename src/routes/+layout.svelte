@@ -5,6 +5,11 @@
     import { afterNavigate, beforeNavigate } from "$app/navigation";
     import { ModeWatcher } from "mode-watcher";
     import "../app.pcss";
+    interface Props {
+        children?: import('svelte').Snippet;
+    }
+
+    let { children }: Props = $props();
 
     // Fixes scroll behaivour when going to a new page: https://github.com/sveltejs/kit/pull/8723#issuecomment-1423522635
     let scroll_behaviour: any;
@@ -29,7 +34,7 @@
 <!-- Holiday Particles -->
 <HolidayParticles />
 
-<slot />
+{@render children?.()}
 
 <!-- Footer -->
 <Footer />

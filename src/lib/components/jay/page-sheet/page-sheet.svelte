@@ -128,10 +128,10 @@
                                 class="text-muted-foreground hyperlink cursor-pointer hover:scale-105"
                             /></a
                         >
-                        <!-- svelte-ignore a11y-click-events-have-key-events -->
-                        <!-- svelte-ignore a11y-no-static-element-interactions -->
+                        <!-- svelte-ignore a11y_click_events_have_key_events -->
+                        <!-- svelte-ignore a11y_no_static_element_interactions -->
                         <div
-                            on:click={toggleMode}
+                            onclick={toggleMode}
                             class="hyperlink right-16 absolute cursor-pointer"
                         >
                             <Sun class="scale-100 dark:scale-0 absolute" />

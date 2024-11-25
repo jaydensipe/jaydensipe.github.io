@@ -1,15 +1,27 @@
 <script lang="ts">
-    export let name: string;
-    export let link: string = "";
-    export let imgSrc;
-    export let altImageText: string;
-    export let githubLink: string = "";
-    export let description: string;
-    export let noFillBgColor: string = "";
 
     import * as Card from "$lib/components/ui/card";
     import Separator from "$lib/components/ui/separator/separator.svelte";
     import Saos from "saos";
+    interface Props {
+        name: string;
+        link?: string;
+        imgSrc: any;
+        altImageText: string;
+        githubLink?: string;
+        description: string;
+        noFillBgColor?: string;
+    }
+
+    let {
+        name,
+        link = "",
+        imgSrc,
+        altImageText,
+        githubLink = "",
+        description,
+        noFillBgColor = ""
+    }: Props = $props();
 </script>
 
 <div>
@@ -25,7 +37,7 @@
                     <a class="m-0 p-0" href={link}>
                         <enhanced:img
                             loading="lazy"
-                            class="{noFillBgColor} w-full scale-90 sm:scale-100 shadow-lg rounded-lg motion-safe:hover:scale-100 sm:hover:scale-110 hover:motion-safe:skew-y-2 transition duration-150 ease-out"
+                            class="{noFillBgColor} w-full scale-90 sm:scale-100 shadow-lg rounded-lg motion-reduce:hover:scale-100 sm:hover:scale-110 hover:motion-reduce:skew-y-2 transition duration-150 ease-out"
                             src={imgSrc}
                             alt={altImageText}
                         /></a
@@ -33,7 +45,7 @@
                 {:else}
                     <enhanced:img
                         loading="lazy"
-                        class="{noFillBgColor} w-full scale-90 sm:scale-100 shadow-lg rounded-lg motion-safe:hover:scale-100 sm:hover:scale-110 hover:motion-safe:skew-y-2 transition duration-150 ease-out"
+                        class="{noFillBgColor} w-full scale-90 sm:scale-100 shadow-lg rounded-lg motion-reduce:hover:scale-100 sm:hover:scale-110 hover:motion-reduce:skew-y-2 transition duration-150 ease-out"
                         src={imgSrc}
                         alt={altImageText}
                     />

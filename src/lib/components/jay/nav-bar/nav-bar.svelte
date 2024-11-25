@@ -2,7 +2,11 @@
     import { base } from "$app/paths";
     import NavButton from "./nav-button.svelte";
 
-    export let onMainPage = false;
+    interface Props {
+        onMainPage?: boolean;
+    }
+
+    let { onMainPage = false }: Props = $props();
 </script>
 
 <nav

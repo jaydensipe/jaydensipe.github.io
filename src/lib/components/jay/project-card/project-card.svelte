@@ -1,14 +1,27 @@
 <script lang="ts">
-    export let name: string;
-    export let language: string;
-    export let languageIcons: any[] = [];
-    export let githubLink: string = "";
-    export let imgSrc;
-    export let altImageText: string;
-    export let description: string;
-    export let isArchived: boolean = false;
 
     import Saos from "saos";
+    interface Props {
+        name: string;
+        language: string;
+        languageIcons?: any[];
+        githubLink?: string;
+        imgSrc: any;
+        altImageText: string;
+        description: string;
+        isArchived?: boolean;
+    }
+
+    let {
+        name,
+        language,
+        languageIcons = [],
+        githubLink = "",
+        imgSrc,
+        altImageText,
+        description,
+        isArchived = false
+    }: Props = $props();
 </script>
 
 <Saos
@@ -49,8 +62,9 @@
             </div>
             <div class="flex flex-row gap-4 justify-center p-4">
                 {#each languageIcons as icon}
-                    <svelte:component this={icon} style="font-size: 1.5rem;"
-                    ></svelte:component>
+                    {@const SvelteComponent = icon}
+                    <SvelteComponent style="font-size: 1.5rem;"
+                    ></SvelteComponent>
                 {/each}
             </div>
             <p class="mt-4 text-sm sm:text-base">

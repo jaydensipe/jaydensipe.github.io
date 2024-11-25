@@ -1,18 +1,32 @@
 <script lang="ts">
-    export let name: string;
-    export let link: string = "";
-    export let date: string;
-    export let imgSrc;
-    export let engineLogo: any;
-    export let altImageText: string;
-    export let githubLink: string = "";
-    export let description: string;
-    export let archived: boolean = false;
 
     import * as Card from "$lib/components/ui/card";
     import Saos from "saos";
     import Badge from "$lib/components/ui/badge/badge.svelte";
     import * as Tooltip from "$lib/components/ui/tooltip";
+    interface Props {
+        name: string;
+        link?: string;
+        date: string;
+        imgSrc: any;
+        engineLogo: any;
+        altImageText: string;
+        githubLink?: string;
+        description: string;
+        archived?: boolean;
+    }
+
+    let {
+        name,
+        link = "",
+        date,
+        imgSrc,
+        engineLogo,
+        altImageText,
+        githubLink = "",
+        description,
+        archived = false
+    }: Props = $props();
 </script>
 
 <Saos
@@ -62,11 +76,11 @@
                 <p class="text-sm sm:text-base">
                     {description}
                 </p>
+                {@const SvelteComponent = engineLogo}
                 <span class="flex flex-row justify-between">
-                    <svelte:component
-                        this={engineLogo}
+                    <SvelteComponent
                         style="font-size: 1.0rem;"
-                    ></svelte:component>
+                    ></SvelteComponent>
                     {#if archived}
                         <Tooltip.Root>
                             <Tooltip.Trigger

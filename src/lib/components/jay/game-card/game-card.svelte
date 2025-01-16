@@ -37,16 +37,16 @@
         class="flex flex-col justify-center items-center gap-8 sm:gap-10 sm:mx-8"
     >
         <Badge class="mt-8" variant="secondary">{date}</Badge>
-        <Card.Root class="text-center shadow-md sm:border-0 bg-secondary">
+        <Card.Root class="text-center shadow-md sm:border-0 bg-secondary w-5/6">
             <Card.Header>
                 <enhanced:img
-                    class="bg-red-100 rounded-lg"
+                    class="bg-red-100 rounded-lg scale-95"
                     src={imgSrc}
                     alt={altImageText}
                 />
                 <br />
                 <Card.Title
-                    class="text-lg sm:text-2xl sm:mx-0 mx-4 p-2 bg-zinc-200 dark:bg-zinc-700"
+                    class="text-lg sm:text-2xl sm:mx-0 mx-4 p-2 bg-zinc-200 dark:bg-zinc-700 rounded-lg"
                 >
                     {#if link}
                         <a

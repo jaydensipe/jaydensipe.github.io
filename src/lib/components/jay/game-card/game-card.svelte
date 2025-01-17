@@ -37,7 +37,7 @@
         class="flex flex-col justify-center items-center gap-8 sm:gap-10 sm:mx-8"
     >
         <Badge class="mt-8" variant="secondary">{date}</Badge>
-        <Card.Root class="text-center shadow-md sm:border-0 bg-secondary w-5/6">
+        <Card.Root class="text-center shadow-md sm:border-0 bg-secondary sm:w-5/6">
             <Card.Header>
                 <enhanced:img
                     class="bg-red-100 rounded-lg scale-95"

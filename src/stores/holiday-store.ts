@@ -9,7 +9,7 @@ const halloweenSound = new Howl({
     loop: true,
     volume: 0.1,
     html5: true,
-    preload: "metadata"
+    preload: false
 });
 
 // Christmas Music
@@ -19,7 +19,7 @@ const christmasSound = new Howl({
     loop: true,
     volume: 0.1,
     html5: true,
-    preload: "metadata"
+    preload: false
 });
 
 export enum SupportedHolidays {
@@ -57,9 +57,11 @@ export function playThemedHolidayMusic(): void {
     }
 
     if (getHoliday() === SupportedHolidays.Halloween) {
+        halloweenSound.load();
         currentPlayingTrack = halloweenSound;
     }
     else if (getHoliday() === SupportedHolidays.Christmas) {
+        christmasSound.load();
         currentPlayingTrack = christmasSound;
     }
 

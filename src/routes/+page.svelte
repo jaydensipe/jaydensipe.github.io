@@ -188,7 +188,7 @@
         </blockquote>
 
         <p class="text-center">
-            Currently <i>employed</i> as a <b>Software Engineer</b>.
+            Currently <i>employed</i> as a <b>Senior Software Engineer</b>.
         </p>
     </section>
 

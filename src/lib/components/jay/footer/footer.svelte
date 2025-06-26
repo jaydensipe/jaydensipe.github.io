@@ -1,11 +1,11 @@
 <script lang="ts">
-    import { Github, Linkedin, Joystick } from "lucide-svelte";
+    import { Github, Linkedin, Joystick } from "@lucide/svelte";
 
     let year = new Date().getFullYear();
 </script>
 
 <footer
-    class="flex flex-col gap-4 my-16 items-center justify-center text-sm sm:text-base bg-card bg-opacity-50 backdrop-blur-lg rounded-md p-4 sm:p-6 decoration-trasparent"
+    class="flex flex-col gap-4 my-16 items-center justify-center text-sm sm:text-base bg-card/50 backdrop-blur-lg rounded-md p-4 sm:p-6 decoration-trasparent"
 >
     <div class="flex flex-row gap-8">
         <a

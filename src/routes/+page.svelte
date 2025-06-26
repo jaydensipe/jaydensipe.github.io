@@ -1,8 +1,13 @@
 <script lang="ts">
+    import { base } from "$app/paths";
     import DescriptiveCard from "$lib/components/jay/descriptive-card/descriptive-card.svelte";
     import NavBar from "$lib/components/jay/nav-bar/nav-bar.svelte";
     import PageSheet from "$lib/components/jay/page-sheet/page-sheet.svelte";
     import PageContainer from "$lib/components/jay/page-container/page-container.svelte";
+    import DarkModeSwitcher from "$lib/components/jay/dark-mode-switcher/dark-mode-switcher.svelte";
+    import { toggleMode } from "mode-watcher";
+    import { Separator } from "$lib/components/ui/separator";
+    import { Button } from "$lib/components/ui/button";
     import * as Command from "$lib/components/ui/command";
     import {
         holidayStore,
@@ -10,10 +15,6 @@
         SupportedHolidays,
         playThemedHolidayMusic,
     } from "../stores/holiday-store";
-    import { Separator } from "$lib/components/ui/separator";
-    import { Button } from "$lib/components/ui/button";
-    import { base } from "$app/paths";
-    import { toggleMode } from "mode-watcher";
 
     // Images
     import acfcImage from "$lib/images/acfc1.webp?enhanced";
@@ -30,12 +31,10 @@
         Joystick,
         Layers,
         Swords,
-        Moon,
-        Sun,
         Disc,
         Disc3,
         NotepadText,
-    } from "lucide-svelte";
+    } from "@lucide/svelte";
 </script>
 
 <svelte:head>
@@ -100,7 +99,9 @@
                 >
                     <div class="flex flex-row items-center m-1 sm:m-0">
                         {#if $musicPlayingStore}
-                            <Disc3 class="mr-2 h-4 w-4 scale-100 absolute" />
+                            <Disc3
+                                class="mr-2 h-4 w-4 scale-100 absolute animate-spin"
+                            />
                             <span class="ml-6">Stop Holiday Themed Music</span>
                         {:else}
                             <Disc class="mr-2 h-4 w-4 scale-100 absolute" />
@@ -111,10 +112,7 @@
             {/if}
             <Command.Item onSelect={toggleMode} class="cursor-pointer">
                 <div class="flex flex-row items-center m-1 sm:m-0">
-                    <Sun class="mr-2 h-4 w-4 scale-100 dark:scale-0 absolute" />
-                    <Moon
-                        class="mr-2 h-4 w-4 scale-0 dark:scale-100 absolute"
-                    />
+                    <DarkModeSwitcher></DarkModeSwitcher>
                     <span class="ml-6">Toggle Dark Mode</span>
                 </div>
             </Command.Item>
@@ -180,11 +178,12 @@
             computers. I love how games can be used to tell an interactive story
             and appreciate all genres. Some personal favorites include
             Half-Life: Alyx, Life is Strange, Team Fortress 2, It Takes Two,
-            Psychonauts, Hellblade: Senua's Sacrifice, Hades, The Forest,
-            Garry's Mod, Minecraft, Bioshock Infinite and many more that, if
-            listed, will fill this entire page. <br /> <br /> While games are, perhaps,
-            a more expressive way of demonstrating software development and programming,
-            I strive to advance my knowledge in all areas of computer science.
+            Psychonauts, Clair Obscur: Expedition 33, Hellblade: Senua's
+            Sacrifice, Hades, The Forest, Garry's Mod, Minecraft, Bioshock
+            Infinite and many more that, if listed, will fill this entire page. <br
+            /> <br /> While games are, perhaps, a more expressive way of demonstrating
+            software development and programming, I strive to advance my knowledge
+            in all areas of computer science.
         </blockquote>
 
         <p class="text-center">
@@ -237,7 +236,7 @@
 
         <div class="flex justify-center my-8">
             <Button variant="outline" href="{base}/games"
-                ><Swords strokeWidth="1.5" class="mr-2" />View More Games</Button
+                ><Swords strokeWidth="1.5" />View More Games</Button
             >
         </div>
     </section>
@@ -288,9 +287,9 @@
             ></DescriptiveCard>
         </div>
 
-        <div class="flex justify-center my-8 mb-16">
+        <div class="flex justify-center my-8">
             <Button variant="outline" href="{base}/personal-projects"
-                ><Layers strokeWidth="1.5" class="mr-2" />View More Projects</Button
+                ><Layers strokeWidth="1.5" />View More Projects</Button
             >
         </div>
     </section>

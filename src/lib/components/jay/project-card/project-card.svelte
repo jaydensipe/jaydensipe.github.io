@@ -1,5 +1,4 @@
 <script lang="ts">
-
     import Saos from "saos";
     interface Props {
         name: string;
@@ -20,7 +19,7 @@
         imgSrc,
         altImageText,
         description,
-        isArchived = false
+        isArchived = false,
     }: Props = $props();
 </script>
 
@@ -28,9 +27,9 @@
     once
     animation={"swing-in-top-fwd 0.45s cubic-bezier(0.230, 1.000, 0.320, 1.000) both"}
 >
-    <div class="p-4 flex flex-col items-center">
+    <div class="pl-4 pr-4 pb-8 flex flex-col items-center">
         <div
-            class="text-center mt-4 flex flex-col items-center sm:border-0 p-4 text-card-foreground {!isArchived
+            class="text-center flex flex-col items-center sm:border-0 p-4 text-card-foreground {!isArchived
                 ? 'bg-secondary shadow-md rounded-md'
                 : ''}"
         >

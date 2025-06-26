@@ -1,5 +1,4 @@
 <script lang="ts">
-
     import * as Card from "$lib/components/ui/card";
     import Separator from "$lib/components/ui/separator/separator.svelte";
     import Saos from "saos";
@@ -20,7 +19,7 @@
         altImageText,
         githubLink = "",
         description,
-        noFillBgColor = ""
+        noFillBgColor = "",
     }: Props = $props();
 </script>
 
@@ -50,14 +49,14 @@
                         alt={altImageText}
                     />
                 {/if}
-                <br />
-                <Card.Title>
+                <Card.Title class="pt-6">
                     {#if link}
-                        <a class="hyperlink card-title" href={link}
-                            >{@html name}</a
+                        <a
+                            class="hyperlink card-title text-lg leading-none"
+                            href={link}>{@html name}</a
                         >
                     {:else}
-                        <span class="card-title">
+                        <span class="card-title text-lg leading-none">
                             {@html name}
                         </span>
                     {/if}
@@ -65,7 +64,7 @@
                     {#if githubLink}
                         |
                         <a
-                            class="hyperlink tracking-wide font-bold"
+                            class="hyperlink tracking-wide font-bold text-lg leading-none"
                             href={githubLink}>GitHub</a
                         >
                     {/if}

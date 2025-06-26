@@ -287,7 +287,7 @@
 </script>
 
 {#if $holidayStore === SupportedHolidays.Halloween}
-    {#if $mode === "dark"}
+    {#if mode.current === "dark"}
         <Particles
             id="tsparticles"
             class="hidden sm:block"
@@ -313,7 +313,7 @@
         />
     {/if}
 {:else if $holidayStore === SupportedHolidays.Christmas}
-    {#if $mode === "dark"}
+    {#if mode.current === "dark"}
         <Particles
             id="tsparticles"
             class="hidden sm:block"
@@ -339,7 +339,7 @@
         />
     {/if}
 {:else if $holidayStore === SupportedHolidays.NewYears}
-    {#if $mode === "dark"}
+    {#if mode.current === "dark"}
         <Particles
             id="tsparticles"
             class="hidden sm:block"

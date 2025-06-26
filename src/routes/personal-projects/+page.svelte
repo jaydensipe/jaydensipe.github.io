@@ -6,8 +6,9 @@
     import PageContainer from "$lib/components/jay/page-container/page-container.svelte";
 
     import * as Carousel from "$lib/components/ui/carousel/index.js";
+    import type { CarouselAPI } from "$lib/components/ui/carousel/context";
     import { Separator } from "$lib/components/ui/separator";
-    import { MoveLeft, MoveRight } from "lucide-svelte";
+    import { MoveLeft, MoveRight } from "@lucide/svelte";
 
     // Images
     import gdLocalHistoryImage from "$lib/images/gdlocalhistory.png?enhanced";
@@ -32,6 +33,8 @@
     import JSLogo from "virtual:icons/logos/javascript";
     import MongoDBLogo from "virtual:icons/logos/mongodb-icon";
     import Java from "virtual:icons/logos/java";
+
+    let api = $state<CarouselAPI>();
 </script>
 
 <svelte:head>
@@ -53,7 +56,7 @@
 
     <!-- Personal Projects Page -->
     <section
-        class="flex flex-col justify-center items-center divide-y gap-8 mb-16 sm:mx-4"
+        class="flex flex-col justify-center items-center divide-y gap-8 sm:mx-4"
     >
         <ProjectCard
             name="GD Local History"
@@ -119,15 +122,34 @@
         ></ProjectCard>
 
         <div
-            class="bg-yellow-50 dark:bg-stone-800 flex justify-center items-center flex-col p-2"
+            class="bg-yellow-50 dark:bg-zinc-800 flex justify-center items-center flex-col p-2 rounded-md shadow-md"
         >
-            <div class="mt-8 text-lg flex flex-row gap-4 text-muted-foreground">
-                <MoveLeft></MoveLeft>Archived Projects ⚠️<MoveRight></MoveRight>
+            <div
+                class="mt-8 text-lg flex flex-row gap-4 text-muted-foreground font-medium"
+            >
+                <button
+                    type="button"
+                    onclick={() => api?.scrollPrev()}
+                    class="hyperlink"
+                >
+                    <MoveLeft />
+                </button>
+                Archived Projects ⚠️
+                <button
+                    type="button"
+                    onclick={() => api?.scrollNext()}
+                    class="hyperlink"
+                >
+                    <MoveRight />
+                </button>
             </div>
             <p class="text-muted-foreground text-sm">
                 Old, nasty code lies ahead... (Swipe)
             </p>
-            <Carousel.Root class="max-w-80 sm:max-w-none sm:w-full">
+            <Carousel.Root
+                class="max-w-80 sm:max-w-none sm:w-full"
+                setApi={(emblaApi) => (api = emblaApi)}
+            >
                 <Carousel.Content>
                     <Carousel.Item class="p-4">
                         <ProjectCard

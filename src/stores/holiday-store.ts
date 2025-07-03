@@ -1,5 +1,5 @@
 import { writable } from "svelte/store";
-import { Howl, Howler } from 'howler';
+import { Howl } from 'howler';
 import { get } from "svelte/store";
 
 // Halloween Music

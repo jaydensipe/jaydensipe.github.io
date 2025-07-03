@@ -42,7 +42,7 @@
 
     <!-- Games Page -->
     <section
-        class="flex flex-col justify-center items-center divide-y gap-8 mb-16"
+        class="flex flex-col justify-center items-center divide-y gap-8"
     >
         <GameCard
             name="A Concoction for Creeps"

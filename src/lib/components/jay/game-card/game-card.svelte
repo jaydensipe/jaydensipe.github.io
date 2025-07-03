@@ -1,5 +1,4 @@
 <script lang="ts">
-
     import * as Card from "$lib/components/ui/card";
     import Saos from "saos";
     import Badge from "$lib/components/ui/badge/badge.svelte";
@@ -25,7 +24,7 @@
         altImageText,
         githubLink = "",
         description,
-        archived = false
+        archived = false,
     }: Props = $props();
 </script>
 
@@ -34,10 +33,12 @@
     animation={"swing-in-top-fwd 0.45s cubic-bezier(0.230, 1.000, 0.320, 1.000) both"}
 >
     <div
-        class="flex flex-col justify-center items-center gap-8 sm:gap-10 sm:mx-8"
+        class="flex flex-col justify-center items-center gap-8 sm:gap-10 sm:mx-8 pb-8"
     >
-        <Badge class="mt-8" variant="secondary">{date}</Badge>
-        <Card.Root class="text-center shadow-md sm:border-0 bg-secondary sm:w-5/6">
+        <Badge variant="secondary">{date}</Badge>
+        <Card.Root
+            class="text-center rounded-lg shadow-md sm:border-0 bg-secondary sm:w-5/6"
+        >
             <Card.Header>
                 <enhanced:img
                     class="bg-red-100 rounded-lg scale-95"
@@ -46,7 +47,7 @@
                 />
                 <br />
                 <Card.Title
-                    class="text-lg sm:text-2xl sm:mx-0 mx-4 p-2 bg-zinc-200 dark:bg-zinc-700 rounded-lg"
+                    class="text-lg sm:text-2xl sm:mx-0 mx-4 p-2 bg-zinc-200 dark:bg-stone-700 rounded-md"
                 >
                     {#if link}
                         <a
@@ -78,19 +79,24 @@
                 </p>
                 {@const SvelteComponent = engineLogo}
                 <span class="flex flex-row justify-between">
-                    <SvelteComponent
-                        style="font-size: 1.0rem;"
+                    <SvelteComponent style="font-size: 1.0rem;"
                     ></SvelteComponent>
                     {#if archived}
-                        <Tooltip.Root>
-                            <Tooltip.Trigger
-                                ><Badge variant="destructive">Archived ⚠️</Badge
-                                ></Tooltip.Trigger
-                            >
-                            <Tooltip.Content>
-                                <p>Contains mildly horrible code... be wary!</p>
-                            </Tooltip.Content>
-                        </Tooltip.Root>
+                        <Tooltip.Provider>
+                            <Tooltip.Root>
+                                <Tooltip.Trigger
+                                    ><Badge variant="destructive"
+                                        >Archived ⚠️</Badge
+                                    ></Tooltip.Trigger
+                                >
+                                <Tooltip.Content>
+                                    <p>
+                                        Contains mildly horrible code... be
+                                        wary!
+                                    </p>
+                                </Tooltip.Content>
+                            </Tooltip.Root>
+                        </Tooltip.Provider>
                     {/if}
                 </span>
             </Card.Content>

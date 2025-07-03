@@ -2,6 +2,7 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+@custom-variant hover (&:hover);
 
 @layer base {
   :root {
@@ -154,7 +155,7 @@
   }
 
   main {
-    @apply p-[2rem] 2xl:max-w-[1400px];
+    @apply p-[1rem] sm:p-[2rem] 2xl:max-w-[1400px];
   }
 
   .card-title {

@@ -5,6 +5,7 @@
     import Holiday from "$lib/components/jay/holiday/holiday.svelte";
     import EasterEgg from "$lib/components/jay/easter-egg/easter-egg.svelte";
 
+    import Toaster from "$lib/components/ui/sonner/sonner.svelte";
     import { ModeWatcher } from "mode-watcher";
 
     interface Props {
@@ -21,6 +22,9 @@
 
 <!-- Easter Egg Handler -->
 <EasterEgg />
+
+<!-- Toaster Handler -->
+<Toaster />
 
 {@render children?.()}
 

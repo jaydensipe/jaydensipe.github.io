@@ -7,9 +7,17 @@
     } from "../../../../stores/easter-egg-store";
     import Particles from "@tsparticles/svelte";
 
+    let firstHit: boolean = false;
+    let nextKeyWithinTimeframe: boolean = false;
     function handleEasterEggKey(event: KeyboardEvent) {
-        if (event.key === "3") {
-            // Start timer
+        if (event.key === "3" && !firstHit) {
+            firstHit = true;
+            nextKeyWithinTimeframe = true;
+            setTimeout(() => {
+                firstHit = false;
+                nextKeyWithinTimeframe = false;
+            }, 200);
+        } else if (event.key === "3" && nextKeyWithinTimeframe) {
             setEasterEgg(SupportedEasterEggs.Expedition33);
         }
     }

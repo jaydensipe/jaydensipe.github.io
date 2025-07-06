@@ -17,7 +17,7 @@
             aria-label="Github Link"
             target="_blank"
             ><Github
-                class="text-muted-foreground hyperlink cursor-pointer hover:scale-105"
+                class="text-muted-foreground hyperlink cursor-pointer hover:scale-105" strokeWidth="1.5"
             /></a
         >
         <a
@@ -25,7 +25,7 @@
             aria-label="LinkedIn Link"
             target="_blank"
             ><Linkedin
-                class="text-muted-foreground hyperlink cursor-pointer hover:scale-105"
+                class="text-muted-foreground hyperlink cursor-pointer hover:scale-105" strokeWidth="1.5"
             /></a
         >
         <a
@@ -33,7 +33,7 @@
             target="_blank"
             aria-label="itch.io Link"
             ><Joystick
-                class="text-muted-foreground hyperlink cursor-pointer hover:scale-105"
+                class="text-muted-foreground hyperlink cursor-pointer hover:scale-105" strokeWidth="1.5"
             /></a
         >
     </div>

@@ -46,12 +46,14 @@
 </svelte:head>
 
 <!-- Header -->
-<header class="text-center max-w-5xl">
-    <h1 class="text-7xl sm:text-9xl pt-20 pb-8 font-medium">
-        <span class="text-gray-500">./</span> Jayden
-        <span class="text-red-700 dark:text-red-600">Sipe</span>
+<header class="text-center max-w-5xl flex flex-col items-center">
+    <h1 class="text-7xl sm:text-9xl pt-20 pb-8 font-medium name-header">
+        <p>
+            <span class="text-gray-500">./</span>Jayden
+            <span class="text-red-700 dark:text-red-600">Sipe</span>
+        </p>
     </h1>
-    <p class="mx-8 pb-8">
+    <p class="mx-8 pb-8 max-w-3xl">
         Explore my <span class="font-semibold">portfolio</span>, where you can
         delve into my array of
         <span class="font-semibold">game development</span>
@@ -112,7 +114,7 @@
             {/if}
             <Command.Item onSelect={toggleMode} class="cursor-pointer">
                 <div class="flex flex-row items-center m-1 sm:m-0">
-                    <DarkModeSwitcher></DarkModeSwitcher>
+                    <DarkModeSwitcher useStrokeWidth={false}></DarkModeSwitcher>
                     <span class="ml-6">Toggle Dark Mode</span>
                 </div>
             </Command.Item>

@@ -113,6 +113,7 @@
                         <a href="https://github.com/jaydensipe" target="_blank"
                             ><Github
                                 class="text-muted-foreground hyperlink cursor-pointer hover:scale-105"
+                                strokeWidth="1.5"
                             /></a
                         >
                         <a
@@ -120,11 +121,13 @@
                             target="_blank"
                             ><Linkedin
                                 class="text-muted-foreground hyperlink cursor-pointer hover:scale-105"
+                                strokeWidth="1.5"
                             /></a
                         >
                         <a href="https://jaydensippy.itch.io/" target="_blank"
                             ><Joystick
                                 class="text-muted-foreground hyperlink cursor-pointer hover:scale-105"
+                                strokeWidth="1.5"
                             /></a
                         >
                         <!-- svelte-ignore a11y_click_events_have_key_events -->

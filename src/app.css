@@ -38,6 +38,24 @@
     --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
     --sidebar-border: oklch(0.92 0.004 286.32);
     --sidebar-ring: oklch(0.637 0.237 25.331);
+
+    --shadow-main-bg: 7px 7px #E3E2F0, 14px 14px #E2EFF0;
+    --shadow-main-bg-mobile: 0px 7px #E3E2F0, 0px 14px #E2EFF0, 0px -7px #E3E2F0, 0px -14px #E2EFF0;
+
+    .halloween {
+      --shadow-main-bg: 7px 7px #F7D9FF, 14px 14px #FFE8D2;
+      --shadow-main-bg-mobile: 0px 7px #F7D9FF, 0px 14px #FFE8D2, 0px -7px #F7D9FF, 0px -14px #FFE8D2;
+    }
+
+    .christmas {
+      --shadow-main-bg: 7px 7px #FFDDDD, 14px 14px #DDECE1;
+      --shadow-main-bg-mobile: 0px 7px #FFDDDD, 0px 14px #DDECE1, 0px -7px #FFDDDD, 0px -14px #DDECE1;
+    }
+
+    .new-years {
+      --shadow-main-bg: 7px 7px #FFF6C7, 14px 14px #F9DBFF;
+      --shadow-main-bg-mobile: 0px 7px #FFF6C7, 0px 14px #F9DBFF, 0px -7px #FFF6C7, 0px -14px #F9DBFF;
+    }
   }
 
   .dark {
@@ -72,6 +90,24 @@
     --sidebar-accent-foreground: oklch(0.985 0.001 106.423);
     --sidebar-border: oklch(1 0 0 / 10%);
     --sidebar-ring: oklch(0.553 0.013 58.071);
+
+    --shadow-main-bg: 7px 7px #12BE94, 14px 14px #9412BE;
+    --shadow-main-bg-mobile: 0px 7px #12BE94, 0px 14px #9412BE, 0px -7px #12BE94, 0px -14px #9412BE;
+
+    .halloween {
+      --shadow-main-bg: 7px 7px #FF7600, 14px 14px #52006A;
+      --shadow-main-bg-mobile: 0px 7px #FF7600, 0px 14px #52006A, 0px -7px #FF7600, 0px -14px #52006A;
+    }
+
+    .christmas {
+      --shadow-main-bg: 7px 7px #35B25C, 14px 14px #BB0000;
+      --shadow-main-bg-mobile: 0px 7px #35B25C, 0px 14px #BB0000, 0px -7px #35B25C, 0px -14px #BB0000;
+    }
+
+    .new-years {
+      --shadow-main-bg: 7px 7px #CB00F0, 14px 14px #F0CB00;
+      --shadow-main-bg-mobile: 0px 7px #CB00F0, 0px 14px #F0CB00, 0px -7px #CB00F0, 0px -14px #F0CB00;
+    }
   }
 }
 
@@ -112,25 +148,9 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  /* Shadows - Normal Styles */
-  --shadow-main-bg-light: 7px 7px #E3E2F0, 14px 14px #E2EFF0;
-  --shadow-main-bg-light-halloween: 7px 7px #F7D9FF, 14px 14px #FFE8D2;
-  --shadow-main-bg-light-christmas: 7px 7px #FFDDDD, 14px 14px #DDECE1;
-  --shadow-main-bg-light-new-years: 7px 7px #FFF6C7, 14px 14px #F9DBFF;
-  --shadow-main-bg-dark: 7px 7px #12BE94, 14px 14px #9412BE;
-  --shadow-main-bg-dark-halloween: 7px 7px #FF7600, 14px 14px #52006A;
-  --shadow-main-bg-dark-christmas: 7px 7px #35B25C, 14px 14px #BB0000;
-  --shadow-main-bg-dark-new-years: 7px 7px #CB00F0, 14px 14px #F0CB00;
-
-  /* Shadows - Mobile Styles */
-  --shadow-main-bg-light-mobile: 0px 7px #E3E2F0, 0px 14px #E2EFF0, 0px -7px #E3E2F0, 0px -14px #E2EFF0;
-  --shadow-main-bg-light-halloween-mobile: 0px 7px #F7D9FF, 0px 14px #FFE8D2, 0px -7px #F7D9FF, 0px -14px #FFE8D2;
-  --shadow-main-bg-light-christmas-mobile: 0px 7px #FFDDDD, 0px 14px #DDECE1, 0px -7px #FFDDDD, 0px -14px #DDECE1;
-  --shadow-main-bg-light-new-years-mobile: 0px 7px #FFF6C7, 0px 14px #F9DBFF, 0px -7px #FFF6C7, 0px -14px #F9DBFF;
-  --shadow-main-bg-dark-mobile: 0px 7px #12BE94, 0px 14px #9412BE, 0px -7px #12BE94, 0px -14px #9412BE;
-  --shadow-main-bg-dark-halloween-mobile: 0px 7px #FF7600, 0px 14px #52006A, 0px -7px #FF7600, 0px -14px #52006A;
-  --shadow-main-bg-dark-christmas-mobile: 0px 7px #35B25C, 0px 14px #BB0000, 0px -7px #35B25C, 0px -14px #BB0000;
-  --shadow-main-bg-dark-new-years-mobile: 0px 7px #CB00F0, 0px 14px #F0CB00, 0px -7px #CB00F0, 0px -14px #F0CB00;
+  /* Shadows - Normal & Mobile Styles */
+  --shadow-main-bg: var(--shadow-main-bg);
+  --shadow-main-bg-mobile: var(--shadow-main-bg-mobile);
 }
 
 @layer base {

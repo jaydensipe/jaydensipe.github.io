@@ -2,7 +2,6 @@
     import { base } from "$app/paths";
     import DescriptiveCard from "$lib/components/jay/descriptive-card/descriptive-card.svelte";
     import NavBar from "$lib/components/jay/nav-bar/nav-bar.svelte";
-    import PageSheet from "$lib/components/jay/page-sheet/page-sheet.svelte";
     import PageContainer from "$lib/components/jay/page-container/page-container.svelte";
     import DarkModeSwitcher from "$lib/components/jay/dark-mode-switcher/dark-mode-switcher.svelte";
     import { toggleMode } from "mode-watcher";
@@ -35,6 +34,10 @@
         Disc3,
         NotepadText,
     } from "@lucide/svelte";
+    import {
+        setEasterEgg,
+        SupportedEasterEggs,
+    } from "../stores/easter-egg-store";
 </script>
 
 <svelte:head>
@@ -47,11 +50,15 @@
 
 <!-- Header -->
 <header class="text-center max-w-5xl flex flex-col items-center">
-    <h1 class="text-7xl sm:text-9xl pt-20 pb-8 font-medium name-header">
-        <p>
-            <span class="text-gray-500">./</span>Jayden
-            <span class="text-red-700 dark:text-red-600">Sipe</span>
-        </p>
+    <h1 class="text-7xl sm:text-9xl pt-15 pb-8 font-medium name-header">
+        <div
+            class="bg-rose-50/10 dark:bg-stone-700/10 decoration-transparent backdrop-blur-lg rounded-lg p-6"
+        >
+            <p>
+                <span class="text-gray-500">./</span>Jayden
+                <span class="text-red-700 dark:text-red-600">Sipe</span>
+            </p>
+        </div>
     </h1>
     <p class="mx-8 pb-8 max-w-3xl">
         Explore my <span class="font-semibold">portfolio</span>, where you can
@@ -90,7 +97,7 @@
 </header>
 
 <!-- Command Bar -->
-<Command.Root class="rounded-lg border shadow-md max-w-80 sm:max-w-[450px]">
+<Command.Root class="border shadow-md max-w-80 sm:max-w-[450px]">
     <Command.List>
         <Command.Empty>No results found.</Command.Empty>
         <Command.Group heading="Actions">
@@ -113,7 +120,7 @@
                 </Command.Item>
             {/if}
             <Command.Item onSelect={toggleMode} class="cursor-pointer">
-                <div class="flex flex-row items-center m-1 sm:m-0">
+                <div class="flex flex-row items-center sm:m-0">
                     <DarkModeSwitcher useStrokeWidth={false}></DarkModeSwitcher>
                     <span class="ml-6">Toggle Dark Mode</span>
                 </div>
@@ -122,7 +129,7 @@
         <Command.Group heading="Experience">
             <Command.Item class="cursor-pointer">
                 <a
-                    class="flex flex-row items-center m-1 sm:m-0 w-full"
+                    class="flex flex-row items-center sm:m-0 w-full"
                     href="https://jaydensipe.github.io/JaydenSipeResume.pdf"
                     target="_blank"
                 >
@@ -134,7 +141,7 @@
         <Command.Group heading="Links">
             <Command.Item class="cursor-pointer">
                 <a
-                    class="flex flex-row items-center m-1 sm:m-0 w-full"
+                    class="flex flex-row items-center sm:m-0 w-full"
                     href="https://github.com/jaydensipe"
                     target="_blank"
                 >
@@ -144,7 +151,7 @@
             </Command.Item>
             <Command.Item class="cursor-pointer">
                 <a
-                    class="flex flex-row items-center m-1 sm:m-0 w-full"
+                    class="flex flex-row items-center sm:m-0 w-full"
                     href="https://www.linkedin.com/in/jaydensipe/"
                     target="_blank"
                 >
@@ -154,7 +161,7 @@
             </Command.Item>
             <Command.Item class="cursor-pointer">
                 <a
-                    class="flex flex-row items-center m-1 sm:m-0 w-full"
+                    class="flex flex-row items-center sm:m-0 w-full"
                     href="https://jaydensippy.itch.io/"
                     target="_blank"
                 >
@@ -180,12 +187,16 @@
             computers. I love how games can be used to tell an interactive story
             and appreciate all genres. Some personal favorites include
             Half-Life: Alyx, Life is Strange, Team Fortress 2, It Takes Two,
-            Psychonauts, Clair Obscur: Expedition 33, Hellblade: Senua's
-            Sacrifice, Hades, The Forest, Garry's Mod, Minecraft, Bioshock
-            Infinite and many more that, if listed, will fill this entire page. <br
-            /> <br /> While games are, perhaps, a more expressive way of demonstrating
-            software development and programming, I strive to advance my knowledge
-            in all areas of computer science.
+            Psychonauts, Clair Obscur: Expedition <button
+                class="hyperlink no-underline"
+                type="button"
+                onclick={() => setEasterEgg(SupportedEasterEggs.Expedition33)}
+                aria-label="Expedition 33 Easter Egg">33</button
+            >, Hellblade: Senua's Sacrifice, Hades, The Forest, Garry's Mod,
+            Minecraft, Bioshock Infinite and many more that, if listed, will
+            fill this entire page. <br /> <br /> While games are, perhaps, a more
+            expressive way of demonstrating software development and programming,
+            I strive to advance my knowledge in all areas of computer science.
         </blockquote>
 
         <p class="text-center">
@@ -296,6 +307,3 @@
         </div>
     </section>
 </PageContainer>
-
-<!-- Sheet -->
-<PageSheet></PageSheet>

@@ -67,3 +67,7 @@ export type WithoutChild<T> = T extends { child?: any } ? Omit<T, "child"> : T;
 export type WithoutChildren<T> = T extends { children?: any } ? Omit<T, "children"> : T;
 export type WithoutChildrenOrChild<T> = WithoutChildren<WithoutChild<T>>;
 export type WithElementRef<T, U extends HTMLElement = HTMLElement> = T & { ref?: U | null };
+
+// A simple wait function that returns a promise that resolves after a specified time
+export const wait = (time: number) =>
+    new Promise((resolve) => setTimeout(resolve, time));

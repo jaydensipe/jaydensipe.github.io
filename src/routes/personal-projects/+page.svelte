@@ -2,7 +2,6 @@
     import NavBar from "$lib/components/jay/nav-bar/nav-bar.svelte";
     import ProjectCard from "$lib/components/jay/project-card/project-card.svelte";
     import PageHeader from "$lib/components/jay/page-header/page-header.svelte";
-    import PageSheet from "$lib/components/jay/page-sheet/page-sheet.svelte";
     import PageContainer from "$lib/components/jay/page-container/page-container.svelte";
 
     import * as Carousel from "$lib/components/ui/carousel/index.js";
@@ -196,6 +195,3 @@
         </div>
     </section>
 </PageContainer>
-
-<!-- Sheet -->
-<PageSheet></PageSheet>

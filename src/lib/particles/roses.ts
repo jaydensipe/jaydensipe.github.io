@@ -1,4 +1,4 @@
-export let leavesParticles = {
+export let roseParticles = {
     emitters: [
         {
             position: {
@@ -28,6 +28,22 @@ export let leavesParticles = {
             },
         },
     ],
+    interactivity: {
+        events: {
+            onHover: {
+                enable: true,
+                mode: "attract",
+            },
+            resize: true,
+        },
+        modes: {
+            attract: {
+                distance: 100,
+                duration: 1.0,
+                speed: 3.0,
+            },
+        },
+    },
     particles: {
         move: {
             direction: "bottom",
@@ -50,35 +66,6 @@ export let leavesParticles = {
                 speed: 10,
             },
         },
-        // tilt: {
-        //     direction: "random",
-        //     enable: true,
-        //     move: true,
-        //     value: {
-        //         min: 0,
-        //         max: 360,
-        //     },
-        //     animation: {
-        //         enable: true,
-        //         speed: 10,
-        //     },
-        // },
-        // roll: {
-        //     darken: {
-        //         enable: true,
-        //         value: 30,
-        //     },
-        //     enlighten: {
-        //         enable: true,
-        //         value: 30,
-        //     },
-        //     enable: true,
-        //     mode: "both",
-        //     speed: {
-        //         min: 5,
-        //         max: 15,
-        //     },
-        // },
         wobble: {
             distance: 10,
             enable: true,
@@ -87,9 +74,17 @@ export let leavesParticles = {
         shape: {
             type: "image",
             options: {
-                image: {
-                    src: "assets/red-leaf.png",
-                },
+                image: [
+                    { src: "assets/particles/rose/rose1.png?enhanced" },
+                    { src: "assets/particles/rose/rose2.png?enhanced" },
+                    { src: "assets/particles/rose/rose3.png?enhanced" },
+                    { src: "assets/particles/rose/rose4.png?enhanced" },
+                    { src: "assets/particles/rose/rose5.png?enhanced" },
+                    { src: "assets/particles/rose/rose6.png?enhanced" },
+                    { src: "assets/particles/rose/rose7.png?enhanced" },
+                    { src: "assets/particles/rose/rose8.png?enhanced" },
+                    { src: "assets/particles/rose/rose9.png?enhanced" },
+                ],
             },
         },
         size: {
@@ -102,4 +97,4 @@ export let leavesParticles = {
             },
         },
     },
-}
+};

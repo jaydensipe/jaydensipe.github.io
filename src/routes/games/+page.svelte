@@ -2,7 +2,6 @@
     import NavBar from "$lib/components/jay/nav-bar/nav-bar.svelte";
     import GameCard from "$lib/components/jay/game-card/game-card.svelte";
     import PageHeader from "$lib/components/jay/page-header/page-header.svelte";
-    import PageSheet from "$lib/components/jay/page-sheet/page-sheet.svelte";
     import PageContainer from "$lib/components/jay/page-container/page-container.svelte";
 
     import { Separator } from "$lib/components/ui/separator";
@@ -41,9 +40,7 @@
     <NavBar />
 
     <!-- Games Page -->
-    <section
-        class="flex flex-col justify-center items-center divide-y gap-8"
-    >
+    <section class="flex flex-col justify-center items-center divide-y gap-8">
         <GameCard
             name="A Concoction for Creeps"
             link="https://jaydensippy.itch.io/a-concoction-for-creeps"
@@ -127,6 +124,3 @@
         />
     </section>
 </PageContainer>
-
-<!-- Sheet -->
-<PageSheet></PageSheet>

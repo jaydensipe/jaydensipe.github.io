@@ -5,7 +5,7 @@
 </script>
 
 <footer
-    class="flex flex-col gap-4 my-16 items-center justify-center text-sm sm:text-base bg-card/50 backdrop-blur-lg rounded-md p-4 sm:p-6 decoration-trasparent"
+    class="flex flex-col gap-4 my-16 items-center justify-center text-sm sm:text-base bg-card/50 backdrop-blur-lg rounded-md p-4 sm:p-6 decoration-trasparent border"
 >
     <div class="flex flex-row gap-8">
         <a
@@ -17,7 +17,8 @@
             aria-label="Github Link"
             target="_blank"
             ><Github
-                class="text-muted-foreground hyperlink cursor-pointer hover:scale-105" strokeWidth="1.5"
+                class="text-muted-foreground hyperlink cursor-pointer hover:scale-105"
+                strokeWidth="1.5"
             /></a
         >
         <a
@@ -25,7 +26,8 @@
             aria-label="LinkedIn Link"
             target="_blank"
             ><Linkedin
-                class="text-muted-foreground hyperlink cursor-pointer hover:scale-105" strokeWidth="1.5"
+                class="text-muted-foreground hyperlink cursor-pointer hover:scale-105"
+                strokeWidth="1.5"
             /></a
         >
         <a
@@ -33,7 +35,8 @@
             target="_blank"
             aria-label="itch.io Link"
             ><Joystick
-                class="text-muted-foreground hyperlink cursor-pointer hover:scale-105" strokeWidth="1.5"
+                class="text-muted-foreground hyperlink cursor-pointer hover:scale-105"
+                strokeWidth="1.5"
             /></a
         >
     </div>

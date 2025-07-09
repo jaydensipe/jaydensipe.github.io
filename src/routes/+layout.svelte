@@ -4,8 +4,9 @@
     import Footer from "$lib/components/jay/footer/footer.svelte";
     import Holiday from "$lib/components/jay/holiday/holiday.svelte";
     import EasterEgg from "$lib/components/jay/easter-egg/easter-egg.svelte";
-
+    import PageSheet from "$lib/components/jay/page-sheet/page-sheet.svelte";
     import Toaster from "$lib/components/ui/sonner/sonner.svelte";
+
     import { ModeWatcher } from "mode-watcher";
 
     interface Props {
@@ -24,9 +25,12 @@
 <EasterEgg />
 
 <!-- Toaster Handler -->
-<Toaster />
+<Toaster richColors />
 
 {@render children?.()}
+
+<!-- Page Sheet -->
+<PageSheet></PageSheet>
 
 <!-- Footer -->
 <Footer />

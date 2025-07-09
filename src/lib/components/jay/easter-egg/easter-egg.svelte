@@ -1,10 +1,12 @@
 <script lang="ts">
-    import { leavesParticles } from "$lib/particles/leaves";
+    import { wait } from "$lib/utils";
     import {
         easterEggStore,
         setEasterEgg,
         SupportedEasterEggs,
     } from "../../../../stores/easter-egg-store";
+
+    import { roseParticles } from "$lib/particles/roses";
     import Particles from "@tsparticles/svelte";
 
     let firstHit: boolean = false;
@@ -26,10 +28,12 @@
 <svelte:window on:keydown={handleEasterEggKey} />
 
 {#if $easterEggStore === SupportedEasterEggs.Expedition33}
-    <Particles
-        id="tsparticles"
-        class="hidden sm:block"
-        style="z-index: -1;"
-        options={leavesParticles}
-    />
+    {#await wait(13000) then value}
+        <Particles
+            id="tsparticles"
+            class="hidden sm:block"
+            style="z-index: -1;"
+            options={roseParticles}
+        />
+    {/await}
 {/if}

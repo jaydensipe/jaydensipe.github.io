@@ -30,13 +30,12 @@
                 opacity: [0, 1],
                 transform: ["translateY(-20px)", "translateY(0)"],
                 duration: 300,
-                easing: "anticipate",
             });
         });
     });
 </script>
 
-<div class="pl-4 pr-4 pb-8">
+<div class="px-4 pb-8">
     <div
         class="text-center flex flex-col items-center sm:border-0 p-4 text-card-foreground {!isArchived
             ? 'bg-secondary shadow-md rounded-md project-card'

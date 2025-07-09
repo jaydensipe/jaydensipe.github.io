@@ -12,26 +12,24 @@
 
 {#if $holidayStore === SupportedHolidays.Halloween}
     <main
-        class="bg-card pt-8 shadow-main-bg-light-halloween-mobile dark:shadow-main-bg-dark-halloween-mobile sm:shadow-main-bg-light-halloween sm:dark:shadow-main-bg-dark-halloween"
+        class="bg-card pt-8 shadow-main-bg-mobile sm:shadow-main-bg halloween"
     >
         {@render children?.()}
     </main>
 {:else if $holidayStore === SupportedHolidays.Christmas}
     <main
-        class="bg-card pt-8 shadow-main-bg-light-christmas-mobile dark:shadow-main-bg-dark-christmas-mobile sm:shadow-main-bg-light-christmas sm:dark:shadow-main-bg-dark-christmas"
+        class="bg-card pt-8 shadow-main-bg-mobile sm:shadow-main-bg christmas"
     >
         {@render children?.()}
     </main>
 {:else if $holidayStore === SupportedHolidays.NewYears}
     <main
-        class="bg-card pt-8 shadow-main-bg-light-new-years-mobile dark:shadow-main-bg-dark-new-years-mobile sm:shadow-main-bg-light-new-years sm:dark:shadow-main-bg-dark-new-years"
+        class="bg-card pt-8 shadow-main-bg-mobile sm:shadow-main-bg new-years"
     >
         {@render children?.()}
     </main>
 {:else}
-    <main
-        class="bg-card pt-8 shadow-main-bg-light-mobile dark:shadow-main-bg-dark-mobile sm:shadow-main-bg-light sm:dark:shadow-main-bg-dark"
-    >
+    <main class="bg-card pt-8 shadow-main-bg-mobile sm:shadow-main-bg">
         {@render children?.()}
     </main>
 {/if}

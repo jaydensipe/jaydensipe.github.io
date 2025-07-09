@@ -3,9 +3,11 @@
     import Badge from "$lib/components/ui/badge/badge.svelte";
     import * as Tooltip from "$lib/components/ui/tooltip";
 
+    import Separator from "$lib/components/ui/separator/separator.svelte";
+
     import { inView, animate } from "motion";
     import { onMount } from "svelte";
-    
+
     interface Props {
         name: string;
         link?: string;
@@ -36,7 +38,6 @@
                 opacity: [0, 1],
                 transform: ["translateX(-20px)", "translateX(0)"],
                 duration: 300,
-                easing: "anticipate",
             });
         });
     });
@@ -49,15 +50,15 @@
     <Card.Root
         class="text-center rounded-lg shadow-md sm:border-0 bg-secondary sm:w-5/6"
     >
-        <Card.Header>
+        <Card.Header class="flex flex-col items-center">
             <enhanced:img
                 class="bg-red-100 rounded-lg scale-95"
                 src={imgSrc}
                 alt={altImageText}
             />
-            <br />
+            <Separator class="my-2" />
             <Card.Title
-                class="text-lg sm:text-2xl sm:mx-0 mx-4 p-2 bg-zinc-200 dark:bg-stone-700 rounded-md"
+                class="text-lg sm:text-2xl sm:mx-0 mx-4 p-2 bg-zinc-200 dark:bg-stone-700 rounded-md w-5/6"
             >
                 {#if link}
                     <a
@@ -82,7 +83,7 @@
             </Card.Title>
         </Card.Header>
         <Card.Content class="flex flex-col gap-4">
-            <p class="text-sm sm:text-base">
+            <p class="text-sm sm:text-base w-5/6 mx-auto">
                 {description}
             </p>
             {@const SvelteComponent = engineLogo}

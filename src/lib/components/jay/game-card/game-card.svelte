@@ -52,6 +52,7 @@
     >
         <Card.Header class="flex flex-col items-center">
             <enhanced:img
+                loading="lazy"
                 class="bg-red-100 rounded-lg scale-95"
                 src={imgSrc}
                 alt={altImageText}

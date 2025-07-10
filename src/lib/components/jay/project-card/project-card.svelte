@@ -46,6 +46,7 @@
                 class="sm:mr-auto left-4 max-w-36 max-h-36 sm:max-w-24 sm:max-h-24 p-4"
             >
                 <enhanced:img
+                    loading="lazy"
                     class="rounded-lg"
                     src={imgSrc}
                     alt={altImageText}

@@ -3,6 +3,7 @@
     import ProjectCard from "$lib/components/jay/project-card/project-card.svelte";
     import PageHeader from "$lib/components/jay/page-header/page-header.svelte";
     import PageContainer from "$lib/components/jay/page-container/page-container.svelte";
+    import PageSheet from "$lib/components/jay/page-sheet/page-sheet.svelte";
 
     import * as Carousel from "$lib/components/ui/carousel/index.js";
     import type { CarouselAPI } from "$lib/components/ui/carousel/context";
@@ -121,7 +122,7 @@
         ></ProjectCard>
 
         <div
-            class="bg-yellow-50 dark:bg-zinc-800 flex justify-center items-center flex-col p-2 rounded-md shadow-md"
+            class="bg-yellow-50 dark:bg-zinc-800 flex justify-center items-center flex-col p-2 rounded-md shadow-md border sm:border-0"
         >
             <div
                 class="mt-8 text-lg flex flex-row gap-4 text-muted-foreground font-medium"
@@ -195,3 +196,6 @@
         </div>
     </section>
 </PageContainer>
+
+<!-- Page Sheet -->
+<PageSheet></PageSheet>

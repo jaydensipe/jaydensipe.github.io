@@ -24,7 +24,7 @@
         class="bg-card/50 shadow-lg backdrop-blur-lg rounded-md p-2 flex flex-row gap-2 decoration-trasparent hyperlink fixed left-4 top-4"
         ><Menu></Menu><ArrowRightToLine></ArrowRightToLine></Sheet.Trigger
     >
-    <Sheet.Content side="left" class="bg-background/50 backdrop-blur-lg">
+    <Sheet.Content side="left" class="bg-background sm:bg-background/50 backdrop-blur-lg">
         <Sheet.Header>
             <Sheet.Title
                 ><div

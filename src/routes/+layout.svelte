@@ -46,8 +46,5 @@
 
 {@render children?.()}
 
-<!-- Page Sheet -->
-<PageSheet></PageSheet>
-
 <!-- Footer -->
 <Footer />

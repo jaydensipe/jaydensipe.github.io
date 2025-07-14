@@ -37,9 +37,9 @@
 
 <div class="px-4 pb-8">
     <div
-        class="text-center flex flex-col items-center sm:border-0 p-4 text-card-foreground {!isArchived
+        class="text-center flex flex-col items-center border sm:border-0 p-4 text-card-foreground {!isArchived
             ? 'bg-secondary shadow-md rounded-md project-card'
-            : ''}"
+            : 'border-none'}"
     >
         <div class="flex flex-col sm:flex-row items-center justify-center">
             <div

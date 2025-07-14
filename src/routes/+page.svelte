@@ -3,6 +3,7 @@
     import DescriptiveCard from "$lib/components/jay/descriptive-card/descriptive-card.svelte";
     import NavBar from "$lib/components/jay/nav-bar/nav-bar.svelte";
     import PageContainer from "$lib/components/jay/page-container/page-container.svelte";
+    import PageSheet from "$lib/components/jay/page-sheet/page-sheet.svelte";
     import DarkModeSwitcher from "$lib/components/jay/dark-mode-switcher/dark-mode-switcher.svelte";
     import { toggleMode } from "mode-watcher";
     import { Separator } from "$lib/components/ui/separator";
@@ -307,3 +308,6 @@
         </div>
     </section>
 </PageContainer>
+
+<!-- Page Sheet -->
+<PageSheet></PageSheet>

@@ -30,7 +30,7 @@
             <a class="m-0 p-0" href={link} aria-label={altImageText}>
                 <enhanced:img
                     loading="lazy"
-                    class="{noFillBgColor} w-full scale-85 sm:scale-100 shadow-lg rounded-lg motion-reduce:hover:scale-100 sm:hover:scale-110 hover:motion-reduce:skew-y-2 transition duration-150 ease-out"
+                    class="{noFillBgColor} w-full scale-85 sm:scale-100 shadow-lg rounded-lg motion-safe:hover:scale-100 sm:hover:scale-110 motion-safe:hover:skew-y-2 transition duration-150 ease-out"
                     src={imgSrc}
                     alt={altImageText}
                 /></a
@@ -38,7 +38,7 @@
         {:else}
             <enhanced:img
                 loading="lazy"
-                class="{noFillBgColor} w-full scale-85 sm:scale-100 shadow-lg rounded-lg motion-reduce:hover:scale-100 sm:hover:scale-110 hover:motion-reduce:skew-y-2 transition duration-150 ease-out descriptive-image"
+                class="{noFillBgColor} w-full scale-85 sm:scale-100 shadow-lg rounded-lg motion-safe:hover:scale-100 sm:hover:scale-110 motion-safe:hover:skew-y-2 transition duration-150 ease-out descriptive-image"
                 src={imgSrc}
                 alt={altImageText}
             />

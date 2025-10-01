@@ -107,7 +107,7 @@
                     onSelect={() => playThemedHolidayMusic()}
                     class="cursor-pointer"
                 >
-                    <div class="flex flex-row items-center m-1 sm:m-0">
+                    <div class="flex flex-row items-center sm:m-0 w-full">
                         {#if $musicPlayingStore}
                             <Disc3
                                 class="mr-2 h-4 w-4 scale-100 absolute animate-spin"
@@ -121,7 +121,7 @@
                 </Command.Item>
             {/if}
             <Command.Item onSelect={toggleMode} class="cursor-pointer">
-                <div class="flex flex-row items-center sm:m-0">
+                <div class="flex flex-row items-center sm:m-0 w-full">
                     <DarkModeSwitcher useStrokeWidth={false}></DarkModeSwitcher>
                     <span class="ml-6">Toggle Dark Mode</span>
                 </div>

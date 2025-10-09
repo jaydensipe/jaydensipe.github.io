@@ -37,13 +37,13 @@
 
 <div class="px-4 pb-8">
     <div
-        class="text-center flex flex-col items-center border sm:border-0 p-4 text-card-foreground {!isArchived
+        class="text-center flex flex-col items-center border lg:border-0 p-4 text-card-foreground {!isArchived
             ? 'bg-secondary shadow-md rounded-md project-card'
             : 'border-none'}"
     >
-        <div class="flex flex-col sm:flex-row items-center justify-center">
+        <div class="flex flex-col lg:flex-row items-center justify-center">
             <div
-                class="sm:mr-auto left-4 max-w-36 max-h-36 sm:max-w-24 sm:max-h-24 p-4"
+                class="lg:mr-auto left-4 max-w-36 max-h-36 lg:max-w-24 lg:max-h-24 p-4"
             >
                 <enhanced:img
                     loading="lazy"
@@ -52,7 +52,7 @@
                     alt={altImageText}
                 />
             </div>
-            <div class="card-title text-sm sm:text-xl max-w-lg">
+            <div class="card-title text-sm lg:text-xl max-w-lg">
                 {#if githubLink}
                     <a
                         class="font-extrabold hyperlink underline-offset-4 text-cyan-700 dark:text-cyan-500"
@@ -77,7 +77,7 @@
                 {/each}
             </div>
         </div>
-        <p class="mt-4 text-sm sm:text-base">
+        <p class="mt-4 text-sm lg:text-base">
             {description}
         </p>
     </div>

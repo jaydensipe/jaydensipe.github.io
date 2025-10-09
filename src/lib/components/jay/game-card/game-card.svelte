@@ -44,11 +44,11 @@
 </script>
 
 <div
-    class="flex flex-col justify-center items-center gap-8 sm:gap-10 sm:mx-8 pb-8 game-card"
+    class="flex flex-col justify-center items-center gap-8 lg:gap-10 lg:mx-8 pb-8 game-card"
 >
     <Badge variant="secondary">{date}</Badge>
     <Card.Root
-        class="text-center rounded-lg shadow-md sm:border-0 bg-secondary sm:w-5/6"
+        class="text-center rounded-lg shadow-md lg:border-0 bg-secondary lg:w-5/6"
     >
         <Card.Header class="flex flex-col items-center">
             <enhanced:img
@@ -59,7 +59,7 @@
             />
             <Separator class="my-2" />
             <Card.Title
-                class="text-lg sm:text-2xl sm:mx-0 mx-4 p-2 bg-zinc-200 dark:bg-stone-700 rounded-md w-5/6"
+                class="text-lg lg:text-2xl lg:mx-0 mx-4 p-2 bg-zinc-200 dark:bg-stone-700 rounded-md w-5/6"
             >
                 {#if link}
                     <a
@@ -84,7 +84,7 @@
             </Card.Title>
         </Card.Header>
         <Card.Content class="flex flex-col gap-4">
-            <p class="text-sm sm:text-base w-5/6 mx-auto">
+            <p class="text-sm lg:text-base w-5/6 mx-auto">
                 {description}
             </p>
             {@const SvelteComponent = engineLogo}

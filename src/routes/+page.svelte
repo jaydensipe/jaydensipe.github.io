@@ -193,7 +193,7 @@
                 type="button"
                 onclick={() => setEasterEgg(SupportedEasterEggs.Expedition33)}
                 aria-label="Expedition 33 Easter Egg">33</button
-            >, Hellblade: Senua's Sacrifice, Hades I & 2, The Forest, Garry's Mod,
+            >, Hellblade: Senua's Sacrifice, Hades I & II, The Forest, Garry's Mod,
             Minecraft, Bioshock Infinite and many more that, if listed, will
             fill this entire page. <br /> <br /> While games are, perhaps, a more
             expressive way of demonstrating software development and programming,

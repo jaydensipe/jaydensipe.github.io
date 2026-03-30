@@ -1,7 +1,10 @@
 <script lang="ts">
-    import { Github, Linkedin, Joystick } from "@lucide/svelte";
-
     let year = new Date().getFullYear();
+
+    // Icons
+    import ItchIoLogo from "virtual:icons/simple-icons/itchdotio";
+    import GitHubLogo from "virtual:icons/simple-icons/github";
+    import LinkedInLogo from "virtual:icons/simple-icons/linkedin";
 </script>
 
 <footer
@@ -16,27 +19,24 @@
             href="https://github.com/jaydensipe"
             aria-label="Github Link"
             target="_blank"
-            ><Github
+            ><GitHubLogo
                 class="text-muted-foreground hyperlink cursor-pointer hover:scale-105"
-                strokeWidth="1.5"
             /></a
         >
         <a
             href="https://www.linkedin.com/in/jaydensipe/"
             aria-label="LinkedIn Link"
             target="_blank"
-            ><Linkedin
+            ><LinkedInLogo
                 class="text-muted-foreground hyperlink cursor-pointer hover:scale-105"
-                strokeWidth="1.5"
             /></a
         >
         <a
             href="https://jaydensippy.itch.io/"
             target="_blank"
             aria-label="itch.io Link"
-            ><Joystick
+            ><ItchIoLogo
                 class="text-muted-foreground hyperlink cursor-pointer hover:scale-105"
-                strokeWidth="1.5"
             /></a
         >
     </div>

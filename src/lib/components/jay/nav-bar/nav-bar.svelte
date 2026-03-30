@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { base } from "$app/paths";
+    import { resolve } from "$app/paths";
     import NavButton from "./nav-button.svelte";
 
     interface Props {
@@ -20,11 +20,11 @@
             <NavButton name="Games" link="#games" />
             <NavButton name="Personal Projects" link="#personal-projects" />
         {:else}
-            <NavButton name="Back to Home" link="{base}/" />
-            <NavButton name="Games" link="{base}/games" />
+            <NavButton name="Back to Home" link={resolve("/")} />
+            <NavButton name="Games" link={resolve("/games")} />
             <NavButton
                 name="Personal Projects"
-                link="{base}/personal-projects"
+                link={resolve("/personal-projects")}
             />
         {/if}
         <NavButton

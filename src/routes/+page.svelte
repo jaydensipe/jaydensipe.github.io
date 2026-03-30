@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { base } from "$app/paths";
+    import { resolve } from "$app/paths";
     import DescriptiveCard from "$lib/components/jay/descriptive-card/descriptive-card.svelte";
     import NavBar from "$lib/components/jay/nav-bar/nav-bar.svelte";
     import PageContainer from "$lib/components/jay/page-container/page-container.svelte";
@@ -15,6 +15,10 @@
         SupportedHolidays,
         playThemedHolidayMusic,
     } from "../stores/holiday-store";
+    import {
+        setEasterEgg,
+        SupportedEasterEggs,
+    } from "../stores/easter-egg-store";
 
     // Images
     import acfcImage from "$lib/images/acfc1.webp?enhanced";
@@ -25,20 +29,14 @@
     import squireImage from "$lib/images/squire.png?enhanced";
 
     // Icons
-    import {
-        Linkedin,
-        Github,
-        Joystick,
-        Layers,
-        Swords,
-        Disc,
-        Disc3,
-        NotepadText,
-    } from "@lucide/svelte";
-    import {
-        setEasterEgg,
-        SupportedEasterEggs,
-    } from "../stores/easter-egg-store";
+    import Laptop from "virtual:icons/solar/laptop-bold-duotone";
+    import Layers from "virtual:icons/solar/layers-bold-duotone";
+    import Document from "virtual:icons/solar/documents-bold-duotone";
+    import ItchIo from "virtual:icons/simple-icons/itchdotio";
+    import GitHub from "virtual:icons/simple-icons/github";
+    import LinkedIn from "virtual:icons/simple-icons/linkedin";
+    import Play from "virtual:icons/solar/play-circle-bold";
+    import Spin from "virtual:icons/solar/vinyl-record-bold";
 </script>
 
 <svelte:head>
@@ -98,7 +96,7 @@
 </header>
 
 <!-- Command Bar -->
-<Command.Root class="border shadow-md max-w-80 sm:max-w-[450px]">
+<Command.Root class="border shadow-md max-w-80 sm:max-w-112.5">
     <Command.List>
         <Command.Empty>No results found.</Command.Empty>
         <Command.Group heading="Actions">
@@ -109,12 +107,12 @@
                 >
                     <div class="flex flex-row items-center sm:m-0 w-full">
                         {#if $musicPlayingStore}
-                            <Disc3
+                            <Spin
                                 class="mr-2 h-4 w-4 scale-100 absolute animate-spin"
                             />
                             <span class="ml-6">Stop Holiday Themed Music</span>
                         {:else}
-                            <Disc class="mr-2 h-4 w-4 scale-100 absolute" />
+                            <Play class="mr-2 h-4 w-4 scale-100 absolute" />
                             <span class="ml-6">Play Holiday Themed Music</span>
                         {/if}
                     </div>
@@ -122,7 +120,7 @@
             {/if}
             <Command.Item onSelect={toggleMode} class="cursor-pointer">
                 <div class="flex flex-row items-center sm:m-0 w-full">
-                    <DarkModeSwitcher useStrokeWidth={false}></DarkModeSwitcher>
+                    <DarkModeSwitcher></DarkModeSwitcher>
                     <span class="ml-6">Toggle Dark Mode</span>
                 </div>
             </Command.Item>
@@ -134,7 +132,7 @@
                     href="https://jaydensipe.github.io/JaydenSipeResume.pdf"
                     target="_blank"
                 >
-                    <NotepadText class="mr-2 h-4 w-4" />
+                    <Document class="mr-2 h-4 w-4" />
                     <span>Resume</span>
                 </a>
             </Command.Item>
@@ -146,7 +144,7 @@
                     href="https://github.com/jaydensipe"
                     target="_blank"
                 >
-                    <Github class="mr-2 h-4 w-4" />
+                    <GitHub class="mr-2 h-4 w-4" />
                     <span>GitHub</span>
                 </a>
             </Command.Item>
@@ -156,7 +154,7 @@
                     href="https://www.linkedin.com/in/jaydensipe/"
                     target="_blank"
                 >
-                    <Linkedin class="mr-2 h-4 w-4" />
+                    <LinkedIn class="mr-2 h-4 w-4" />
                     <span>LinkedIn</span>
                 </a>
             </Command.Item>
@@ -166,7 +164,7 @@
                     href="https://jaydensippy.itch.io/"
                     target="_blank"
                 >
-                    <Joystick class="mr-2 h-4 w-4" />
+                    <ItchIo class="mr-2 h-4 w-4" />
                     <span>itch.io</span>
                 </a>
             </Command.Item>
@@ -193,10 +191,10 @@
                 type="button"
                 onclick={() => setEasterEgg(SupportedEasterEggs.Expedition33)}
                 aria-label="Expedition 33 Easter Egg">33</button
-            >, Hellblade: Senua's Sacrifice, Hades I & II, The Forest, Garry's Mod,
-            Minecraft, Bioshock Infinite and many more that, if listed, will
-            fill this entire page. <br /> <br /> While games are, perhaps, a more
-            expressive way of demonstrating software development and programming,
+            >, Hellblade: Senua's Sacrifice, Hades I & II, The Forest, Garry's
+            Mod, Minecraft, Bioshock Infinite and many more that, if listed,
+            will fill this entire page. <br /> <br /> While games are, perhaps, a
+            more expressive way of demonstrating software development and programming,
             I strive to advance my knowledge in all areas of computer science.
         </blockquote>
 
@@ -217,12 +215,12 @@
         </h2>
         <br />
         <p class="text-center sm:mx-32 mb-8">
-            These are the latest <a href="{base}/games" class="hyperlink"
+            These are the latest <a href={resolve("/games")} class="hyperlink"
                 >games</a
             > I have worked on in my own time to better master game development and
             programming techniques. These games were created with various game engines.
         </p>
-        <div class="flex flex-wrap flex-shrink-0 flex-grow-0 justify-center">
+        <div class="flex flex-wrap shrink-0 grow-0 justify-center">
             <DescriptiveCard
                 name="A Concoction for <br/> Creeps"
                 link="https://jaydensippy.itch.io/a-concoction-for-creeps"
@@ -249,8 +247,8 @@
         </div>
 
         <div class="flex justify-center my-8">
-            <Button variant="outline" href="{base}/games"
-                ><Swords strokeWidth="1.5" />View More Games</Button
+            <Button variant="outline" href={resolve("/games")}
+                ><Laptop />View More Games</Button
             >
         </div>
     </section>
@@ -269,11 +267,11 @@
         <p class="text-center sm:mx-32 mb-8">
             These are the latest of the random <a
                 class="hyperlink"
-                href="{base}/personal-projects">personal projects</a
+                href={resolve("/personal-projects")}>personal projects</a
             > I have finished. These may come from personal projects I have completed
             myself, or with the aid of an online course.
         </p>
-        <div class="flex flex-wrap flex-shrink-0 flex-grow-0 justify-center">
+        <div class="flex flex-wrap shrink-0 grow-0 justify-center">
             <DescriptiveCard
                 name="GD Local History"
                 link="https://godotengine.org/asset-library/asset/3266"
@@ -302,8 +300,8 @@
         </div>
 
         <div class="flex justify-center my-8">
-            <Button variant="outline" href="{base}/personal-projects"
-                ><Layers strokeWidth="1.5" />View More Projects</Button
+            <Button variant="outline" href={resolve("/personal-projects")}
+                ><Layers />View More Projects</Button
             >
         </div>
     </section>

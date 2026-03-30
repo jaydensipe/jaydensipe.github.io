@@ -8,7 +8,6 @@
     import * as Carousel from "$lib/components/ui/carousel/index.js";
     import type { CarouselAPI } from "$lib/components/ui/carousel/context";
     import { Separator } from "$lib/components/ui/separator";
-    import { MoveLeft, MoveRight } from "@lucide/svelte";
 
     // Images
     import gdLocalHistoryImage from "$lib/images/gdlocalhistory.png?enhanced";
@@ -33,6 +32,8 @@
     import JSLogo from "virtual:icons/logos/javascript";
     import MongoDBLogo from "virtual:icons/logos/mongodb-icon";
     import Java from "virtual:icons/logos/java";
+    import Left from "virtual:icons/solar/arrow-left-linear";
+    import Right from "virtual:icons/solar/arrow-right-linear";
 
     let api = $state<CarouselAPI>();
 </script>
@@ -132,7 +133,7 @@
                     onclick={() => api?.scrollPrev()}
                     class="hyperlink"
                 >
-                    <MoveLeft />
+                    <Left />
                 </button>
                 Archived Projects ⚠️
                 <button
@@ -140,7 +141,7 @@
                     onclick={() => api?.scrollNext()}
                     class="hyperlink"
                 >
-                    <MoveRight />
+                    <Right />
                 </button>
             </div>
             <p class="text-muted-foreground text-sm">

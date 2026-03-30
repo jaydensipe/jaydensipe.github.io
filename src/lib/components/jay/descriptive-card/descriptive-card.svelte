@@ -23,7 +23,7 @@
 </script>
 
 <Card.Root
-    class="bg-transparent w-[21rem] text-center border-0 shadow-none descriptive-card"
+    class="bg-transparent w-84 text-center border-0 shadow-none descriptive-card"
 >
     <Card.Header>
         {#if link}

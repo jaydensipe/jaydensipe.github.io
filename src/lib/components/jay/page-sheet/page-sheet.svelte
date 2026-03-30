@@ -1,28 +1,27 @@
 <script lang="ts">
-    import { base } from "$app/paths";
     import { page } from "$app/state";
     import DarkModeSwitcher from "../dark-mode-switcher/dark-mode-switcher.svelte";
-    import {
-        Menu,
-        ArrowLeftCircle,
-        Github,
-        Joystick,
-        Linkedin,
-        ArrowRightToLine,
-        NotepadText,
-        Layers,
-        Swords,
-    } from "@lucide/svelte";
     import Separator from "$lib/components/ui/separator/separator.svelte";
     import * as Sheet from "$lib/components/ui/sheet";
     import { toggleMode } from "mode-watcher";
+    import { resolve } from "$app/paths";
+
+    // Icons
+    import { Menu, ArrowRightToLine } from "@lucide/svelte";
+    import Laptop from "virtual:icons/solar/laptop-broken";
+    import Layers from "virtual:icons/solar/layers-minimalistic-broken";
+    import Document from "virtual:icons/solar/document-text-broken";
+    import ItchIo from "virtual:icons/simple-icons/itchdotio";
+    import GitHub from "virtual:icons/simple-icons/github";
+    import LinkedIn from "virtual:icons/simple-icons/linkedin";
+    import Left from "virtual:icons/solar/arrow-left-bold";
 </script>
 
 <Sheet.Root>
     <Sheet.Trigger
         aria-label="Open Menu"
         class="bg-card/50 shadow-lg backdrop-blur-lg rounded-md p-2 flex flex-row gap-2 decoration-trasparent hyperlink fixed left-4 top-4"
-        ><Menu></Menu><ArrowRightToLine></ArrowRightToLine></Sheet.Trigger
+        ><Menu /><ArrowRightToLine /></Sheet.Trigger
     >
     <Sheet.Content side="left" class="bg-background">
         <Sheet.Header>
@@ -30,8 +29,7 @@
                 ><div
                     class="flex flex-row gap-2 items-center text-sm sm:text-lg font-bold"
                 >
-                    <a class="hyperlink" href="{base}/"
-                        ><ArrowLeftCircle></ArrowLeftCircle></a
+                    <a class="hyperlink" href={resolve("/")}><Left /></a
                     >{page.url.pathname.toUpperCase()}
                 </div></Sheet.Title
             >
@@ -40,56 +38,44 @@
                     <ul class="py-3">
                         {#if page.url.pathname == "/games"}
                             <li>
-                                <a href="{base}/personal-projects">
+                                <a href={resolve("/personal-projects")}>
                                     <p
                                         class="flex flex-row items-center hyperlink decoration-transparent text-lg"
                                     >
                                         Personal Projects
-                                        <Layers
-                                            strokeWidth="1.5"
-                                            class="ml-2"
-                                        />
+                                        <Layers class="ml-2" />
                                     </p>
                                 </a>
                             </li>
                         {:else if page.url.pathname == "/personal-projects"}
                             <li>
-                                <a href="{base}/games">
+                                <a href={resolve("/games")}>
                                     <p
                                         class="flex flex-row items-center hyperlink decoration-transparent text-lg"
                                     >
                                         Games
-                                        <Swords
-                                            strokeWidth="1.5"
-                                            class="ml-2"
-                                        />
+                                        <Laptop class="ml-2" />
                                     </p>
                                 </a>
                             </li>
                         {:else if page.url.pathname == "/"}
                             <li>
-                                <a href="{base}/games">
+                                <a href={resolve("/games")}>
                                     <p
                                         class="flex flex-row items-center hyperlink decoration-transparent text-lg"
                                     >
                                         Games
-                                        <Swords
-                                            strokeWidth="1.5"
-                                            class="ml-2"
-                                        />
+                                        <Laptop class="ml-2" />
                                     </p>
                                 </a>
                             </li>
                             <li>
-                                <a href="{base}/personal-projects">
+                                <a href={resolve("/personal-projects")}>
                                     <p
                                         class="flex flex-row items-center hyperlink decoration-transparent text-lg"
                                     >
                                         Personal Projects
-                                        <Layers
-                                            strokeWidth="1.5"
-                                            class="ml-2"
-                                        />
+                                        <Layers class="ml-2" />
                                     </p>
                                 </a>
                             </li>
@@ -102,7 +88,7 @@
                                 class="flex flex-row gap-2 items-center hyperlink decoration-transparent text-lg"
                             >
                                 <p>Resume</p>
-                                <NotepadText strokeWidth="1.5" />
+                                <Document />
                             </span>
                         </a>
                     </ul>
@@ -111,23 +97,20 @@
 
                     <div class="flex flex-row gap-8">
                         <a href="https://github.com/jaydensipe" target="_blank"
-                            ><Github
-                                class="text-muted-foreground hyperlink cursor-pointer hover:scale-105"
-                                strokeWidth="1.5"
+                            ><GitHub
+                                class="scale-125 text-muted-foreground hyperlink cursor-pointer hover:scale-130"
                             /></a
                         >
                         <a
                             href="https://www.linkedin.com/in/jaydensipe/"
                             target="_blank"
-                            ><Linkedin
-                                class="text-muted-foreground hyperlink cursor-pointer hover:scale-105"
-                                strokeWidth="1.5"
+                            ><LinkedIn
+                                class="scale-125 text-muted-foreground hyperlink cursor-pointer hover:scale-130"
                             /></a
                         >
                         <a href="https://jaydensippy.itch.io/" target="_blank"
-                            ><Joystick
-                                class="text-muted-foreground hyperlink cursor-pointer hover:scale-105"
-                                strokeWidth="1.5"
+                            ><ItchIo
+                                class="scale-125 text-muted-foreground hyperlink cursor-pointer hover:scale-130"
                             /></a
                         >
                         <!-- svelte-ignore a11y_click_events_have_key_events -->
@@ -136,7 +119,7 @@
                             onclick={toggleMode}
                             class="hyperlink right-16 absolute cursor-pointer"
                         >
-                            <DarkModeSwitcher></DarkModeSwitcher>
+                            <DarkModeSwitcher big />
                         </div>
                     </div>
                 </div>

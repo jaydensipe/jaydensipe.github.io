@@ -8,9 +8,9 @@
 
     // Icons
     import { Menu, ArrowRightToLine } from "@lucide/svelte";
-    import Laptop from "virtual:icons/solar/laptop-broken";
-    import Layers from "virtual:icons/solar/layers-minimalistic-broken";
-    import Document from "virtual:icons/solar/document-text-broken";
+    import Laptop from "virtual:icons/solar/laptop-linear";
+    import Layers from "virtual:icons/solar/layers-minimalistic-linear";
+    import Document from "virtual:icons/solar/document-text-linear";
     import ItchIo from "virtual:icons/simple-icons/itchdotio";
     import GitHub from "virtual:icons/simple-icons/github";
     import LinkedIn from "virtual:icons/simple-icons/linkedin";

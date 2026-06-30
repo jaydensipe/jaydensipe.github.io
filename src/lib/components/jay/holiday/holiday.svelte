@@ -9,9 +9,14 @@
     import { christmasParticles } from "$lib/particles/christmas";
     import { newYearsParticles } from "$lib/particles/new-years";
     import { mode } from "mode-watcher";
+    import { onMount } from "svelte";
 
-    void particlesInit(async (engine) => {
+    const initParticles = async (engine: any) => {
         await loadFull(engine);
+    };
+
+    onMount(() => {
+        void particlesInit(initParticles);
     });
 </script>
 
